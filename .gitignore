@@ -1,0 +1,34 @@
+/**
+
+!/.gitignore
+
+# Files
+!.zshrc
+!.bashrc
+!.tmux.conf
+!.vimrc
+!.xinitrc
+!.xprofile
+!fix_corrupt
+
+# Directories
+!.vim**/**
+!.tmux**/**
+!.doom.d**/**
+!.themes**/**
+!Wallpapers**/**
+
+# Sub directories in .config
+!/.config/
+/.config/**
+!/.config/autostart**/**
+!/.config/nvim**/**
+!/.config/conky**/**
+!/.config/gtk-3.0**/**
+!/.config/gtk-4.0**/**
+!/.config/terminator**/**
+!/.config/termulauncher**/**
+!/.config/termxfce4**/**
+!/.config/termsystemd**/**
+!/.config/termyakuakerc**/**
+!/.config/termpicom**/**

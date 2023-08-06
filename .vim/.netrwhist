@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/etc/systemd/user/default.target.wants'
+let g:netrw_dirhist_3='/etc/xdg/autostart'
+let g:netrw_dirhist_2='/home/nedd/.config/systemd/user'
+let g:netrw_dirhist_1='/home/nedd/dev/RLVM/RLA'
