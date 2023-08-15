@@ -100,6 +100,11 @@
 (setq! gc-cons-threshold (* 300 1024 1024)) ; Set the GC threshold to 300 MB (becasue garbage collected languages first need to collect themselves out of this world)
 (setq! evil-want-fine-undo t)
 (setq! display-line-numbers-type 't)
+
+;(lsp-mode 0)
+;(company-mode 0)
+;(flycheck-mode 0)
+
 ;; Consider the following (WARNING!: SLOWEST MODULES)
 ;; :ui indent-guides
 ;; :ui ligatures
