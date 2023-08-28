@@ -87,10 +87,10 @@
 (setq! scroll-conservatively 101)
 ;;(after! evil
 ;;  (define-key evil-insert-state-map (kbd "TAB") (lambda () (interactive) (insert "\t"))))
-(setq-default tab-width 4)
-(setq-default evil-shift-width 4)
-(setq-default evil-indent-convert-tabs nil)
-(setq-default indent-tabs-mode nil)
+(setq! tab-width 4)
+(setq! evil-shift-width 4)
+(setq! evil-indent-convert-tabs nil)
+(setq! indent-tabs-mode nil)
 (setq! undo-limit 80000000)
 (setq! confirm-kill-emacs nil)
 (after! doom-themes
@@ -100,6 +100,7 @@
 (setq! gc-cons-threshold (* 300 1024 1024)) ; Set the GC threshold to 300 MB (becasue garbage collected languages first need to collect themselves out of this world)
 (setq! evil-want-fine-undo t)
 (setq! display-line-numbers-type 't)
+(setq! display-line-numbers-widen t)
 
 ;(lsp-mode 0)
 ;(company-mode 0)

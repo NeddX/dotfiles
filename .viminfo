@@ -11,29 +11,33 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/ENET_CALLBACK
+~MSle0~/w
 
 # Last Substitute Search Pattern:
-~MSle0~&Release
+~MSle0&Release
 
 # Last Substitute String:
 $Debug
 
 # Command Line History (newest to oldest):
+:q
+|2,0,1693236921,,"q"
+:wq
+|2,0,1693236871,,"wq"
+:w
+|2,0,1693236725,,"w"
+:w3
+|2,0,1693232917,,"w3"
+:wq!
+|2,0,1693236385,,"wq!"
 :q!
-|2,0,1692135345,,"q!"
+|2,0,1693226792,,"q!"
 :q!@
 |2,0,1692135343,,"q!@"
-:w
-|2,0,1692135044,,"w"
-:wq
-|2,0,1692113654,,"wq"
 :%s/Release/Debug
 |2,0,1692113650,,"%s/Release/Debug"
 :qw
 |2,0,1692025337,,"qw"
-:q
-|2,0,1691849841,,"q"
 :wq2
 |2,0,1691767659,,"wq2"
 :Lw
@@ -42,8 +46,6 @@ $Debug
 |2,0,1691089794,,"W"
 :%s/mylib/mlib
 |2,0,1691071571,,"%s/mylib/mlib"
-:wq!
-|2,0,1690886172,,"wq!"
 :%s/.end/.thats_it
 |2,0,1690700370,,"%s/.end/.thats_it"
 :w1
@@ -80,6 +82,12 @@ $Debug
 |2,0,1689191638,,"set nu"
 
 # Search String History (newest to oldest):
+??w
+|2,1,1693224037,63,"w"
+?/div %r4
+|2,1,1692315701,47,"div %r4"
+?/div
+|2,1,1692315640,47,"div"
 ? Release
 |2,1,1692113650,,"Release"
 ?/ENET_CALLBACK
@@ -130,283 +138,526 @@ $Debug
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	-DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake
-|3,0,0,0,1,0,1691870068,"-DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake"
-""1	CHAR	0
-	
-		std::function<int(int, int, int)>int f = lolo(1);
-	
-	
-|3,1,1,0,4,0,1692135027,"","	std::function<int(int, int, int)>int f = lolo(1);","",""
+"0	LINE	0
+	Exec=LC_ALL=de_CH.UTF-8 env WINEPREFIX=/home/nedd/.wine wine ' C:\\users\\nedd\\AppData\\Local\\Growtopia\\Growtopia.exe'
+|3,0,0,1,1,0,1693223948,"Exec=LC_ALL=de_CH.UTF-8 env WINEPREFIX=/home/nedd/.wine wine ' C:\\\\users\\\\nedd\\\\AppData\\\\Local\\\\Growtopia\\\\Growtopia.exe'"
+"1	LINE	0
+		pstr _LC1	
+|3,0,1,1,1,0,1693236529,"	pstr _LC1	"
 "2	LINE	0
-	#include <enet/enet.h>
-|3,0,2,1,1,0,1692110486,"#include <enet/enet.h>"
+		pint %r2
+|3,0,2,1,1,0,1693236526,"	pint %r2"
 "3	LINE	0
-	
-|3,0,3,1,1,0,1692016303,""
-"4	CHAR	0
-	
-	// fmt from VCPKG
-	find_package(fmt CONFIG REQUI
-|3,0,4,0,3,0,1692016302,"","// fmt from VCPKG","find_package(fmt CONFIG REQUI"
+		movq $10, %r2
+|3,0,3,1,1,0,1693236525,"	movq $10, %r2"
+"4	LINE	0
+		movq $1239, %r2
+|3,0,4,1,1,0,1693232946,"	movq $1239, %r2"
 "5	LINE	0
-	target_include_directories(proxyman PRIVATE ${VENDOR_DIR}/enet/include)
-|3,0,5,1,1,0,1692016269,"target_include_directories(proxyman PRIVATE ${VENDOR_DIR}/enet/include)"
+		pstr _LC0
+|3,0,5,1,1,0,1693232793,"	pstr _LC0"
 "6	LINE	0
-	message(${VENDOR_DIR}/enet/include)
-|3,0,6,1,1,0,1692016269,"message(${VENDOR_DIR}/enet/include)"
-"7	CHAR	0
-	find_package(unofficial-enet CONFIG REQUIRED)
-	target_link_libraries(proxyman PRIVATE unofficial::enet::enet)
-	
-	
-|3,0,7,0,4,0,1691870520,"find_package(unofficial-enet CONFIG REQUIRED)","target_link_libraries(proxyman PRIVATE unofficial::enet::enet)","",""
-"8	CHAR	0
-	#add_subdirectory(vendor/enet ${PROJECT_BINARY_DIR}/enet)
-	#set(ENET_INCLUDE_DIRS ${VENDOR_DIR}/enet/include)
-	#set(ENET_LIBRARIES enet)
-	#target_include_directories(proxyman PRIVATE ${ENET_INCLUDE_DIRS})
-	#target_link_libraries(proxyman ${ENET_LIBRARIES})
-	
-	
-|3,0,8,0,7,0,1691870518,"#add_subdirectory(vendor/enet ${PROJECT_BINARY_DIR}/enet)","#set(ENET_INCLUDE_DIRS ${VENDOR_DIR}/enet/include)","#set(ENET_LIBRARIES enet)","#target_include_directories(proxyman PRIVATE ${ENET_INCLUDE_DIRS})","#target_link_libraries(proxyman ${ENET_LIBRARIES})","",""
+		pstr _LC0
+|3,0,6,1,1,0,1693226430,"	pstr _LC0"
+"7	LINE	0
+	Name=Growtopia
+|3,0,7,1,1,0,1693224038,"Name=Growtopia"
+"8	LINE	0
+	TerminalOptions=
+|3,0,8,1,1,0,1693224013,"TerminalOptions="
 "9	LINE	0
-	
-|3,0,9,1,1,0,1691869969,""
-"-	CHAR	0
-	std::function<int(int, int, int)>
-|3,0,36,0,1,0,1692134978,"std::function<int(int, int, int)>"
+	Exec=env WINEPREFIX=/home/nedd/.wine wine ' C:\\users\\nedd\\AppData\\Local\\Growtopia\\Growtopia.exe'
+|3,0,9,1,1,0,1693224010,"Exec=env WINEPREFIX=/home/nedd/.wine wine ' C:\\\\users\\\\nedd\\\\AppData\\\\Local\\\\Growtopia\\\\Growtopia.exe'"
+""-	CHAR	0
+	 %r0, 
+|3,1,36,0,1,0,1693236853," %r0, "
 
 # File marks:
-'0  11  16  ~/dev/tests/functional.cpp
-|4,48,11,16,1692135345,"~/dev/tests/functional.cpp"
-'1  25  1  ~/dev/gprox/build
-|4,49,25,1,1692113654,"~/dev/gprox/build"
-'2  33  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,50,33,0,1692110496,"~/dev/gprox/Proxyman/pch/sdafx.h"
-'3  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,51,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
-'4  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,52,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
-'5  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,53,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
-'6  3  19  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,54,3,19,1692110236,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
-'7  3  19  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,55,3,19,1692110236,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
-'8  7  65  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,56,7,65,1692110179,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
-'9  7  65  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,57,7,65,1692110179,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
+'0  1  0  ~/dev/ALVM/examples/new.amc
+|4,48,1,0,1693236921,"~/dev/ALVM/examples/new.amc"
+'1  66  8  ~/dev/ALVM/examples/new.amc
+|4,49,66,8,1693236871,"~/dev/ALVM/examples/new.amc"
+'2  66  8  ~/dev/ALVM/examples/new.amc
+|4,50,66,8,1693236871,"~/dev/ALVM/examples/new.amc"
+'3  7  0  ~/dev/ALVM/examples/part.amc
+|4,51,7,0,1693236754,"~/dev/ALVM/examples/part.amc"
+'4  25  1  ~/dev/ALVM/examples/part.amc
+|4,52,25,1,1693236385,"~/dev/ALVM/examples/part.amc"
+'5  16  1  ~/dev/ALVM/examples/part.amc
+|4,53,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+'6  14  1  ~/dev/ALVM/examples/part.amc
+|4,54,14,1,1693226792,"~/dev/ALVM/examples/part.amc"
+'7  16  1  ~/dev/ALVM/examples/part.amc
+|4,55,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+'8  5  23  ~/dev/ALVM/examples/part.amc
+|4,56,5,23,1693225098,"~/dev/ALVM/examples/part.amc"
+'9  5  23  ~/dev/ALVM/examples/part.amc
+|4,57,5,23,1693225098,"~/dev/ALVM/examples/part.amc"
 
 # Jumplist (newest first):
--'  11  16  ~/dev/tests/functional.cpp
-|4,39,11,16,1692135345,"~/dev/tests/functional.cpp"
--'  1  0  ~/dev/tests/functional.cpp
-|4,39,1,0,1692134135,"~/dev/tests/functional.cpp"
--'  25  1  ~/dev/gprox/build
-|4,39,25,1,1692113654,"~/dev/gprox/build"
--'  25  1  ~/dev/gprox/build
-|4,39,25,1,1692113654,"~/dev/gprox/build"
--'  20  0  ~/dev/gprox/build
-|4,39,20,0,1692113650,"~/dev/gprox/build"
--'  20  0  ~/dev/gprox/build
-|4,39,20,0,1692113650,"~/dev/gprox/build"
--'  1  0  ~/dev/gprox/build
-|4,39,1,0,1692113622,"~/dev/gprox/build"
--'  1  0  ~/dev/gprox/build
-|4,39,1,0,1692113622,"~/dev/gprox/build"
--'  33  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,33,0,1692110496,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  33  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,33,0,1692110496,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  33  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,33,0,1692110496,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  33  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,33,0,1692110496,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  1  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,1,0,1692110464,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  1  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,1,0,1692110464,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  1  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,1,0,1692110464,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  1  0  ~/dev/gprox/Proxyman/pch/sdafx.h
-|4,39,1,0,1692110464,"~/dev/gprox/Proxyman/pch/sdafx.h"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  2  16  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,2,16,1692110381,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/main.cpp
-|4,39,1,0,1692110375,"~/dev/Growtopia-Proxy/newfol/main.cpp"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  7  72  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,7,72,1692110304,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,1,0,1692110300,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  1  0  ~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt
-|4,39,1,0,1692110297,"~/dev/Growtopia-Proxy/newfol/enet/CMakeLists.txt"
--'  3  19  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,3,19,1692110236,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  3  19  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,3,19,1692110236,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  3  19  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,3,19,1692110236,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
--'  3  19  ~/dev/Growtopia-Proxy/newfol/CMakeLists.txt
-|4,39,3,19,1692110236,"~/dev/Growtopia-Proxy/newfol/CMakeLists.txt"
+-'  1  0  ~/dev/ALVM/examples/new.amc
+|4,39,1,0,1693236921,"~/dev/ALVM/examples/new.amc"
+-'  66  8  ~/dev/ALVM/examples/new.amc
+|4,39,66,8,1693236871,"~/dev/ALVM/examples/new.amc"
+-'  66  8  ~/dev/ALVM/examples/new.amc
+|4,39,66,8,1693236871,"~/dev/ALVM/examples/new.amc"
+-'  1  0  ~/dev/ALVM/examples/new.amc
+|4,39,1,0,1693236757,"~/dev/ALVM/examples/new.amc"
+-'  7  0  ~/dev/ALVM/examples/part.amc
+|4,39,7,0,1693236754,"~/dev/ALVM/examples/part.amc"
+-'  7  0  ~/dev/ALVM/examples/part.amc
+|4,39,7,0,1693236754,"~/dev/ALVM/examples/part.amc"
+-'  7  0  ~/dev/ALVM/examples/part.amc
+|4,39,7,0,1693236754,"~/dev/ALVM/examples/part.amc"
+-'  7  0  ~/dev/ALVM/examples/part.amc
+|4,39,7,0,1693236754,"~/dev/ALVM/examples/part.amc"
+-'  25  1  ~/dev/ALVM/examples/part.amc
+|4,39,25,1,1693236385,"~/dev/ALVM/examples/part.amc"
+-'  25  1  ~/dev/ALVM/examples/part.amc
+|4,39,25,1,1693236385,"~/dev/ALVM/examples/part.amc"
+-'  25  1  ~/dev/ALVM/examples/part.amc
+|4,39,25,1,1693236385,"~/dev/ALVM/examples/part.amc"
+-'  25  1  ~/dev/ALVM/examples/part.amc
+|4,39,25,1,1693236385,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693236369,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693236369,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693236369,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693236369,"~/dev/ALVM/examples/part.amc"
+-'  5  15  ~/dev/ALVM/examples/part.amc
+|4,39,5,15,1693232874,"~/dev/ALVM/examples/part.amc"
+-'  5  15  ~/dev/ALVM/examples/part.amc
+|4,39,5,15,1693232874,"~/dev/ALVM/examples/part.amc"
+-'  5  15  ~/dev/ALVM/examples/part.amc
+|4,39,5,15,1693232874,"~/dev/ALVM/examples/part.amc"
+-'  5  15  ~/dev/ALVM/examples/part.amc
+|4,39,5,15,1693232874,"~/dev/ALVM/examples/part.amc"
+-'  24  1  ~/dev/ALVM/examples/part.amc
+|4,39,24,1,1693232871,"~/dev/ALVM/examples/part.amc"
+-'  24  1  ~/dev/ALVM/examples/part.amc
+|4,39,24,1,1693232871,"~/dev/ALVM/examples/part.amc"
+-'  24  1  ~/dev/ALVM/examples/part.amc
+|4,39,24,1,1693232871,"~/dev/ALVM/examples/part.amc"
+-'  24  1  ~/dev/ALVM/examples/part.amc
+|4,39,24,1,1693232871,"~/dev/ALVM/examples/part.amc"
+-'  17  0  ~/dev/ALVM/examples/part.amc
+|4,39,17,0,1693232808,"~/dev/ALVM/examples/part.amc"
+-'  17  0  ~/dev/ALVM/examples/part.amc
+|4,39,17,0,1693232808,"~/dev/ALVM/examples/part.amc"
+-'  17  0  ~/dev/ALVM/examples/part.amc
+|4,39,17,0,1693232808,"~/dev/ALVM/examples/part.amc"
+-'  17  0  ~/dev/ALVM/examples/part.amc
+|4,39,17,0,1693232808,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693232743,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693232743,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693232743,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693232743,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  14  1  ~/dev/ALVM/examples/part.amc
+|4,39,14,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  14  1  ~/dev/ALVM/examples/part.amc
+|4,39,14,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  14  1  ~/dev/ALVM/examples/part.amc
+|4,39,14,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  14  1  ~/dev/ALVM/examples/part.amc
+|4,39,14,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  16  1  ~/dev/ALVM/examples/part.amc
+|4,39,16,1,1693226792,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693226419,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693226419,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693226419,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693226419,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  6  9  ~/dev/ALVM/examples/part.amc
+|4,39,6,9,1693225098,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693225086,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693225086,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693225086,"~/dev/ALVM/examples/part.amc"
+-'  1  0  ~/dev/ALVM/examples/part.amc
+|4,39,1,0,1693225086,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  22  9  ~/dev/ALVM/examples/part.amc
+|4,39,22,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  19  9  ~/dev/ALVM/examples/part.amc
+|4,39,19,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  18  9  ~/dev/ALVM/examples/part.amc
+|4,39,18,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  22  9  ~/dev/ALVM/examples/part.amc
+|4,39,22,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  22  9  ~/dev/ALVM/examples/part.amc
+|4,39,22,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  19  9  ~/dev/ALVM/examples/part.amc
+|4,39,19,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  18  9  ~/dev/ALVM/examples/part.amc
+|4,39,18,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  22  9  ~/dev/ALVM/examples/part.amc
+|4,39,22,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  22  9  ~/dev/ALVM/examples/part.amc
+|4,39,22,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  19  9  ~/dev/ALVM/examples/part.amc
+|4,39,19,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  18  9  ~/dev/ALVM/examples/part.amc
+|4,39,18,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  22  9  ~/dev/ALVM/examples/part.amc
+|4,39,22,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  21  9  ~/dev/ALVM/examples/part.amc
+|4,39,21,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  22  9  ~/dev/ALVM/examples/part.amc
+|4,39,22,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  19  9  ~/dev/ALVM/examples/part.amc
+|4,39,19,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  18  9  ~/dev/ALVM/examples/part.amc
+|4,39,18,9,1693225064,"~/dev/ALVM/examples/part.amc"
+-'  20  9  ~/dev/ALVM/examples/part.amc
+|4,39,20,9,1693225064,"~/dev/ALVM/examples/part.amc"
 
 # History of marks within files (newest to oldest):
 
+> ~/dev/ALVM/examples/new.amc
+	*	1693236920	0
+	"	1	0
+	^	66	9
+	.	59	9
+	+	6	0
+	+	7	12
+	+	12	13
+	+	13	13
+	+	15	18
+	+	16	13
+	+	22	16
+	+	27	13
+	+	29	19
+	+	44	13
+	+	51	21
+	+	52	21
+	+	53	5
+	+	52	4
+	+	51	4
+	+	57	13
+	+	59	9
+
+> ~/dev/ALVM/examples/part.amc
+	*	1693236753	0
+	"	7	0
+	^	7	1
+	.	7	1
+	+	5	15
+	+	5	17
+	+	5	14
+	+	16	19
+	+	17	0
+	+	27	1
+	+	25	1
+	+	24	1
+	+	27	1
+	+	26	3
+	+	26	15
+	+	25	1
+	+	24	1
+	+	25	1
+	+	26	0
+	+	5	15
+	+	6	3
+	+	5	23
+	+	5	14
+	+	6	1
+	+	7	3
+	+	6	15
+	+	7	1
+
+> ~/Desktop/steam.desktop
+	*	1693224077	0
+	"	7	0
+
+> ~/Desktop/Growtopia.desktop
+	*	1693224062	0
+	"	1	0
+	.	4	0
+	+	2	47
+	+	2	0
+	+	3	0
+	+	3	5
+	+	10	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	2	0
+	+	3	0
+	+	9	0
+	+	4	0
+
+> ~/new.amc
+	*	1693186927	0
+	"	1	0
+
+> ~/dev/ALVM/TODO.txt
+	*	1693103094	0
+	"	4	57
+	^	4	58
+	.	4	58
+	+	4	58
+
+> ~/dev/ALVM.MID/ALVM/src/Instruction.h
+	*	1693102964	0
+	"	75	12
+
+> ~/dev/ALVM.bak/ALVM/src/Instruction.h
+	*	1693102938	0
+	"	51	8
+
+> ~/dev/ALVM/ALVM/src/Instruction.h
+	*	1693102915	0
+	"	75	22
+
+> /tmp/test.amc
+	*	1693102366	0
+	"	29	8
+	^	12	35
+	.	22	4
+	+	2	37
+	+	33	3
+	+	5	7
+	+	32	5
+	+	12	17
+	+	12	13
+	+	12	29
+	+	12	34
+	+	12	23
+	+	12	28
+	+	12	34
+	+	12	24
+	+	12	35
+	+	13	0
+	+	12	14
+	+	12	17
+	+	12	34
+	+	13	0
+	+	21	3
+	+	12	9
+	+	26	7
+	+	22	3
+	+	19	12
+	+	22	1
+	+	20	12
+	+	14	9
+	+	15	8
+	+	27	0
+	+	30	7
+	+	23	7
+	+	28	3
+	+	25	7
+	+	24	22
+	+	12	9
+	+	17	4
+	+	24	3
+	+	17	13
+	+	22	4
+
+> ~/dev/ALVM/examples/exp.amc
+	*	1692315706	0
+	"	126	12
+
+> ~/dev/ALVM/examples/snake.amc
+	*	1692314987	0
+	"	67	1
+	^	67	2
+	.	67	1
+	+	114	3
+	+	46	8
+	+	43	16
+	+	16	17
+	+	44	10
+	+	105	8
+	+	118	7
+	+	44	17
+	+	45	11
+	+	108	12
+	+	116	3
+	+	115	0
+	+	113	8
+	+	112	15
+	+	16	18
+	+	8	22
+	+	22	0
+	+	16	18
+	+	111	7
+	+	108	20
+	+	103	8
+	+	111	12
+	+	106	8
+	+	117	7
+	+	111	0
+	+	17	18
+	+	109	17
+	+	111	10
+	+	110	15
+	+	111	13
+	+	110	3
+	+	17	0
+	+	17	19
+	+	20	23
+	+	42	0
+	+	12	19
+	+	9	24
+	+	12	30
+	+	41	12
+	+	94	8
+	+	100	3
+	+	95	9
+	+	97	16
+	+	54	12
+	+	92	3
+	+	63	4
+	+	84	7
+	+	64	3
+	+	55	8
+	+	91	5
+	+	64	16
+	+	65	7
+	+	86	3
+	+	80	7
+	+	73	3
+	+	82	3
+	+	86	2
+	+	65	8
+	+	80	8
+	+	73	7
+	+	83	7
+	+	79	7
+	+	68	12
+	+	73	8
+	+	58	8
+	+	88	8
+	+	89	7
+	+	86	4
+	+	88	0
+	+	103	9
+	+	68	13
+	+	61	12
+	+	75	17
+	+	66	1
+	+	67	19
+	+	68	0
+	+	76	3
+	+	59	8
+	+	55	9
+	+	87	7
+	+	69	12
+	+	76	15
+	+	69	15
+	+	76	19
+	+	1	14
+	+	10	24
+	+	76	29
+	+	79	0
+	+	77	3
+	+	76	12
+	+	111	1
+	+	110	1
+	+	5	8
+	+	7	0
+	+	6	0
+	+	3	0
+	+	23	15
+	+	24	7
+	+	53	3
+	+	67	1
+
+> ~/dev/ALVM/.git/MERGE_MSG
+	*	1692291187	0
+	"	1	29
+	^	1	30
+	.	1	29
+	+	1	29
+
 > ~/dev/tests/functional.cpp
-	*	1692135344	0
-	"	11	16
+	*	1692136581	0
+	"	9	29
 	^	11	17
 	.	11	16
 	+	2	19
@@ -760,121 +1011,9 @@ $Debug
 	+	8	10
 	+	9	13
 
-> ~/Desktop/Growtopia.desktop
-	*	1691528513	0
-	"	3	47
-	^	3	48
-	.	3	47
-	+	3	47
-
 > ~/Growtopia.desktop
 	*	1691528341	0
 	"	1	0
-
-> ~/dev/ALVM/examples/snake.amc
-	*	1691526887	0
-	"	5	8
-	^	97	1
-	.	5	8
-	+	119	3
-	+	101	8
-	+	106	3
-	+	36	0
-	+	34	6
-	+	36	9
-	+	112	3
-	+	45	8
-	+	42	16
-	+	16	17
-	+	43	10
-	+	103	8
-	+	116	7
-	+	43	17
-	+	44	11
-	+	106	12
-	+	114	3
-	+	113	0
-	+	111	8
-	+	110	15
-	+	16	18
-	+	8	22
-	+	22	0
-	+	16	18
-	+	109	7
-	+	106	20
-	+	101	8
-	+	109	12
-	+	104	8
-	+	115	7
-	+	109	0
-	+	17	18
-	+	107	17
-	+	109	10
-	+	108	15
-	+	109	13
-	+	108	3
-	+	17	0
-	+	17	19
-	+	20	23
-	+	41	0
-	+	12	19
-	+	9	24
-	+	12	30
-	+	40	12
-	+	92	8
-	+	98	3
-	+	93	9
-	+	95	16
-	+	52	12
-	+	90	3
-	+	61	4
-	+	82	7
-	+	62	3
-	+	53	8
-	+	89	5
-	+	62	16
-	+	63	7
-	+	84	3
-	+	78	7
-	+	71	3
-	+	80	3
-	+	84	2
-	+	63	8
-	+	78	8
-	+	71	7
-	+	81	7
-	+	77	7
-	+	66	12
-	+	71	8
-	+	56	8
-	+	86	8
-	+	87	7
-	+	84	4
-	+	86	0
-	+	101	9
-	+	66	13
-	+	59	12
-	+	73	17
-	+	64	1
-	+	65	19
-	+	66	0
-	+	74	3
-	+	57	8
-	+	53	9
-	+	85	7
-	+	67	12
-	+	74	15
-	+	67	15
-	+	74	19
-	+	1	14
-	+	10	24
-	+	74	29
-	+	77	0
-	+	75	3
-	+	74	12
-	+	109	1
-	+	108	1
-	+	5	8
 
 > ~/dev/ALVM/examples/arr_accumulator.amc
 	*	1691433362	0
@@ -2177,126 +2316,3 @@ $Debug
 > ~/dev/ALVM/basic.amc.bug
 	*	1690142194	0
 	"	1	0
-
-> /etc/resolv.conf
-	*	1690123711	0
-	"	1	0
-
-> /usr/share/vulkan/icd.d/amd_icd64.json
-	*	1690058232	0
-	"	1	0
-
-> ~/dev/ALVM/builds/linux-vscode/Test/basic.amc
-	*	1689957271	0
-	"	18	0
-
-> ~/dev/asm/balls.asm
-	*	1689937042	0
-	"	28	3
-	^	28	4
-	.	31	50
-	+	43	10
-	+	6	57
-	+	7	45
-	+	8	65
-	+	9	49
-	+	31	41
-	+	6	31
-	+	7	40
-	+	8	41
-	+	9	40
-	+	31	50
-
-> ~/dev/asm/test/assemble
-	*	1689935342	0
-	"	4	4
-
-> ~/dev/asm/test/app.asm,
-	*	1689934978	0
-	"	1	0
-
-> ~/.emacs.d/.local/cache/treemacs-persist
-	*	1689798817	0
-	"	1	0
-
-> ~/.emacs.d/.local/cache/projectile.projects
-	*	1689798807	0
-	"	1	0
-
-> ~/.emacs.d/.local/etc/workspaces/_workspaces
-	*	1689798678	0
-	"	13	0
-
-> ~/dev/RLVM/builds/linux/Test/basic.rmc
-	*	1689776714	0
-	"	15	0
-	^	15	1
-	.	15	0
-	+	18	0
-	+	1	27
-	+	19	12
-	+	20	9
-	+	21	11
-	+	22	8
-	+	23	19
-	+	1	1
-	+	25	2
-	+	21	8
-	+	1	20
-	+	1	8
-	+	1	0
-	+	18	0
-	+	3	20
-	+	3	11
-	+	3	9
-	+	3	10
-	+	3	0
-	+	17	6
-	+	3	0
-	+	3	6
-	+	3	11
-	+	3	20
-	+	3	12
-	+	3	11
-	+	3	9
-	+	3	7
-	+	3	8
-	+	3	11
-	+	3	6
-	+	3	0
-	+	3	12
-	+	3	9
-	+	3	18
-	+	3	10
-	+	3	0
-	+	3	10
-	+	3	9
-	+	3	10
-	+	3	12
-	+	3	13
-	+	3	6
-	+	3	9
-	+	18	0
-	+	3	0
-	+	16	0
-	+	3	0
-	+	5	20
-	+	6	0
-	+	4	11
-	+	6	12
-	+	8	0
-	+	9	18
-	+	12	18
-	+	15	7
-	+	12	0
-	+	13	0
-	+	15	0
-
-> ~/dev/RLVM/basic.rmc
-	*	1689774536	0
-	"	5	8
-	^	5	9
-	.	5	8
-	+	4	2
-	+	6	9
-	+	5	8
