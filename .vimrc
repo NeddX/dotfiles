@@ -13,6 +13,12 @@ set completeopt=menuone,longest
 set cursorline
 set wildmenu
 set clipboard=unnamedplus
+set nospell
+set cindent
+set expandtab
+set incsearch hlsearch
+set autoindent
+set laststatus=2
 syntax on
 set t_Co=256
 filetype plugin indent on
