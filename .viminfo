@@ -20,10 +20,10 @@
 $Debug
 
 # Command Line History (newest to oldest):
+:q!
+|2,0,1693932513,,"q!"
 :wq
 |2,0,1693931908,,"wq"
-:q!
-|2,0,1693931897,,"q!"
 :w
 |2,0,1693931858,,"w"
 :w\
@@ -212,42 +212,64 @@ $Debug
 |3,1,36,0,1,0,1693931903,";"
 
 # File marks:
-'0  31  0  ~/.vimrc
-|4,48,31,0,1693931908,"~/.vimrc"
-'1  21  0  ~/.vimrc
-|4,49,21,0,1693931905,"~/.vimrc"
+'0  5  56  ~/test
+|4,48,5,56,1693932513,"~/test"
+'1  31  0  ~/.vimrc
+|4,49,31,0,1693931908,"~/.vimrc"
 '2  21  0  ~/.vimrc
 |4,50,21,0,1693931905,"~/.vimrc"
 '3  21  0  ~/.vimrc
-|4,51,21,0,1693931891,"~/.vimrc"
+|4,51,21,0,1693931905,"~/.vimrc"
 '4  21  0  ~/.vimrc
 |4,52,21,0,1693931891,"~/.vimrc"
-'5  21  15  ~/.vimrc
-|4,53,21,15,1693931860,"~/.vimrc"
+'5  21  0  ~/.vimrc
+|4,53,21,0,1693931891,"~/.vimrc"
 '6  21  15  ~/.vimrc
 |4,54,21,15,1693931860,"~/.vimrc"
 '7  21  15  ~/.vimrc
 |4,55,21,15,1693931860,"~/.vimrc"
 '8  21  15  ~/.vimrc
 |4,56,21,15,1693931860,"~/.vimrc"
-'9  4  0  ~/dev/ALVM/examples/basic.asl
-|4,57,4,0,1693870089,"~/dev/ALVM/examples/basic.asl"
+'9  21  15  ~/.vimrc
+|4,57,21,15,1693931860,"~/.vimrc"
 
 # Jumplist (newest first):
+-'  5  56  ~/test
+|4,39,5,56,1693932513,"~/test"
+-'  1  0  ~/test
+|4,39,1,0,1693932488,"~/test"
 -'  31  0  ~/.vimrc
 |4,39,31,0,1693931908,"~/.vimrc"
+-'  31  0  ~/.vimrc
+|4,39,31,0,1693931908,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931906,"~/.vimrc"
 -'  1  0  ~/.vimrc
 |4,39,1,0,1693931906,"~/.vimrc"
 -'  21  0  ~/.vimrc
 |4,39,21,0,1693931905,"~/.vimrc"
 -'  21  0  ~/.vimrc
 |4,39,21,0,1693931905,"~/.vimrc"
+-'  21  0  ~/.vimrc
+|4,39,21,0,1693931905,"~/.vimrc"
+-'  21  0  ~/.vimrc
+|4,39,21,0,1693931905,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931900,"~/.vimrc"
 -'  1  0  ~/.vimrc
 |4,39,1,0,1693931900,"~/.vimrc"
 -'  21  0  ~/.vimrc
 |4,39,21,0,1693931891,"~/.vimrc"
 -'  21  0  ~/.vimrc
 |4,39,21,0,1693931891,"~/.vimrc"
+-'  21  0  ~/.vimrc
+|4,39,21,0,1693931891,"~/.vimrc"
+-'  21  0  ~/.vimrc
+|4,39,21,0,1693931891,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931884,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931884,"~/.vimrc"
 -'  1  0  ~/.vimrc
 |4,39,1,0,1693931884,"~/.vimrc"
 -'  1  0  ~/.vimrc
@@ -260,6 +282,22 @@ $Debug
 |4,39,21,15,1693931860,"~/.vimrc"
 -'  21  15  ~/.vimrc
 |4,39,21,15,1693931860,"~/.vimrc"
+-'  21  15  ~/.vimrc
+|4,39,21,15,1693931860,"~/.vimrc"
+-'  21  15  ~/.vimrc
+|4,39,21,15,1693931860,"~/.vimrc"
+-'  21  15  ~/.vimrc
+|4,39,21,15,1693931860,"~/.vimrc"
+-'  21  15  ~/.vimrc
+|4,39,21,15,1693931860,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931654,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931654,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931654,"~/.vimrc"
+-'  1  0  ~/.vimrc
+|4,39,1,0,1693931654,"~/.vimrc"
 -'  1  0  ~/.vimrc
 |4,39,1,0,1693931654,"~/.vimrc"
 -'  1  0  ~/.vimrc
@@ -396,46 +434,17 @@ $Debug
 |4,39,4,0,1693870089,"~/dev/ALVM/examples/basic.asl"
 -'  4  0  ~/dev/ALVM/examples/basic.asl
 |4,39,4,0,1693870089,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
--'  1  0  ~/dev/ALVM/examples/basic.asl
-|4,39,1,0,1693829466,"~/dev/ALVM/examples/basic.asl"
 
 # History of marks within files (newest to oldest):
+
+> ~/test
+	*	1693932512	0
+	"	5	56
+	^	5	57
+	.	5	56
+	+	7	0
+	+	6	12
+	+	5	56
 
 > ~/.vimrc
 	*	1693931908	0
@@ -2482,7 +2491,3 @@ $Debug
 > ~/dev/ALVM/builds/linux/Test/basic.cmp
 	*	1690706436	0
 	"	1	0
-
-> ~/dev/basic.bug
-	*	1690701497	0
-	"	18	0
