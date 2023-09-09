@@ -17,7 +17,7 @@
 !.doom.d**/**
 !.themes**/**
 !Wallpapers**/**
-!Scripts**/**
+!scripts**/**
 
 # Sub directories in .config
 !/.config/
