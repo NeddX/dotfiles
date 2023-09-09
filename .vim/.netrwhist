@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/nedd/dev/ALVM/ALASM/src'
+let g:netrw_dirhist_6='/home/nedd/dev/ALVM/ALASM'
+let g:netrw_dirhist_5='/home/nedd/dev/ALVM'
 let g:netrw_dirhist_4='/etc/systemd/user/default.target.wants'
 let g:netrw_dirhist_3='/etc/xdg/autostart'
 let g:netrw_dirhist_2='/home/nedd/.config/systemd/user'
