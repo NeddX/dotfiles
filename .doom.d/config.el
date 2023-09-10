@@ -134,9 +134,172 @@
         '(font-lock-namespace-face :foreground "#858585")
         '(font-lock-comment-face :slant italic)
         '(font-lock-variable-name-face :foreground "#bc9334")
+        '(cursor :background "#eb2672")
+        ;;'(hl-line :foreground "#eb2672")
         )
       )
   )
+
+;; Centaur
+
+  :ensure t
+(use-package! centaur-tabs
+  :init
+  (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
+  ;;(add-hook! 'doom-after-init-hook #'centaur-tabs-mode)
+  :config
+  (global-set-key (kbd "<C-S-left>")  'centaur-tabs-backward)
+  (global-set-key (kbd "<C-S-right>") 'centaur-tabs-forward)
+  (global-set-key (kbd "C-S-n") 'centaur-tabs--create-new-empty-buffer)
+  (global-set-key (kbd "C-S-w") 'centaur-tabs--kill-this-buffer-dont-ask)
+  (setq!
+        centaur-tabs-cycle-scope 'tabs
+        centaur-tabs-style "alternate"
+        centaur-tabs-height 32
+        centaur-tabs-set-icons t
+        centaur-tabs-gray-out-icons 'buffer
+        centaur-tabs-set-bar 'left
+        centaur-tabs-excluded-buffers '("*Messages*" "*scratch*" "*Help*" "*Completions*" "*Buffer List*" "*Minibuffer*"))
+  (centaur-tabs-group-by-projectile-project)
+  (centaur-tabs-headline-match)
+  (centaur-tabs-mode t)
+)
+(defun toggle-centaur-tabs ()
+  (if (string= (buffer-name) "*dashboard*")
+      (centaur-tabs-mode -1) ; Disable centaur-tabs
+    (centaur-tabs-mode 1))) ; Enable centaur-tabs
+
+(add-hook 'buffer-list-update-hook 'toggle-centaur-tabs)
+
+;; Org
+(after! org-mode
+  (org +pretty)
+  (setq org-ellipsis " ▾ ")
+  (appendq! +ligatures-extra-symbols
+            `(:checkbox      "☐"
+              :pending       "◼"
+              :checkedbox    "☑"
+              :list_property "∷"
+              :em_dash       "—"
+              :ellipses      "…"
+              :arrow_right   "→"
+              :arrow_left    "←"
+              :begin_quote   "❝"
+              :end_quote     "❞"
+              :header        "›"
+              :priority_a   ,(propertize "⚑" 'face 'all-the-icons-red)
+              :priority_b   ,(propertize "⬆" 'face 'all-the-icons-orange)
+              :priority_c   ,(propertize "■" 'face 'all-the-icons-yellow)
+              :priority_d   ,(propertize "⬇" 'face 'all-the-icons-green)
+              :priority_e   ,(propertize "❓" 'face 'all-the-icons-blue)
+              :roam_tags nil
+              :filetags nil))
+  (set-ligatures! 'org-mode
+    :merge t
+    :checkbox      "[ ]"
+    :pending       "[-]"
+    :checkedbox    "[X]"
+    :list_property "::"
+    :em_dash       "---"
+    :ellipsis      "..."
+    :arrow_right   "->"
+    :arrow_left    "<-"
+    :title         "#+title:"
+    :subtitle      "#+subtitle:"
+    :author        "#+author:"
+    :date          "#+date:"
+    :property      "#+property:"
+    :options       "#+options:"
+    :startup       "#+startup:"
+    :macro         "#+macro:"
+    :html_head     "#+html_head:"
+    :html          "#+html:"
+    :latex_class   "#+latex_class:"
+    :latex_header  "#+latex_header:"
+    :beamer_header "#+beamer_header:"
+    :latex         "#+latex:"
+    :attr_latex    "#+attr_latex:"
+    :attr_html     "#+attr_html:"
+    :attr_org      "#+attr_org:"
+    :begin_quote   "#+begin_quote"
+    :end_quote     "#+end_quote"
+    :caption       "#+caption:"
+    :header        "#+header:"
+    :begin_export  "#+begin_export"
+    :end_export    "#+end_export"
+    :results       "#+RESULTS:"
+    :property      ":PROPERTIES:"
+    :end           ":END:"
+    :priority_a    "[#A]"
+    :priority_b    "[#B]"
+    :priority_c    "[#C]"
+    :priority_d    "[#D]"
+    :priority_e    "[#E]"
+    :roam_tags     "#+roam_tags:"
+    :filetags      "#+filetags:")
+  (plist-put +ligatures-extra-symbols :name "⁍"))
+
+;; Dashboard
+(use-package! dashboard
+  :custom-face
+  (dashboard-heading ((t (:inherit (font-lock-string-face bold)))))
+  (dashboard-banner ((t (:inherit default))))
+  :hook
+  (dashboard-mode . (lambda ()
+                      ;; Enable `page-break-lines-mode'
+                      (when (fboundp 'page-break-lines-mode)
+                        (page-break-lines-mode 1))))
+  :init
+  (setq! dashboard-items '((recents . 4)
+                          (projects . 3)
+                          (bookmarks . 5))
+        dashboard-show-shortcuts t
+        dashboard-center-content t
+        dashboard-startup-banner 'official
+        dashboard-startup-banner (concat doom-user-dir "assets/splash.png")
+        dashboard-banner-logo-title "Welcome back to the EMACS Operating System."
+        dashboard-page-separator "\n\f\n"
+        dashboard-display-icons-p t
+        dashboard-set-file-icons t
+        dashboard-set-heading-icons t
+        dashboard-set-navigator t)
+  ;; Format: "(icon title help action face prefix suffix)"
+  (setq! dashboard-navigator-buttons
+        `(;; line 1
+          ((,(all-the-icons-octicon "mark-github" :height 1.0 :v-adjust 0.0)
+            "GitHub"
+            "Browse GitHub"
+            (lambda (&rest _) (browse-url "https://github.com/NeddX"))))
+          (;; line 2
+           (,(all-the-icons-faicon "calendar" :height 1.0 :v-adjust 0.0)
+            "Agenda"
+            "View org-agenda"
+            (lambda (&rest _) (org-agenda)) warning)
+           (,(all-the-icons-octicon "book" :height 1.0 :v-adjust 0.0)
+            "Docs"
+            "Show documentation"
+            (lambda (&rest _) (doom/help)) warning))))
+  :config
+  (dashboard-setup-startup-hook)
+  (setq! doom-fallback-buffer-name "*dashboard*"))
+
+(add-to-list 'recentf-exclude "~/.emacs.d/elpa")
+(add-to-list 'recentf-exclude "~/.emacs.d/.local/etc/workspaces/autosave")
+(add-to-list 'recentf-exclude "~/.emacs.d/bookmarks")
+(add-to-list 'recentf-exclude "~/.emacs.d/recentf")
+(add-to-list 'recentf-exclude "~/.emacs.d/ido.last")
+(add-to-list 'recentf-exclude "~/.cache/treemacs-persist")
+
+;; info-colors
+(use-package! info-colors
+  :commands (info-colors-fontify-node))
+
+(add-hook 'Info-selection-hook
+          'info-colors-fontify-node)
+
+;; Emojify
+(use-package emojify
+  :hook (after-init . global-emojify-mode))
 
 ;; Nyan mode
 (use-package! nyan-mode
@@ -158,6 +321,7 @@
 (after! doom-themes
   (setq! doom-themes-enable-bold t
         doom-themes-enable-italic t))
+
 ;; Info colors
 (use-package! info-colors
   :commands (info-colors-fontify-node))
@@ -180,28 +344,6 @@
   :config
   (evil-multiedit-default-keybinds))
 
-;; Centaur
-  :ensure t
-(use-package! centaur-tabs
-  :init
-  (add-hook 'server-after-make-frame-hook 'centaur-tabs-mode)
-  (add-hook! 'doom-after-init-hook #'centaur-tabs-mode)
-  :config
-  (global-set-key (kbd "<C-S-left>")  'centaur-tabs-backward)
-  (global-set-key (kbd "<C-S-right>") 'centaur-tabs-forward)
-  (global-set-key (kbd "C-S-n") 'centaur-tabs--create-new-empty-buffer)
-  (global-set-key (kbd "C-S-w") 'centaur-tabs--kill-this-buffer-dont-ask)
-  (setq!
-        centaur-tabs-cycle-scope 'tabs
-        centaur-tabs-style "alternate"
-        centaur-tabs-height 32
-        centaur-tabs-set-icons t
-        centaur-tabs-gray-out-icons 'buffer
-        centaur-tabs-set-bar 'left)
-  (centaur-tabs-group-by-projectile-project)
-  (centaur-tabs-headline-match)
-  (centaur-tabs-mode t)
-)
 
 (map! :leader
       :desc "Goto line"

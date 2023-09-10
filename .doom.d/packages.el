@@ -95,3 +95,4 @@
 (package! nyan-mode)
 (package! elcord)
 (package! fast-scroll)
+(package! dashboard)
