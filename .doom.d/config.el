@@ -98,7 +98,8 @@
 (setq! evil-want-fine-undo t)
 (setq! display-line-numbers-type 't)
 (setq! display-line-numbers-widen t)
-
+(setq! inhibit-compacting-font-caches t)
+(setq! find-file-visit-truename t)
 ;; Consider the following (WARNING!: SLOWEST MODULES)
 ;; :ui indent-guides
 ;; :ui ligatures
