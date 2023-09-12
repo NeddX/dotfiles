@@ -85,9 +85,6 @@
 (setq! scroll-margin 8)
 (setq! inhibit-compacting-font-caches t)
 (setq! scroll-conservatively 101)
-;;(after! evil
-;;  (define-key evil-insert-state-map (kbd "TAB") (lambda () (interactive) (insert "\t"))))
-(setq! tab-width 4)
 (setq! evil-shift-width 4)
 (setq! evil-indent-convert-tabs nil)
 (setq! indent-tabs-mode nil)
@@ -101,10 +98,6 @@
 (setq! evil-want-fine-undo t)
 (setq! display-line-numbers-type 't)
 (setq! display-line-numbers-widen t)
-
-;(lsp-mode 0)
-;(company-mode 0)
-;(flycheck-mode 0)
 
 ;; Consider the following (WARNING!: SLOWEST MODULES)
 ;; :ui indent-guides
@@ -141,9 +134,8 @@
   )
 
 ;; Centaur
-
-  :ensure t
 (use-package! centaur-tabs
+  :ensure t
   :init
   (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
   ;;(add-hook! 'doom-after-init-hook #'centaur-tabs-mode)
@@ -262,7 +254,8 @@
         dashboard-display-icons-p t
         dashboard-set-file-icons t
         dashboard-set-heading-icons t
-        dashboard-set-navigator t)
+        dashboard-set-navigator t
+        doom-fallback-buffer-name "*dashboard*")
   ;; Format: "(icon title help action face prefix suffix)"
   (setq! dashboard-navigator-buttons
         `(;; line 1
@@ -371,6 +364,46 @@
  :leader
  :desc "Toggle next multi-vterm instance"
  "o t" #'multi-vterm-next)
+(map!
+ :leader
+ :desc 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"")
 (map!
  :leader
  :desc "Restart LSP workspace"
