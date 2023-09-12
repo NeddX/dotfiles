@@ -150,18 +150,27 @@
         centaur-tabs-height 32
         centaur-tabs-set-icons t
         centaur-tabs-gray-out-icons 'buffer
-        centaur-tabs-set-bar 'left
-        centaur-tabs-excluded-buffers '("*Messages*" "*scratch*" "*Help*" "*Completions*" "*Buffer List*" "*Minibuffer*"))
+        centaur-tabs-set-bar 'left)
   (centaur-tabs-group-by-projectile-project)
   (centaur-tabs-headline-match)
   (centaur-tabs-mode t)
 )
+
+;; Toggle centaur-tabs-mode based on the visibility of '*dashboard*' buffer."
+(defun my-toggle-centaur-tabs-mode ()
+  (if (get-buffer-window "*dashboard*" 'visible)
+      (centaur-tabs-mode -1)
+    (centaur-tabs-mode 1)))
+
+(add-hook 'buffer-list-update-hook 'my-toggle-centaur-tabs-mode)
+
+
 (defun toggle-centaur-tabs ()
   (if (string= (buffer-name) "*dashboard*")
       (centaur-tabs-mode -1) ; Disable centaur-tabs
     (centaur-tabs-mode 1))) ; Enable centaur-tabs
 
-(add-hook 'buffer-list-update-hook 'toggle-centaur-tabs)
+;;(add-hook 'buffer-list-update-hook 'toggle-centaur-tabs)
 
 ;; Org
 (after! org-mode
@@ -242,20 +251,6 @@
                       (when (fboundp 'page-break-lines-mode)
                         (page-break-lines-mode 1))))
   :init
-  (setq! dashboard-items '((recents . 4)
-                          (projects . 3)
-                          (bookmarks . 5))
-        dashboard-show-shortcuts t
-        dashboard-center-content t
-        dashboard-startup-banner 'official
-        dashboard-startup-banner (concat doom-user-dir "assets/splash.png")
-        dashboard-banner-logo-title "Welcome back to the EMACS Operating System."
-        dashboard-page-separator "\n\f\n"
-        dashboard-display-icons-p t
-        dashboard-set-file-icons t
-        dashboard-set-heading-icons t
-        dashboard-set-navigator t
-        doom-fallback-buffer-name "*dashboard*")
   ;; Format: "(icon title help action face prefix suffix)"
   (setq! dashboard-navigator-buttons
         `(;; line 1
@@ -273,8 +268,22 @@
             "Show documentation"
             (lambda (&rest _) (doom/help)) warning))))
   :config
-  (dashboard-setup-startup-hook)
-  (setq! doom-fallback-buffer-name "*dashboard*"))
+  (setq! dashboard-items '((recents . 4)
+                          (projects . 3)
+                          (bookmarks . 5))
+        dashboard-show-shortcuts t
+        dashboard-center-content t
+        dashboard-startup-banner 'official
+        dashboard-startup-banner (concat doom-user-dir "assets/splash.png")
+        dashboard-banner-logo-title "Welcome back to the EMACS Operating System."
+        dashboard-page-separator "\n\f\n"
+        dashboard-display-icons-p t
+        dashboard-set-file-icons t
+        dashboard-set-heading-icons t
+        dashboard-set-navigator t)
+        ;;doom-fallback-buffer-name "*dashboard*"
+        ;;initial-buffer-choice "*dashboard*")
+  (dashboard-setup-startup-hook))
 
 (add-to-list 'recentf-exclude "~/.emacs.d/elpa")
 (add-to-list 'recentf-exclude "~/.emacs.d/.local/etc/workspaces/autosave")
