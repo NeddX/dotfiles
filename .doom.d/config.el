@@ -94,12 +94,15 @@
   (setq! doom-themes-enable-bold t
         doom-themes-enable-italic t))
 (setq! all-the-icons-completion-mode t)
-(setq! gc-cons-threshold (* 300 1024 1024)) ; Set the GC threshold to 300 MB (becasue garbage collected languages first need to collect themselves out of this world)
+(setq! better-gc-cons-threshold (* 300 1024 1024))
+; Set the GC threshold to 300 MB (becasue garbage collected languages first need to collect themselves out of this world)
+(setq! gc-cons-threshold better-gc-cons-threshold)
 (setq! evil-want-fine-undo t)
 (setq! display-line-numbers-type 't)
 (setq! display-line-numbers-widen t)
 (setq! inhibit-compacting-font-caches t)
 (setq! find-file-visit-truename t)
+;;(defvar better-gc-cons-threshold 134217728) ; 128mb
 ;; Consider the following (WARNING!: SLOWEST MODULES)
 ;; :ui indent-guides
 ;; :ui ligatures
@@ -134,6 +137,28 @@
       )
   )
 
+;; WE WILL INVOKE THE GARBAGE COLLECTOR OURSELVES!!
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (if (boundp 'after-focus-change-function)
+                (add-function :after after-focus-change-function
+                              (lambda ()
+                                (unless (frame-focus-state)
+                                  (garbage-collect))))
+              (add-hook 'after-focus-change-function 'garbage-collect))
+            (defun gc-minibuffer-setup-hook ()
+              (setq! gc-cons-threshold (* better-gc-cons-threshold 2)))
+
+            (defun gc-minibuffer-exit-hook ()
+              (garbage-collect)
+              (setq! gc-cons-threshold better-gc-cons-threshold))
+
+            (add-hook 'minibuffer-setup-hook #'gc-minibuffer-setup-hook)
+            (add-hook 'minibuffer-exit-hook #'gc-minibuffer-exit-hook)))
+
+;; Rainbow-mode
+(use-package! rainbow-mode :ensure t)
+
 ;; Centaur
 (use-package! centaur-tabs
   :ensure t
@@ -165,13 +190,20 @@
 
 (add-hook 'buffer-list-update-hook 'my-toggle-centaur-tabs-mode)
 
-
 (defun toggle-centaur-tabs ()
   (if (string= (buffer-name) "*dashboard*")
       (centaur-tabs-mode -1) ; Disable centaur-tabs
     (centaur-tabs-mode 1))) ; Enable centaur-tabs
 
 ;;(add-hook 'buffer-list-update-hook 'toggle-centaur-tabs)
+
+;; Rustic
+(use-package! rustic
+  :ensure t
+)
+
+;; nerd icons
+(use-package! nerd-icons :ensure t)
 
 ;; Org
 (after! org-mode
@@ -241,57 +273,126 @@
     :filetags      "#+filetags:")
   (plist-put +ligatures-extra-symbols :name "⁍"))
 
-;; Dashboard
-(use-package! dashboard
-  :custom-face
-  (dashboard-heading ((t (:inherit (font-lock-string-face bold)))))
-  (dashboard-banner ((t (:inherit default))))
-  :hook
-  (dashboard-mode . (lambda ()
-                      ;; Enable `page-break-lines-mode'
-                      (when (fboundp 'page-break-lines-mode)
-                        (page-break-lines-mode 1))))
-  :init
-  ;; Format: "(icon title help action face prefix suffix)"
-  (setq! dashboard-navigator-buttons
-        `(;; line 1
-          ((,(all-the-icons-octicon "mark-github" :height 1.0 :v-adjust 0.0)
-            "GitHub"
-            "Browse GitHub"
-            (lambda (&rest _) (browse-url "https://github.com/NeddX"))))
-          (;; line 2
-           (,(all-the-icons-faicon "calendar" :height 1.0 :v-adjust 0.0)
-            "Agenda"
-            "View org-agenda"
-            (lambda (&rest _) (org-agenda)) warning)
-           (,(all-the-icons-octicon "book" :height 1.0 :v-adjust 0.0)
-            "Docs"
-            "Show documentation"
-            (lambda (&rest _) (doom/help)) warning))))
+;; dashboard
+(use-package dashboard
+  :bind (:map dashboard-mode-map
+              ;; ("j" . nil)
+              ;; ("k" . nil)
+              ("n" . 'dashboard-next-line)
+              ("p" . 'dashboard-previous-line)
+              )
+  :init (add-hook 'dashboard-mode-hook (lambda () (setq! show-trailing-whitespace nil)))
+  :custom
+  (dashboard-set-navigator t)
+  (dashboard-center-content t)
+  (dashboard-set-file-icons t)
+  (dashboard-set-heading-icons t)
+  (dashboard-image-banner-max-height 250)
+  (dashboard-banner-logo-title "[EMACS is my operating system]")
+  (dashboard-startup-banner (concat doom-user-dir "assets/splash.png"))
   :config
-  (setq! dashboard-items '((recents . 4)
-                          (projects . 3)
-                          (bookmarks . 5))
-        dashboard-show-shortcuts t
-        dashboard-center-content t
-        dashboard-startup-banner 'official
-        dashboard-startup-banner (concat doom-user-dir "assets/splash.png")
-        dashboard-banner-logo-title "Welcome back to the EMACS Operating System."
-        dashboard-page-separator "\n\f\n"
-        dashboard-display-icons-p t
-        dashboard-set-file-icons t
-        dashboard-set-heading-icons t
-        dashboard-set-navigator t)
-        ;;doom-fallback-buffer-name "*dashboard*"
-        ;;initial-buffer-choice "*dashboard*")
-  (dashboard-setup-startup-hook))
+  (dashboard-setup-startup-hook)
+  (setq! dashboard-footer-icon (nerd-icons-codicon "nf-cod-calendar"
+                                                  :height 1.1
+                                                  :v-adjust -0.05
+                                                  :face 'font-lock-keyword-face))
 
-(add-to-list 'recentf-exclude "~/.emacs.d/elpa")
-(add-to-list 'recentf-exclude "~/.emacs.d/.local/etc/workspaces/autosave")
-(add-to-list 'recentf-exclude "~/.emacs.d/bookmarks")
-(add-to-list 'recentf-exclude "~/.emacs.d/recentf")
-(add-to-list 'recentf-exclude "~/.emacs.d/ido.last")
-(add-to-list 'recentf-exclude "~/.cache/treemacs-persist")
+  (setq! dashboard-navigator-buttons
+        `(;; line1
+          ((,(nerd-icons-codicon "nf-cod-octoface" :height 1.5 :v-adjust 0.0)
+            "GitHub"
+            "Browse your github... nedd..."
+            (lambda (&rest _) (browse-url "https://github.com/NeddX")) nil "" " |")
+           (,(nerd-icons-codicon "nf-cod-refresh" :height 1.5 :v-adjust 0.0)
+            "Update"
+            "Update Emacs"
+            (lambda (&rest _) (auto-package-update-maybe)) warning "" " "))
+           ;;(,(nerd-icons-faicon "nf-fa-flag" :height 1.5 :v-adjust 0.0) nil
+           ;; "Report a BUG"
+            ;;(lambda (&rest _) (browse-url "https://github.com/Likhon-baRoy/.emacs.d/issues/new")) error "" ""))
+
+          ;; line 2
+          ;; ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+          ;;   "AlienFriend"
+          ;;   "Browse Alien Page"
+          ;;   (lambda (&rest _) (browse-url "https://github.com/b-coimbra/.emacs.d")) nil "" ""))
+          ;; Empty line
+          (("" "\n" "" nil nil "" ""))
+
+          ;; Keybindings
+          ((,(nerd-icons-faicon "nf-fa-search" :height 0.9 :v-adjust -0.1)
+            " Find file" nil
+            (lambda (&rest _) (interactive) (call-interactively 'find-file)) nil "" "            SPC SPC"))
+          ((,(nerd-icons-octicon "nf-oct-file_directory" :height 1.0 :v-adjust -0.1)
+            " Open project" nil
+            (lambda (&rest _) (interactive) (call-interactively 'projectile-switch-project)) nil "" "         SPC p p"))
+          ((,(nerd-icons-octicon "nf-oct-three_bars" :height 1.1 :v-adjust -0.1)
+            " File explorer" nil
+            (lambda (&rest _) (interactive) (call-interactively 'dired)) nil "" "          C-x d"))
+          ;;((,(nerd-icons-codicon "nf-cod-settings" :height 0.9 :v-adjust -0.1)
+          ;;  " Open settings" nil
+          ;;  (lambda (&rest _) (open-config-file)) nil "" "        C-c e  "))
+          ))
+  (setq!
+   dashboard-items '((recents        . 3)
+                     (projects       . 3)
+                     (bookmarks      . 5)
+                     ))
+  :custom-face
+  (dashboard-heading ((t (:foreground nil :weight bold))))) ; "#f1fa8c"
+
+;; Dashboard
+;; (use-package! dashboard
+;;   :custom-face
+;;   (dashboard-heading ((t (:inherit (font-lock-string-face bold)))))
+;;   (dashboard-banner ((t (:inherit default))))
+;;   :hook
+;;   (dashboard-mode . (lambda ()
+;;                       ;; Enable `page-break-lines-mode'
+;;                       (when (fboundp 'page-break-lines-mode)
+;;                         (page-break-lines-mode 1))))
+;;   :init
+;;   ;; Format: "(icon title help action face prefix suffix)"
+;;   (setq! dashboard-display-icons-p t)
+;;   (setq! dashboard-navigator-buttons
+;;         `(;; line 1
+;;           ((,(all-the-icons-octicon "mark-github" :height 1.0 :v-adjust 0.0)
+;;             "GitHub"
+;;             "Browse GitHub"
+;;             (lambda (&rest _) (browse-url "https://github.com/NeddX"))))
+;;           (;; line 2
+;;            (,(all-the-icons-faicon "calendar" :height 1.0 :v-adjust 0.0)
+;;             "Agenda"
+;;             "View org-agenda"
+;;             (lambda (&rest _) (org-agenda)) warning)
+;;            (,(all-the-icons-octicon "book" :height 1.0 :v-adjust 0.0)
+;;             "Docs"
+;;             "Show documentation"
+;;             (lambda (&rest _) (doom/help)) warning))))
+;;   :config
+;;   (setq! dashboard-items '((recents . 4)
+;;                           (projects . 3)
+;;                           (bookmarks . 5))
+;;         dashboard-show-shortcuts t
+;;         dashboard-center-content t
+;;         dashboard-startup-banner 'official
+;;         dashboard-startup-banner (concat doom-user-dir "assets/splash.png")
+;;         dashboard-banner-logo-title "Welcome back to the EMACS Operating System."
+;;         dashboard-page-separator "\n\f\n"
+;;         dashboard-display-icons-p t
+;;         dashboard-set-file-icons t
+;;         dashboard-set-heading-icons t
+;;         dashboard-set-navigator t
+;;         doom-fallback-buffer-name "*dashboard*"
+;;         initial-buffer-choice "*dashboard*")
+;;   (dashboard-setup-startup-hook))
+
+;; (add-to-list 'recentf-exclude "~/.emacs.d/elpa")
+;; (add-to-list 'recentf-exclude "~/.emacs.d/.local/etc/workspaces/autosave")
+;; (add-to-list 'recentf-exclude "~/.emacs.d/bookmarks")
+;; (add-to-list 'recentf-exclude "~/.emacs.d/recentf")
+;; (add-to-list 'recentf-exclude "~/.emacs.d/ido.last")
+;; (add-to-list 'recentf-exclude "~/.cache/treemacs-persist")
 
 ;; info-colors
 (use-package! info-colors
@@ -336,10 +437,14 @@
 ;; Syntax highlighting if doom-meltbus
 
 ;; Yasnippet
-(use-package! yasnippet
+(use-package yasnippet
   :ensure t
   :init
-  (yas-global-mode 1))
+  (yas-global-mode 1)
+  :config
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook 'yas-minor-mode)
+  (add-hook 'text-mode-hook 'yas-minor-mode))
 
 ;; Multiedit
 (use-package! evil-multiedit
@@ -374,46 +479,6 @@
  :leader
  :desc "Toggle next multi-vterm instance"
  "o t" #'multi-vterm-next)
-(map!
- :leader
- :desc 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-"")
 (map!
  :leader
  :desc "Restart LSP workspace"
@@ -525,8 +590,22 @@
   :init
   (dap-mode 0)
   :config
+  (dap-ui-mode)
+  (dap-ui-controls-mode 1)
   (require 'dap-cpptools)
   (require 'dap-lldb)
+  (require 'dap-gdb-lldb)
+
+  ;; Extensions from vscode
+  (dap-gdb-lldb-setup)
+  (dap-register-debug-template
+   "Rust: LLDB Run Configuration"
+   (list :type "lldb"
+         :request "launch"
+         :name "LLDB:Run"
+         :gdpath "rust-lldb"
+         :target nil
+         :cwd nil))
 
   :custom
   (dap-auto-configure-features '(locals expressions))
@@ -551,12 +630,19 @@
   (fast-scroll-config)
   (fast-scroll-mode 1))
 
-;; Lsp
-(use-package! lsp-ui
+;; lsp-ui
+(use-package lsp-ui
   :ensure t
-  :init
+  :commands lsp-ui-mode
+  :config
   (setq! lsp-ui-doc-enable t
-        lsp-ui-sideline-enable t))
+        lsp-ui-sideline-enable t)
+  :custom
+  (lsp-ui-peek-always-show t)
+  (lsp-ui-sideline-show-hover t)
+  (lsp-ui-doc-enable t))
+
+;; lsp-mode
 (use-package! lsp-mode
   :ensure t
   :init
@@ -566,17 +652,36 @@
         lsp-modeline-code-actions-enable t
         lsp-diagnostics-provider :flycheck
         lsp-completion-show-detail t
-        lsp-completion-show-kind t))
+        lsp-completion-show-kind t)
+  :custom
+  (lsp-eldoc-render-all t)
+  (lsp-idle-delay 0.6)
+  (lsp-inlay-hint-enable t)
+  ;; These are optional configurations. See https://emacs-lsp.github.io/lsp-mode/page/lsp-rust-analyzer/#lsp-rust-analyzer-display-chaining-hints for a full list
+  (lsp-rust-analyzer-cargo-watch-command "clippy")
+  (lsp-rust-analyzer-display-lifetime-elision-hints-enable "skip_trivial")
+  (lsp-rust-analyzer-display-chaining-hints t)
+  (lsp-rust-analyzer-display-lifetime-elision-hints-use-parameter-names nil)
+  (lsp-rust-analyzer-display-closure-return-type-hints t)
+  (lsp-rust-analyzer-display-parameter-hints nil)
+  (lsp-rust-analyzer-display-reborrow-hints nil)
+  :config
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+
 
 ;; Company(use-package! company
 (add-hook 'after-init-hook 'global-company-mode)
 ;; from modules/completion/company/config.el
 (use-package! company
+  :ensure t
   :commands (company-mode global-company-mode company-complete
                           company-complete-common company-manual-begin company-grab-line)
   :config
-  (setq! company-idle-delay 1.5
+  (setq! company-idle-delay 0.5
         company-tooltip-limit 10
         company-dabbrev-downcase nil
         company-dabbrev-ignore-case nil
         company-minimum-prefix-length 1))
+
+;; flycheck
+(use-package! flycheck :ensure t)
