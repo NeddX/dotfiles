@@ -114,7 +114,14 @@
 ;;(setq! doom-theme 'doom-tomorrow-night)
 ;;(setq! doom-theme 'doom-tokyo-night)
 ;;(setq! doom-theme 'atom-one-dark)
-(setq! doom-theme 'doom-meltbus)
+;;(setq! doom-theme 'doom-horizon)
+(setq! doom-theme 'doom-ayu-dark)
+;;(setq! doom-theme 'doom-old-hope)
+;;(setq! doom-theme 'doom-vivendi)
+;;(setq! doom-theme 'doom-acario-dark)
+;;
+;;(setq! doom-theme 'doom-ir-black)
+;;(setq! doom-theme 'doom-meltbus)
 
 ; Custom syntax highlighting for doom-meltbus
 (if (equal doom-theme 'doom-meltbus)
@@ -519,7 +526,10 @@
          (call-interactively 'dap-disconnect)
         )
 )
-
+(map!
+ :leader
+ :desc "Delete saved workspace"
+ "TAB D" #'lsp-workspace-folders-remove)
   ;(setq dap-ui-buffer-configurations
   ;      '((,"*DAP Debug Output*"
   ;         (side . bottom)
