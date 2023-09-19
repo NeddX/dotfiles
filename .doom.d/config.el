@@ -164,7 +164,16 @@
             (add-hook 'minibuffer-exit-hook #'gc-minibuffer-exit-hook)))
 
 ;; Rainbow-mode
-(use-package! rainbow-mode :ensure t)
+(use-package! rainbow-mode
+  :ensure t
+  :init
+  (rainbow-mode t))
+
+;; Beacon mode
+(use-package! beacon
+  :ensure t
+  :init
+  (beacon-mode t))
 
 ;; Centaur
 (use-package! centaur-tabs

@@ -97,3 +97,5 @@
 (package! fast-scroll)
 (package! dashboard)
 (package! rustic)
+(package! beacon)
+(package! clippy)
