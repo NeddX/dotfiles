@@ -7,7 +7,7 @@ vim.o.undodir = (os.getenv("OS") == "Windows_NT") and os.getenv("LOCALAPPDATA") 
 vim.o.undofile = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
-vim.o.termguicolors = false -- Disable to get that retro looking like colour theme
+vim.o.termguicolors = true -- Disable to get that retro looking like colour theme
 vim.o.scrolloff = 12
 vim.o.signcolumn = "yes"
 --vim.o.isfname:append("@-@")
