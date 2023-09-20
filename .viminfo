@@ -21,11 +21,11 @@ $\[\033[31m\]
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1695234682,,"wq"
-:q!
-|2,0,1695234522,,"q!"
+|2,0,1695244060,,"wq"
 :w
-|2,0,1695212619,,"w"
+|2,0,1695244011,,"w"
+:q!
+|2,0,1695236040,,"q!"
 :%s/%F{red}/\[\033[31m\]
 |2,0,1695212221,,"%s/%F{red}/\\[\\033[31m\\]"
 :q!@
@@ -179,263 +179,306 @@ $\[\033[31m\]
 	    fi
 |3,0,0,1,4,0,1695213011,"    if is_package_installed \"rust\"; then","        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh","        rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy","    fi"
 ""1	LINE	0
-	        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-|3,1,1,1,1,0,1695213033,"        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
-"2	LINE	0
-	    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
-|3,0,2,1,1,0,1695213029,"    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy"
-"3	LINE	0
 	
-|3,0,3,1,1,0,1695213023,""
+|3,1,1,1,1,0,1695244008,""
+"2	LINE	0
+	                         
+|3,0,2,1,1,0,1695243766,"                         "
+"3	LINE	0
+	Console.WriteLine("Hello, World!");
+|3,0,3,1,1,0,1695243762,"Console.WriteLine(\"Hello, World!\");"
 "4	LINE	0
-	        rustup-init
-|3,0,4,1,1,0,1695212998,"        rustup-init"
+	// See https://aka.ms/new-console-template for more information
+|3,0,4,1,1,0,1695243759,"// See https://aka.ms/new-console-template for more information"
 "5	LINE	0
-	        
-|3,0,5,1,1,0,1695212995,"        "
+	        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+|3,0,5,1,1,0,1695213033,"        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 "6	LINE	0
-	    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 	    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
-|3,0,6,1,2,0,1695212984,"    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh","    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy"
+|3,0,6,1,1,0,1695213029,"    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy"
 "7	LINE	0
-	    # Install Rustup
-|3,0,7,1,1,0,1695212981,"    # Install Rustup"
+	
+|3,0,7,1,1,0,1695213023,""
 "8	LINE	0
-	295
-<    export PS1="\[\033[31m\]┌─\[\033[31m\](%B%F{blue}$PLATFORM_LOGO%b[\[\033[31m\]33[31m])\[\033[31m\]──\[\033[31m\][%B%F{blue}%n%F{reset}%b@%B%F{blue}%m\[\033[31m\]%b]\[\033[31m\]─\[\033[31m\][%B%F{yellow}%~\[\033[31m\]%b]%F{reset}"$'\n'"\[\033[31m\]└─%F{blue}%B#%F{reset}%b: "
-|3,0,8,1,1,0,1695212513,"    export PS1=\"\\[\\033[31m\\]┌─\\[\\033[31m\\](%B%F{blue}$PLATFORM_LOGO%b[\\[\\033[31m\\]33[31m])\\[\\033[31m\\]──\\[\\033[31m\\][%B%F{blue}%n%F{reset}%b@%B%F{blue}%m\\[\\033[31m\\]%b]\\[\\033[31m\\]─\\[\\033[31m\\][%B%F{yellow}%~\\[\\033[31m\\]%b]%F{reset}\"$'\\n'\"\\[\\033[31m\\]└─%F{blue}%B#%F{reset}%b: \""
+	        rustup-init
+|3,0,8,1,1,0,1695212998,"        rustup-init"
 "9	LINE	0
-	    export PS1="\[\033[31m\]┌─\[\033[31m\](%B%F{blue}$PLATFORM_LOGO%b%F{red})%F{red}──%F{red}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{red}%b]%F{red}─%F{red}[%B%F{yellow}%~%F{red}%b]%F{reset}"$'\n'"%F{red}└─%F{blue}%B#%F{reset}%b: "
-|3,0,9,1,1,0,1695212230,"    export PS1=\"\\[\\033[31m\\]┌─\\[\\033[31m\\](%B%F{blue}$PLATFORM_LOGO%b%F{red})%F{red}──%F{red}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{red}%b]%F{red}─%F{red}[%B%F{yellow}%~%F{red}%b]%F{reset}\"$'\\n'\"%F{red}└─%F{blue}%B#%F{reset}%b: \""
+	        
+|3,0,9,1,1,0,1695212995,"        "
 "-	CHAR	0
 	 
 |3,0,36,0,1,0,1695212539," "
 
 # File marks:
-'0  120  27  ~/common_conf
-|4,48,120,27,1695234682,"~/common_conf"
-'1  50  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,49,50,0,1695234522,"~/.cache/yay/emacs-git/PKGBUILD"
-'2  98  8  ~/.cache/yay/emacs-git/PKGBUILD
-|4,50,98,8,1695234500,"~/.cache/yay/emacs-git/PKGBUILD"
-'3  98  8  ~/.cache/yay/emacs-git/PKGBUILD
-|4,51,98,8,1695234500,"~/.cache/yay/emacs-git/PKGBUILD"
-'4  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,52,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
-'5  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,53,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
-'6  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,54,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
-'7  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,55,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
-'8  1  8  ~/common_conf
-|4,56,1,8,1695213056,"~/common_conf"
-'9  1  8  ~/common_conf
-|4,57,1,8,1695213056,"~/common_conf"
+'0  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,48,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+'1  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,49,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+'2  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,50,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+'3  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,51,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+'4  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,52,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+'5  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,53,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+'6  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,54,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+'7  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,55,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+'8  33  0  ~/dev/tests/csharp_playground/Program.cs
+|4,56,33,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+'9  32  0  ~/dev/tests/csharp_playground/Program.cs
+|4,57,32,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
 
 # Jumplist (newest first):
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243908,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243908,"~/dev/tests/csharp_playground/Program.cs"
+-'  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+-'  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+-'  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+-'  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243819,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243819,"~/dev/tests/csharp_playground/Program.cs"
+-'  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+-'  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+-'  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+-'  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+-'  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+-'  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243804,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243804,"~/dev/tests/csharp_playground/Program.cs"
+-'  33  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,33,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  32  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,32,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  14  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  13  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  28  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,28,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  27  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,27,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  14  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  13  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  33  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,33,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  32  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,32,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  14  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  13  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  28  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,28,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  27  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,27,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  14  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  13  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+-'  29  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,29,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  28  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,28,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  10  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  9  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  24  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,24,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  23  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,23,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  10  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  9  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  29  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,29,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  28  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,28,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  10  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  9  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  24  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,24,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  23  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,23,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  10  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  9  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243732,"~/dev/tests/csharp_playground/Program.cs"
+-'  1  0  ~/dev/tests/csharp_playground/Program.cs
+|4,39,1,0,1695243732,"~/dev/tests/csharp_playground/Program.cs"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  66  0  ~/dev/emacs/config.bat
+|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  1  0  ~/dev/emacs/config.bat
+|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
+-'  120  27  ~/common_conf
+|4,39,120,27,1695234682,"~/common_conf"
 -'  120  27  ~/common_conf
 |4,39,120,27,1695234682,"~/common_conf"
 -'  1  0  ~/common_conf
 |4,39,1,0,1695234657,"~/common_conf"
--'  50  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,50,0,1695234522,"~/.cache/yay/emacs-git/PKGBUILD"
--'  50  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,50,0,1695234522,"~/.cache/yay/emacs-git/PKGBUILD"
--'  1  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,1,0,1695234509,"~/.cache/yay/emacs-git/PKGBUILD"
--'  1  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,1,0,1695234509,"~/.cache/yay/emacs-git/PKGBUILD"
--'  98  8  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,98,8,1695234500,"~/.cache/yay/emacs-git/PKGBUILD"
--'  98  8  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,98,8,1695234500,"~/.cache/yay/emacs-git/PKGBUILD"
--'  98  8  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,98,8,1695234500,"~/.cache/yay/emacs-git/PKGBUILD"
--'  98  8  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,98,8,1695234500,"~/.cache/yay/emacs-git/PKGBUILD"
--'  1  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,1,0,1695234465,"~/.cache/yay/emacs-git/PKGBUILD"
--'  1  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,1,0,1695234465,"~/.cache/yay/emacs-git/PKGBUILD"
--'  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
--'  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
--'  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
--'  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
--'  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
--'  55  5  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,55,5,1695234453,"~/.cache/yay/emacs-git/PKGBUILD"
--'  1  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,1,0,1695234389,"~/.cache/yay/emacs-git/PKGBUILD"
--'  1  0  ~/.cache/yay/emacs-git/PKGBUILD
-|4,39,1,0,1695234389,"~/.cache/yay/emacs-git/PKGBUILD"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  1  8  ~/common_conf
-|4,39,1,8,1695213056,"~/common_conf"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  19  0  ~/.zshrc
-|4,39,19,0,1695212920,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  1  0  ~/.zshrc
-|4,39,1,0,1695212917,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
--'  199  28  ~/.zshrc
-|4,39,199,28,1695212639,"~/.zshrc"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695234657,"~/common_conf"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695234657,"~/common_conf"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695234657,"~/common_conf"
 
 # History of marks within files (newest to oldest):
+
+> ~/dev/tests/csharp_playground/csharp_playground.csproj
+	*	1695244060	0
+	"	2	0
+	^	2	0
+	.	2	0
+	+	3	0
+	+	2	0
+
+> ~/dev/tests/csharp_playground/Program.cs
+	*	1695243942	0
+	"	21	11
+	^	21	12
+	.	21	11
+	+	33	0
+	+	32	0
+	+	31	4
+	+	30	8
+	+	29	11
+	+	34	0
+	+	29	11
+	+	2	36
+	+	26	12
+	+	26	5
+	+	27	0
+	+	7	24
+	+	23	4
+	+	9	40
+	+	17	8
+	+	10	8
+	+	11	8
+	+	12	8
+	+	13	8
+	+	14	8
+	+	15	8
+	+	16	8
+	+	6	40
+	+	19	32
+	+	19	23
+	+	22	8
+	+	21	11
+
+> ~/dev/emacs/config.bat
+	*	1695236039	0
+	"	66	0
 
 > ~/common_conf
 	*	1695234681	0
@@ -2313,20 +2356,3 @@ $\[\033[31m\]
 > ~/Desktop/Growtopia.
 	*	1691849840	0
 	"	1	0
-
-> ~/dev/gprox/.projectile
-	*	1691767659	0
-	"	1	0
-
-> ~/dev/Growtopia-Proxy/.projectile
-	*	1691767652	0
-	"	1	0
-
-> ~/dev/gprox/src/main.cpp
-	*	1691767174	0
-	"	2	0
-	^	5	23
-	.	5	22
-	+	7	0
-	+	6	9
-	+	5	22
