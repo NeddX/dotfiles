@@ -34,7 +34,24 @@ install_packages_osx() {
 }
 
 # Function to install packages using APT
+install_packages_apt() {
+    echo "Installing packages using APT..."
+    sudo apt update
+    sudo apt install -y cmake llvm tmux neovim vim gcc
+    sudo apt install -y build-essential  # Install essential build tools
+    # Install Rust using rustup
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+}
 
+# Function to install packages using PACMAN
+install_packages_pacman() {
+    echo "Installing packages using PACMAN..."
+    sudo pacman -Syu
+    sudo pacman -S cmake llvm tmux neovim vim gcc rustup
+    # Install Rust using rustup
+    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+}
 
 # Function to install fonts and refresh font cache
 install_fonts() {
@@ -61,6 +78,9 @@ elif [ "$(uname -s)" == "Linux" ]; then
     echo "[!]: Detected Linux."
     if is_package_installed "apt"; then
         install_packages_apt
+        install_fonts
+    elif is_package_installed "pacman"; then
+        install_packages_pacman
         install_fonts
     else
         echo "[!]: Unsupported package manager."
