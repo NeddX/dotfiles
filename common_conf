@@ -77,19 +77,29 @@ install_fonts() {
     fc-cache -f -v
 }
 
+# Configure neovim
+configure_neovim() {
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+     $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+     echo "[!]: Run :PackerSync in neovim to install packages."
+}
+
 # Determine OS and configure accordingly
 if [ "$(uname -s)" == "Darwin" ]; then
     echo "[!]: Detected OSX."
     install_packages_oxs
     install_fonts
+    configure_neovim
 elif [ "$(uname -s)" == "Linux" ]; then
     echo "[!]: Detected Linux."
     if is_package_installed "apt"; then
         install_packages_apt
         install_fonts
+        configure_neovim
     elif is_package_installed "pacman"; then
         install_packages_pacman
         install_fonts
+        configure_neovim
     else
         echo "[!]: Unsupported package manager."
     fi

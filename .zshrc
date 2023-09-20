@@ -147,13 +147,18 @@ export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
 if [[ "$PLATFORM_OS" == "linux"  ]]; then
 	if [ -f /etc/os-release ]; then
         source /etc/os-release
-        PLATFORM_OS_RELEASE="$(echo "$ID" | tr '[:upper:]' '[:lower:]')"
+        export PLATFORM_OS_RELEASE="$(echo "$ID" | tr '[:upper:]' '[:lower:]')"
     elif [ -f /etc/lsb-release ]; then
-        PLATFORM_OS_RELEASE="$(echo "$DISTRIB_ID" | tr '[:upper:]' '[:lower:]')"
+        export PLATFORM_OS_RELEASE="$(echo "$DISTRIB_ID" | tr '[:upper:]' '[:lower:]')"
+    else
+        export PLATFORM_OS_RELEASE="$(uname -o | tr '[:upper:]' '[:lower:]')"
     fi
 
     # Decent distros
     case "$PLATFORM_OS_RELEASE" in
+        android)
+	        PLATFORM_LOGO="󰀲"	
+            ;; 
         arch)
             PLATFORM_LOGO="󰣇"
             ;;
@@ -176,13 +181,15 @@ if [[ "$PLATFORM_OS" == "linux"  ]]; then
             PLATFORM_LOGO="?"
             ;;
     esac
-elif [[ "$PLATFORM_OS" == "android"  ]]; then
-	PLATFORM_LOGO="󰀲"	
 elif [[ "$PLATFORM_OS" == "darwin" ]]; then
-    
+    PLATFORM_LOGO=""   
 fi
 
-export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{blue}%B$%F{reset}%b: "
+if [[ $UID -eq 0 ]]; then
+    export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{yellow}%B#%F{reset}%b: "
+else
+    export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{blue}%B$%F{reset}%b: "
+fi
 
 # Im env varery
 #alias emacs="emacsclient -c -a emacs"
