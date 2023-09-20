@@ -30,7 +30,9 @@ install_packages_osx() {
     brew link --overwrite gcc
 
     # Install Rustup
-    rustup-init
+    if ! is_package_installed "rustc"; then
+        rustup-init
+    fi
 }
 
 # Function to install packages using APT
@@ -40,8 +42,10 @@ install_packages_apt() {
     sudo apt install -y cmake llvm tmux neovim vim gcc emacs
     sudo apt install -y build-essential  # Install essential build tools
     # Install Rust using rustup
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+    if ! is_package_installed "rust"; then
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+    fi
 }
 
 # Function to install packages using PACMAN
@@ -50,7 +54,9 @@ install_packages_pacman() {
     sudo pacman -Syu
     sudo pacman -S cmake llvm tmux neovim vim gcc rustup emacs
     # Install Rust using rustup
-    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+    if ! is_package_installed "rustc"; then
+        rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+    fi
 }
 
 # Function to install doom emacs
