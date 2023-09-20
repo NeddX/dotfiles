@@ -21,11 +21,11 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1695174245,,"wq"
+|2,0,1695174936,,"wq"
+:w
+|2,0,1695174871,,"w"
 :q!
 |2,0,1695173730,,"q!"
-:w
-|2,0,1695173562,,"w"
 :q!@
 |2,0,1694430297,,"q!@"
 :syntax on
@@ -179,9 +179,9 @@ $
 	}
 |3,0,0,0,10,0,1695174126,"# Function to install packages using APT","install_packages_apt() {","    echo \"Installing packages using APT...\"","    sudo apt update","    sudo apt install -y cmake llvm tmux neovim vim gcc","    sudo apt install -y build-essential  # Install essential build tools","    # Install Rust using rustup","    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh",>93
 |<"    rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy","}"
-""1	LINE	0
+"1	LINE	0
 	    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-|3,1,1,1,1,0,1695174179,"    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+|3,0,1,1,1,0,1695174179,"    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 "2	LINE	0
 	    sudo pacman -S build-essential  # Install essential build tools
 |3,0,2,1,1,0,1695174165,"    sudo pacman -S build-essential  # Install essential build tools"
@@ -228,33 +228,39 @@ $
 	#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 	#fi
 |3,0,9,1,6,0,1695171064,"# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.","# Initialization code that may require console input (password prompts, [y/n]","# confirmations, etc.) must go above this block; everything else may go below.","#if [[ -r \"${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh\" ]]; then","#  source \"${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh\"","#fi"
-"-	CHAR	0
-	#
-|3,0,36,0,1,0,1695170989,"#"
+""-	CHAR	0
+	g
+|3,1,36,0,1,0,1695174538,"g"
 
 # File marks:
-'0  84  20  ~/common_conf
-|4,48,84,20,1695174245,"~/common_conf"
-'1  13  11  ~/.gitignore
-|4,49,13,11,1695173955,"~/.gitignore"
-'2  1  0  ~/.bashrc
-|4,50,1,0,1695173730,"~/.bashrc"
-'3  25  62  ~/common_conf
-|4,51,25,62,1695173645,"~/common_conf"
-'4  25  62  ~/common_conf
-|4,52,25,62,1695173645,"~/common_conf"
-'5  70  1  ~/install_fonts
-|4,53,70,1,1695173569,"~/install_fonts"
-'6  145  0  ~/install_fonts
-|4,54,145,0,1695172771,"~/install_fonts"
-'7  76  0  ~/install_fonts
-|4,55,76,0,1695172771,"~/install_fonts"
-'8  220  0  ~/.zshrc
-|4,56,220,0,1695171314,"~/.zshrc"
-'9  169  0  ~/.zshrc
-|4,57,169,0,1695169466,"~/.zshrc"
+'0  104  26  ~/common_conf
+|4,48,104,26,1695174936,"~/common_conf"
+'1  92  20  ~/common_conf
+|4,49,92,20,1695174245,"~/common_conf"
+'2  84  20  ~/common_conf
+|4,50,84,20,1695174245,"~/common_conf"
+'3  13  11  ~/.gitignore
+|4,51,13,11,1695173955,"~/.gitignore"
+'4  1  0  ~/.bashrc
+|4,52,1,0,1695173730,"~/.bashrc"
+'5  25  62  ~/common_conf
+|4,53,25,62,1695173645,"~/common_conf"
+'6  25  62  ~/common_conf
+|4,54,25,62,1695173645,"~/common_conf"
+'7  25  62  ~/common_conf
+|4,55,25,62,1695173645,"~/common_conf"
+'8  25  62  ~/common_conf
+|4,56,25,62,1695173645,"~/common_conf"
+'9  70  1  ~/install_fonts
+|4,57,70,1,1695173569,"~/install_fonts"
 
 # Jumplist (newest first):
+-'  104  26  ~/common_conf
+|4,39,104,26,1695174936,"~/common_conf"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695174300,"~/common_conf"
+-'  92  20  ~/common_conf
+|4,39,92,20,1695174245,"~/common_conf"
 -'  84  20  ~/common_conf
 |4,39,84,20,1695174245,"~/common_conf"
 -'  1  0  ~/common_conf
@@ -263,6 +269,14 @@ $
 |4,39,13,11,1695173955,"~/.gitignore"
 -'  13  11  ~/.gitignore
 |4,39,13,11,1695173955,"~/.gitignore"
+-'  13  11  ~/.gitignore
+|4,39,13,11,1695173955,"~/.gitignore"
+-'  13  11  ~/.gitignore
+|4,39,13,11,1695173955,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1695173946,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1695173946,"~/.gitignore"
 -'  1  0  ~/.gitignore
 |4,39,1,0,1695173946,"~/.gitignore"
 -'  1  0  ~/.gitignore
@@ -275,6 +289,16 @@ $
 |4,39,1,0,1695173730,"~/.bashrc"
 -'  1  0  ~/.bashrc
 |4,39,1,0,1695173730,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1695173730,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1695173730,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1695173730,"~/.bashrc"
+-'  1  0  ~/.bashrc
+|4,39,1,0,1695173730,"~/.bashrc"
+-'  25  62  ~/common_conf
+|4,39,25,62,1695173645,"~/common_conf"
 -'  25  62  ~/common_conf
 |4,39,25,62,1695173645,"~/common_conf"
 -'  25  62  ~/common_conf
@@ -325,6 +349,70 @@ $
 |4,39,70,1,1695173569,"~/install_fonts"
 -'  70  1  ~/install_fonts
 |4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  70  1  ~/install_fonts
+|4,39,70,1,1695173569,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
+-'  1  0  ~/install_fonts
+|4,39,1,0,1695172774,"~/install_fonts"
 -'  1  0  ~/install_fonts
 |4,39,1,0,1695172774,"~/install_fonts"
 -'  1  0  ~/install_fonts
@@ -367,102 +455,14 @@ $
 |4,39,76,0,1695172771,"~/install_fonts"
 -'  145  0  ~/install_fonts
 |4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  145  0  ~/install_fonts
-|4,39,145,0,1695172771,"~/install_fonts"
--'  76  0  ~/install_fonts
-|4,39,76,0,1695172771,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  1  0  ~/install_fonts
-|4,39,1,0,1695171561,"~/install_fonts"
--'  220  0  ~/.zshrc
-|4,39,220,0,1695171314,"~/.zshrc"
 
 # History of marks within files (newest to oldest):
 
 > ~/common_conf
-	*	1695174244	0
-	"	84	20
-	^	84	21
-	.	84	20
+	*	1695174936	0
+	"	104	26
+	^	104	27
+	.	104	26
 	+	45	0
 	+	39	4
 	+	40	4
@@ -481,7 +481,30 @@ $
 	+	49	41
 	+	48	22
 	+	50	19
-	+	84	20
+	+	92	20
+	+	56	31
+	+	51	61
+	+	40	59
+	+	57	22
+	+	58	8
+	+	49	14
+	+	38	12
+	+	58	55
+	+	59	74
+	+	60	31
+	+	59	3
+	+	60	35
+	+	61	32
+	+	62	0
+	+	59	76
+	+	60	0
+	+	58	36
+	+	89	21
+	+	90	0
+	+	97	42
+	+	98	25
+	+	70	30
+	+	104	26
 
 > ~/.gitignore
 	*	1695173954	0

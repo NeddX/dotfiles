@@ -35,9 +35,9 @@ install_packages_osx() {
 
 # Function to install packages using APT
 install_packages_apt() {
-    echo "Installing packages using APT..."
+    echo "[!]: Installing packages using APT..."
     sudo apt update
-    sudo apt install -y cmake llvm tmux neovim vim gcc
+    sudo apt install -y cmake llvm tmux neovim vim gcc emacs
     sudo apt install -y build-essential  # Install essential build tools
     # Install Rust using rustup
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -46,11 +46,19 @@ install_packages_apt() {
 
 # Function to install packages using PACMAN
 install_packages_pacman() {
-    echo "Installing packages using PACMAN..."
+    echo "[!]: Installing packages using PACMAN..."
     sudo pacman -Syu
-    sudo pacman -S cmake llvm tmux neovim vim gcc rustup
+    sudo pacman -S cmake llvm tmux neovim vim gcc rustup emacs
     # Install Rust using rustup
     rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
+}
+
+# Function to install doom emacs
+install_doom_emacs() {
+    echo "[!]: Installing DOOM Emacs..."
+    git clone --depth 1 https://github.com/doomemacs/doomemacs $HOME/.emacs.d
+    $HOME/.emacs.d/bin/doom install
+    $HOME/.emacs.d/bin/doom sync
 }
 
 # Function to install fonts and refresh font cache
@@ -59,7 +67,7 @@ install_fonts() {
                      "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip")
 
     echo "[!]: Downloading and installing fonts..."
-    for url in "$(font_urls[@])"; do
+    for url in "${font_urls[@]}"; do
         wget "$url" -P "$HOME/Downloads"
         unzip -q "$HOME/Downloads"/*.ttf ~/.local/share/fonts
     done
@@ -85,6 +93,12 @@ elif [ "$(uname -s)" == "Linux" ]; then
     else
         echo "[!]: Unsupported package manager."
     fi
+
+    if ! is_package_installed "doom"; then
+        install_doom_emacs
+    fi
 else
     echo "[!]: Unsupported OS."
 fi
+
+echo "[!]: Script finished."

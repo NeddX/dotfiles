@@ -186,7 +186,7 @@ export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{gree
 
 # Im env varery
 #alias emacs="emacsclient -c -a emacs"
-alias doom="~/.emacs.d/bin/doom"
+alias doom="$HOME/.emacs.d/bin/doom"
 alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
 export EDITOR=vim
 export PATH=$PATH:~/dev/ALVM/bin
