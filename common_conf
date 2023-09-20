@@ -85,9 +85,13 @@ install_fonts() {
 
 # Configure neovim
 configure_neovim() {
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-     $HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
-     echo "[!]: Run :PackerSync in neovim to install packages."
+	if [ "$1" != "win" ]; then
+		git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+		$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim
+	else
+		powershell -c 'git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"'
+	fi
+	echo "[!]: Run :PackerSync in neovim to install packages."
 }
 
 # Determine OS and configure accordingly
@@ -113,6 +117,15 @@ elif [ "$(uname -s)" == "Linux" ]; then
     if ! is_package_installed "doom"; then
         install_doom_emacs
     fi
+elif [[ "$(uname -s | tr '[:upper:]' '[:lower:]')" =~ ^(msys|cygwin|mingw) ]]; then
+	echo "[!]: Detected Microsoft Windows."
+	if ! is_package_installed "scoop"; then
+		echo "[!]: Scoop not installed. Installing Scoop..."
+		powershell -c "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser && irm get.scoop.sh | iex"	
+	install_packages_scoop
+	fi
+	install_doom_emacs
+	configure_neovim "win"
 else
     echo "[!]: Unsupported OS."
 fi
