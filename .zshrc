@@ -1,15 +1,47 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_PLUGINS="$ZSH/custom/plugins"
+
+# Check if the plugins directory exists, and create it if not
+if [[ ! -d "$ZSH_PLUGINS" ]]; then
+    echo "[!]: Creating the Zsh plugins directory..."
+        mkdir -p "$ZSH_PLUGINS"
+fi
+
+download_plugin() {
+    local plugin_url="$1"
+    local plugin_name="$2"
+    local plugin_path="$ZSH_PLUGINS/$plugin_name"
+
+    if [[ ! -d "$plugin_path" ]]; then
+        echo "[!]: Downloading $plugin_name..."
+        git clone "$plugin_url" "$plugin_path"
+        echo "[!]: Downloaded $plugin_name"
+    fi
+}
+
+# Define the plugin URLs
+autosuggestions_url="https://github.com/zsh-users/zsh-autosuggestions"
+highlighting_url="https://github.com/zsh-users/zsh-syntax-highlighting"
+fzf_url="https://github.com/junegunn/fzf"
+
+# Download zsh-autosuggestions
+download_plugin "$autosuggestions_url" "zsh-autosuggestions"
+
+# Download zsh-syntax-highlighting
+download_plugin "$highlighting_url" "zsh-syntax-highlighting"
+
+# Download fzf
+download_plugin "$fzf_url" "fzf"
+if [[ ! -d "$HOME/.fzf" ]]; then
+    echo "[!]: Installing fzf..."
+    git clone --depth 1 "$fzf_url" "$HOME/.fzf"
+    "$HOME/.fzf/install"
+    echo "Installed fzf."
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -78,7 +110,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(jump)
+plugins=(git jump zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,35 +140,46 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#export PS1="%F{blue}[%F{reset}%u%F{green}@%F{reset}%h %F{yellow}%w%F{blue}]\n%F{reset}$%F{green}: "
-
-#export PS1="%F{blue}[%F{reset} %F{cyan}%n%F{reset}@%F{cyan}%m %F{green}in %F{yellow}%~%F{blue}]%F{reset}"$'\n'"%F{green}$%F{reset}: "
-
 export PLATFORM_LOGO="󰣇 <- best distro ever cause i hate going outside"
 
-export PLATFORM_KERNEL_RELEASE=$(echo $(uname -r) | tr '[:upper:]' '[:lower:]')
-export PLATFORM_OS=$(echo $(uname -o) | tr '[:upper:]' '[:lower:]')
+export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
 
-if [[ "$PLATFORM_OS" == "gnu/linux"  ]]; then
-	# Decent distros
-	if echo "$PLATFORM_KERNEL_RELEASE" | grep -qi "arch";  then
-		PLATFORM_LOGO="󰣇"
-	elif echo "$PLATFORM_KERNEL_RELEASE" | grep -qi "debian"; then
-		PLATFORM_LOGO=""
-	elif echo "$PLATFORM_KERNEL_RELEASE" | grep -qi "manjaro"; then
-		PLATFORM_LOGO=""
-	elif echo "$PLATFORM_KERNEL_RELEASE" | grep -qi "mint"; then
-		PLATFORM_LOGO="󰣭"
-	elif echo "$PLATFORM_KERNEL_RELEASE" | grep -qi "fedora"; then
-		PLATFORM_LOGO=""
-	elif echo "$PLATFORM_KERNEL_RELEASE" | grep -qi "opensuse"; then
-		PLATFORM_LOGO=""
-	fi
+if [[ "$PLATFORM_OS" == "linux"  ]]; then
+	if [ -f /etc/os-release ]; then
+        source /etc/os-release
+        PLATFORM_OS_RELEASE="$(echo "$ID" | tr '[:upper:]' '[:lower:]')"
+    elif [ -f /etc/lsb-release ]; then
+        PLATFORM_OS_RELEASE="$(echo "$DISTRIB_ID" | tr '[:upper:]' '[:lower:]')"
+    fi
+
+    # Decent distros
+    case "$PLATFORM_OS_RELEASE" in
+        arch)
+            PLATFORM_LOGO="󰣇"
+            ;;
+        debian)
+		    PLATFORM_LOGO=""
+            ;;
+        manjaro)
+		    PLATFORM_LOGO=""
+            ;;
+        mint)
+		    PLATFORM_LOGO="󰣭"
+            ;;
+        fedora)
+		    PLATFORM_LOGO=""
+            ;;
+        opensuse*)
+		    PLATFORM_LOGO=""
+            ;;
+        *)
+            PLATFORM_LOGO="?"
+            ;;
+    esac
 elif [[ "$PLATFORM_OS" == "android"  ]]; then
 	PLATFORM_LOGO="󰀲"	
+elif [[ "$PLATFORM_OS" == "darwin" ]]; then
+    
 fi
 
 export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{blue}%B$%F{reset}%b: "
@@ -148,14 +191,9 @@ alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -Always
 export EDITOR=vim
 export PATH=$PATH:~/dev/ALVM/bin
 
-# Use fzf
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-
 # Arch Linux command-not-found support, you must have package pkgfile installed
 # https://wiki.archlinux.org/index.php/Pkgfile#.22Command_not_found.22_hook
-[[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
-
+#[[ -e /usr/share/doc/pkgfile/command-not-found.zsh ]] && source /usr/share/doc/pkgfile/command-not-found.zsh
 
 ## Options section
 setopt correct                                                  # Auto correct mistakes
@@ -191,12 +229,4 @@ zstyle ':completion:*' cache-path ~/.cache/zcache
 # automatically load bash completion functions
 autoload -U +X bashcompinit && bashcompinit
 
-## Plugins section: Enable fish style features
-# Use syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Use autosuggestion
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Repeat rate to 25 (X11)
-xset r rate 250 25
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

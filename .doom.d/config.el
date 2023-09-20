@@ -93,7 +93,7 @@
 (after! doom-themes
   (setq! doom-themes-enable-bold t
         doom-themes-enable-italic t))
-(setq! all-the-icons-completion-mode t)
+;;(setq! all-the-icons-completion-mode t)
 (setq! better-gc-cons-threshold (* 300 1024 1024))
 ; Set the GC threshold to 300 MB (becasue garbage collected languages first need to collect themselves out of this world)
 (setq! gc-cons-threshold better-gc-cons-threshold)
@@ -164,14 +164,12 @@
             (add-hook 'minibuffer-exit-hook #'gc-minibuffer-exit-hook)))
 
 ;; Rainbow-mode
-(use-package! rainbow-mode
-  :ensure t
+(use-package rainbow-mode
   :init
   (rainbow-mode t))
 
 ;; Beacon mode
-(use-package! beacon
-  :ensure t
+(use-package beacon
   :init
   (beacon-mode t))
 
@@ -214,9 +212,7 @@
 ;;(add-hook 'buffer-list-update-hook 'toggle-centaur-tabs)
 
 ;; Rustic
-(use-package! rustic
-  :ensure t
-)
+(use-package rustic)
 
 ;; nerd icons
 (use-package! nerd-icons :ensure t)
@@ -237,11 +233,11 @@
               :begin_quote   "❝"
               :end_quote     "❞"
               :header        "›"
-              :priority_a   ,(propertize "⚑" 'face 'all-the-icons-red)
-              :priority_b   ,(propertize "⬆" 'face 'all-the-icons-orange)
-              :priority_c   ,(propertize "■" 'face 'all-the-icons-yellow)
-              :priority_d   ,(propertize "⬇" 'face 'all-the-icons-green)
-              :priority_e   ,(propertize "❓" 'face 'all-the-icons-blue)
+              ;;:priority_a   ,(propertize "⚑" 'face 'all-the-icons-red)
+              ;;:priority_b   ,(propertize "⬆" 'face 'all-the-icons-orange)
+              ;;:priority_c   ,(propertize "■" 'face 'all-the-icons-yellow)
+              ;;:priority_d   ,(propertize "⬇" 'face 'all-the-icons-green)
+              ;;:priority_e   ,(propertize "❓" 'face 'all-the-icons-blue)
               :roam_tags nil
               :filetags nil))
   (set-ligatures! 'org-mode
@@ -411,7 +407,7 @@
 ;; (add-to-list 'recentf-exclude "~/.cache/treemacs-persist")
 
 ;; info-colors
-(use-package! info-colors
+(use-package info-colors
   :commands (info-colors-fontify-node))
 
 (add-hook 'Info-selection-hook
@@ -422,8 +418,8 @@
   :hook (after-init . global-emojify-mode))
 
 ;; Nyan mode
-(use-package! nyan-mode
-  :ensure t ; most definetly ensure the cat, (-50% chance of smashing your keyboard when debugging)
+(use-package nyan-mode
+  :ensure t ; most definetly ensure the cat (-50% chance of smashing your keyboard when debugging)
   :init
   (nyan-mode)
   :config
@@ -443,7 +439,7 @@
         doom-themes-enable-italic t))
 
 ;; Info colors
-(use-package! info-colors
+(use-package info-colors
   :commands (info-colors-fontify-node))
 
 (add-hook 'Info-selection-hook
@@ -454,7 +450,6 @@
 
 ;; Yasnippet
 (use-package yasnippet
-  :ensure t
   :init
   (yas-global-mode 1)
   :config
@@ -463,8 +458,7 @@
   (add-hook 'text-mode-hook 'yas-minor-mode))
 
 ;; Multiedit
-(use-package! evil-multiedit
-  :ensure t
+(use-package evil-multiedit
   :config
   (evil-multiedit-default-keybinds))
 
@@ -585,8 +579,7 @@
 ;          (debug . ((side . bottom) (slot . 3) (window-height . 0.4) (window-width . 0.35)))))
 
 ;; Treesitter
-(use-package! tree-sitter
-  :ensure t
+(use-package tree-sitter
   :hook (prog-mode . turn-on-tree-sitter-mode)
   :hook (tree-sitter-after-on . tree-sitter-hl-mode)
   :config
@@ -595,17 +588,15 @@
         tree-sitter-debug-highlight-jump-region t))
 
 ;; Dired
-(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+;;(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
 
 ;; Treemacs
-(use-package! treemacs
-  :ensure t
+(use-package treemacs
   :init
   (setq! doom-themes-treemacs-theme "doom-colors"))
 
 ; Dap
-(use-package! dap-mode
-  :ensure t
+(use-package dap-mode
   :init
   (dap-mode 0)
   :config
@@ -636,12 +627,11 @@
 )
 
 ;; Elcord
-(use-package! elcord
+(use-package elcord
   :init
   (elcord-mode 0)) ; no discord for now.
 
-(use-package! fast-scroll
-  :ensure t
+(use-package fast-scroll
   :init
   (add-hook 'fast-scroll-start-hook (lambda () (flycheck-mode -1)))
   (add-hook 'fast-scroll-end-hook (lambda () (flycheck-mode 1)))
@@ -662,8 +652,7 @@
   (lsp-ui-doc-enable t))
 
 ;; lsp-mode
-(use-package! lsp-mode
-  :ensure t
+(use-package lsp-mode
   :init
   (setq! lsp-enable-symbol-highlighting t
         lsp-lens-enable t
@@ -691,8 +680,7 @@
 ;; Company(use-package! company
 (add-hook 'after-init-hook 'global-company-mode)
 ;; from modules/completion/company/config.el
-(use-package! company
-  :ensure t
+(use-package company
   :commands (company-mode global-company-mode company-complete
                           company-complete-common company-manual-begin company-grab-line)
   :config
@@ -703,4 +691,4 @@
         company-minimum-prefix-length 1))
 
 ;; flycheck
-(use-package! flycheck :ensure t)
+(use-package flycheck)
