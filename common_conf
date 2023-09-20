@@ -1,0 +1,70 @@
+#!/bin/bash
+
+# Function to check if a package is installed
+is_package_installed() {
+    if [ -n "$(command -v "$1")" ]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+# Function to install Homebrew on OSX
+install_homebrew() {
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+}
+
+# Function to install packages using Homebrew (OSX)
+install_packages_osx() {
+    if ! is_package_installed "brew"; then
+        echo "[!]: Homebrew not installed. Installing Homebrew..."
+        install_homebrew
+    fi
+
+    echo "[!]: Installing common packages using Homebrew..."
+    brew install cmake llvm neovim vim gcc dotnet python rustup
+    brew install --cask emacs
+    
+    # Replace Apple Clang with Homebrew Clang and GCC
+    brew link --overwrite llvm
+    brew link --overwrite gcc
+
+    # Install Rustup
+    rustup-init
+}
+
+# Function to install packages using APT
+
+
+# Function to install fonts and refresh font cache
+install_fonts() {
+    local font_urls=("https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip"
+                     "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip")
+
+    echo "[!]: Downloading and installing fonts..."
+    for url in "$(font_urls[@])"; do
+        wget "$url" -P "$HOME/Downloads"
+        unzip -q "$HOME/Downloads"/*.ttf ~/.local/share/fonts
+    done
+
+    echo "[!]: Done."
+    echo "[!]: Refreshing font cache..."
+    fc-cache -f -v
+}
+
+# Determine OS and configure accordingly
+if [ "$(uname -s)" == "Darwin" ]; then
+    echo "[!]: Detected OSX."
+    install_packages_oxs
+    install_fonts
+elif [ "$(uname -s)" == "Linux" ]; then
+    echo "[!]: Detected Linux."
+    if is_package_installed "apt"; then
+        install_packages_apt
+        install_fonts
+    else
+        echo "[!]: Unsupported package manager."
+    fi
+else
+    echo "[!]: Unsupported OS."
+fi
