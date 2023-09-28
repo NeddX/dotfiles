@@ -1,3 +1,66 @@
+# My stuff
+export PLATFORM_LOGO="?"
+export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
+export PLATFORM_ALIAS="?"
+if [[ "$PLATFORM_OS" == "linux"  ]]; then
+	PLATFORM_ALIAS="linux"
+	if [ -f /etc/os-release ]; then
+        source /etc/os-release
+        export PLATFORM_OS_RELEASE="$(echo "$ID" | tr '[:upper:]' '[:lower:]')"
+    elif [ -f /etc/lsb-release ]; then
+        export PLATFORM_OS_RELEASE="$(echo "$DISTRIB_ID" | tr '[:upper:]' '[:lower:]')"
+    else
+        export PLATFORM_OS_RELEASE="$(uname -o | tr '[:upper:]' '[:lower:]')"
+    fi
+
+    case "$PLATFORM_OS_RELEASE" in
+        android)
+	        PLATFORM_LOGO="󰀲"	
+            ;; 
+        arch)
+            PLATFORM_LOGO="󰣇"
+            ;;
+        debian)
+		    PLATFORM_LOGO=""
+            ;;
+        manjaro)
+		    PLATFORM_LOGO=""
+            ;;
+        mint)
+		    PLATFORM_LOGO="󰣭"
+            ;;
+        fedora)
+		    PLATFORM_LOGO=""
+            ;;
+        opensuse*)
+		    PLATFORM_LOGO=""
+            ;;
+        *)
+            PLATFORM_LOGO="?"
+            ;;
+    esac
+elif [[ "$PLATFORM_OS" == "darwin" ]]; then
+	PLATFORM_ALIAS="osx"
+    PLATFORM_LOGO=""   
+elif [[ "$PLATFORM_OS" =~ ^(msys|cygwin|mingw) ]]; then
+	PLATFORM_ALIAS="mswin"
+	PLATFORM_LOGO=""
+fi
+
+if [[ $UID -eq 0 ]]; then
+    export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{yellow}%B#%F{reset}%b: "
+else
+    export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{blue}%B$%F{reset}%b: "
+fi
+
+# Im env varery
+#alias emacs="emacsclient -c -a emacs"
+alias doom="$HOME/.emacs.d/bin/doom"
+alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
+export EDITOR=vim
+export PATH=$PATH:~/dev/ALVM/bin
+
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH
 
@@ -112,7 +175,9 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git jump zsh-autosuggestions zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
+if [[ "$PLATFORM_ALIAS" != "mswin" ]]; then
+	source $ZSH/oh-my-zsh.sh
+fi
 
 # User configuration
 
@@ -140,63 +205,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PLATFORM_LOGO="󰣇 <- best distro ever cause i hate going outside"
-
-export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
-
-if [[ "$PLATFORM_OS" == "linux"  ]]; then
-	if [ -f /etc/os-release ]; then
-        source /etc/os-release
-        export PLATFORM_OS_RELEASE="$(echo "$ID" | tr '[:upper:]' '[:lower:]')"
-    elif [ -f /etc/lsb-release ]; then
-        export PLATFORM_OS_RELEASE="$(echo "$DISTRIB_ID" | tr '[:upper:]' '[:lower:]')"
-    else
-        export PLATFORM_OS_RELEASE="$(uname -o | tr '[:upper:]' '[:lower:]')"
-    fi
-
-    # Decent distros
-    case "$PLATFORM_OS_RELEASE" in
-        android)
-	        PLATFORM_LOGO="󰀲"	
-            ;; 
-        arch)
-            PLATFORM_LOGO="󰣇"
-            ;;
-        debian)
-		    PLATFORM_LOGO=""
-            ;;
-        manjaro)
-		    PLATFORM_LOGO=""
-            ;;
-        mint)
-		    PLATFORM_LOGO="󰣭"
-            ;;
-        fedora)
-		    PLATFORM_LOGO=""
-            ;;
-        opensuse*)
-		    PLATFORM_LOGO=""
-            ;;
-        *)
-            PLATFORM_LOGO="?"
-            ;;
-    esac
-elif [[ "$PLATFORM_OS" == "darwin" ]]; then
-    PLATFORM_LOGO=""   
-fi
-
-if [[ $UID -eq 0 ]]; then
-    export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{yellow}%B#%F{reset}%b: "
-else
-    export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{blue}%B$%F{reset}%b: "
-fi
-
-# Im env varery
-#alias emacs="emacsclient -c -a emacs"
-alias doom="$HOME/.emacs.d/bin/doom"
-alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
-export EDITOR=vim
-export PATH=$PATH:~/dev/ALVM/bin
 
 # Arch Linux command-not-found support, you must have package pkgfile installed
 # https://wiki.archlinux.org/index.php/Pkgfile#.22Command_not_found.22_hook
