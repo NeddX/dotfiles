@@ -68,6 +68,8 @@ export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_PLUGINS="$ZSH/custom/plugins"
 
+source $ZSH/oh-my-zsh.sh
+
 # Check if the plugins directory exists, and create it if not
 if [[ ! -d "$ZSH_PLUGINS" ]]; then
     echo "[!]: Creating the Zsh plugins directory..."

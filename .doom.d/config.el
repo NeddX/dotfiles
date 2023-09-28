@@ -81,7 +81,7 @@
 ;(setq! doom-debug-mode t)
 (setq! fancy-splash-image (concat doom-user-dir "assets/splash.png"))
 ;(setq! doom-font (font-spec :family "Hack Nerd Font Mono" :size 16))
-(setq! doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 16))
+(setq! doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16))
 (setq! scroll-margin 8)
 (setq! inhibit-compacting-font-caches t)
 (setq! scroll-conservatively 101)
