@@ -11,21 +11,21 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0/doom
+~MSle0~/%F{red}
 
 # Last Substitute Search Pattern:
-~MSle0~&%F{red}
+~MSle0&%F{red}
 
 # Last Substitute String:
-$\[\033[31m\]
+$
 
 # Command Line History (newest to oldest):
+:q!
+|2,0,1695926363,,"q!"
 :wq
 |2,0,1695244060,,"wq"
 :w
 |2,0,1695244011,,"w"
-:q!
-|2,0,1695236040,,"q!"
 :%s/%F{red}/\[\033[31m\]
 |2,0,1695212221,,"%s/%F{red}/\\[\\033[31m\\]"
 :q!@
@@ -88,6 +88,8 @@ $\[\033[31m\]
 |2,0,1689191638,,"set nu"
 
 # Search String History (newest to oldest):
+? @$
+|2,1,1695926284,,"@$"
 ? %F{red}
 |2,1,1695212221,,"%F{red}"
 ?/doom
@@ -98,8 +100,6 @@ $\[\033[31m\]
 |2,1,1694612734,47,"call-inter"
 ?/MAP_SIZE
 |2,1,1694138062,47,"MAP_SIZE"
-? @$
-|2,1,1694135955,,"@$"
 ?/pstr
 |2,1,1694112509,47,"pstr"
 ?/autotab
@@ -172,15 +172,12 @@ $\[\033[31m\]
 # Debug Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	    if is_package_installed "rust"; then
-	        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-	        rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy
-	    fi
-|3,0,0,1,4,0,1695213011,"    if is_package_installed \"rust\"; then","        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh","        rustup toolchain install nightly --allow-downgrade --profile minimal --component clippy","    fi"
-""1	LINE	0
+""0	LINE	0
 	
-|3,1,1,1,1,0,1695244008,""
+|3,1,0,1,1,0,1695926286,""
+"1	LINE	0
+	
+|3,0,1,1,1,0,1695244008,""
 "2	LINE	0
 	                         
 |3,0,2,1,1,0,1695243766,"                         "
@@ -210,230 +207,244 @@ $\[\033[31m\]
 |3,0,36,0,1,0,1695212539," "
 
 # File marks:
-'0  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,48,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
-'1  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,49,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
-'2  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,50,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
-'3  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,51,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
-'4  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,52,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
-'5  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,53,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
-'6  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,54,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
-'7  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,55,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
-'8  33  0  ~/dev/tests/csharp_playground/Program.cs
-|4,56,33,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
-'9  32  0  ~/dev/tests/csharp_playground/Program.cs
-|4,57,32,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
+'0  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,48,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+'1  31  0  ~/dev/BitHunt-Node/public/html/game.html
+|4,49,31,0,1695926277,"~/dev/BitHunt-Node/public/html/game.html"
+'2  30  13  ~/Downloads/main.cpp
+|4,50,30,13,1695608861,"~/Downloads/main.cpp"
+'3  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,51,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+'4  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,52,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+'5  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,53,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+'6  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,54,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+'7  5  0  ~/dev/tests/csharp_playground/Program.cs
+|4,55,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
+'8  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,56,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+'9  2  36  ~/dev/tests/csharp_playground/Program.cs
+|4,57,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
 
 # Jumplist (newest first):
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  31  0  ~/dev/BitHunt-Node/public/html/game.html
+|4,39,31,0,1695926277,"~/dev/BitHunt-Node/public/html/game.html"
+-'  31  0  ~/dev/BitHunt-Node/public/html/game.html
+|4,39,31,0,1695926277,"~/dev/BitHunt-Node/public/html/game.html"
+-'  1  0  ~/dev/BitHunt-Node/public/html/game.html
+|4,39,1,0,1695926271,"~/dev/BitHunt-Node/public/html/game.html"
+-'  1  0  ~/dev/BitHunt-Node/public/html/game.html
+|4,39,1,0,1695926271,"~/dev/BitHunt-Node/public/html/game.html"
+-'  30  13  ~/Downloads/main.cpp
+|4,39,30,13,1695608861,"~/Downloads/main.cpp"
+-'  30  13  ~/Downloads/main.cpp
+|4,39,30,13,1695608861,"~/Downloads/main.cpp"
+-'  30  13  ~/Downloads/main.cpp
+|4,39,30,13,1695608861,"~/Downloads/main.cpp"
+-'  30  13  ~/Downloads/main.cpp
+|4,39,30,13,1695608861,"~/Downloads/main.cpp"
+-'  1  0  ~/Downloads/main.cpp
+|4,39,1,0,1695608842,"~/Downloads/main.cpp"
+-'  1  0  ~/Downloads/main.cpp
+|4,39,1,0,1695608842,"~/Downloads/main.cpp"
+-'  1  0  ~/Downloads/main.cpp
+|4,39,1,0,1695608842,"~/Downloads/main.cpp"
+-'  1  0  ~/Downloads/main.cpp
+|4,39,1,0,1695608842,"~/Downloads/main.cpp"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
+-'  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
 -'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
 |4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
+-'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
+|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
 -'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
 |4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
 -'  21  11  ~/dev/tests/csharp_playground/Program.cs
 |4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
 -'  21  11  ~/dev/tests/csharp_playground/Program.cs
 |4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
+-'  21  11  ~/dev/tests/csharp_playground/Program.cs
+|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
 -'  31  4  ~/dev/tests/csharp_playground/Program.cs
 |4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
 -'  31  4  ~/dev/tests/csharp_playground/Program.cs
 |4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243908,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243908,"~/dev/tests/csharp_playground/Program.cs"
--'  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
--'  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
--'  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
--'  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243819,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243819,"~/dev/tests/csharp_playground/Program.cs"
--'  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
--'  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
--'  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
--'  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
--'  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
--'  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,39,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243804,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243804,"~/dev/tests/csharp_playground/Program.cs"
--'  33  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,33,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  32  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,32,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  14  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  13  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  28  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,28,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  27  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,27,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  14  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  13  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  33  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,33,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  32  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,32,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  14  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  13  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  28  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,28,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  27  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,27,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  14  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,14,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  13  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,13,0,1695243780,"~/dev/tests/csharp_playground/Program.cs"
--'  29  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,29,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  28  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,28,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  10  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  9  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  24  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,24,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  23  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,23,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  10  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  9  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  29  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,29,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  28  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,28,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  10  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  9  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  24  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,24,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  23  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,23,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  10  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,10,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  9  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,9,11,1695243779,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243732,"~/dev/tests/csharp_playground/Program.cs"
--'  1  0  ~/dev/tests/csharp_playground/Program.cs
-|4,39,1,0,1695243732,"~/dev/tests/csharp_playground/Program.cs"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  66  0  ~/dev/emacs/config.bat
-|4,39,66,0,1695236040,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  1  0  ~/dev/emacs/config.bat
-|4,39,1,0,1695236032,"~/dev/emacs/config.bat"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  120  27  ~/common_conf
-|4,39,120,27,1695234682,"~/common_conf"
--'  1  0  ~/common_conf
-|4,39,1,0,1695234657,"~/common_conf"
--'  1  0  ~/common_conf
-|4,39,1,0,1695234657,"~/common_conf"
--'  1  0  ~/common_conf
-|4,39,1,0,1695234657,"~/common_conf"
--'  1  0  ~/common_conf
-|4,39,1,0,1695234657,"~/common_conf"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  31  4  ~/dev/tests/csharp_playground/Program.cs
+|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
 
 # History of marks within files (newest to oldest):
+
+> ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+	*	1695926362	0
+	"	267	26
+
+> ~/dev/BitHunt-Node/public/html/game.html
+	*	1695926277	0
+	"	31	0
+
+> ~/Downloads/main.cpp
+	*	1695608858	0
+	"	30	13
+
+> ~/dev/tests/cpp_playground/.projectile
+	*	1695571929	0
+	"	1	0
 
 > ~/dev/tests/csharp_playground/csharp_playground.csproj
 	*	1695244060	0
@@ -2320,39 +2331,3 @@ $\[\033[31m\]
 	+	11	31
 	+	4	1
 	+	3	20
-
-> ~/dev/gprox/build_release
-	*	1691870117	0
-	"	41	21
-	^	41	22
-	.	25	114
-	+	20	115
-	+	25	114
-
-> ~/dev/gprox/CMakeLists.txt
-	*	1691869857	0
-	"	5	29
-	^	5	30
-	.	6	0
-	+	1	36
-	+	8	36
-	+	8	33
-	+	4	26
-	+	5	30
-	+	9	42
-	+	8	34
-	+	8	0
-	+	8	46
-	+	8	0
-	+	7	18
-	+	8	0
-	+	2	28
-	+	6	0
-
-> ~/dev/gprox/vcpkg/scripts/buildsystems/vcpkg.cmake
-	*	1691869279	0
-	"	53	66
-
-> ~/Desktop/Growtopia.
-	*	1691849840	0
-	"	1	0

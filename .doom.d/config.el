@@ -115,13 +115,13 @@
 ;;(setq! doom-theme 'doom-tokyo-night)
 ;;(setq! doom-theme 'atom-one-dark)
 ;;(setq! doom-theme 'doom-horizon)
-(setq! doom-theme 'doom-ayu-dark) ;; Second favourite
+;;(setq! doom-theme 'doom-ayu-dark) ;; Second favourite
 ;;(setq! doom-theme 'doom-old-hope)
 ;;(setq! doom-theme 'doom-vivendi)
 ;;(setq! doom-theme 'doom-acario-dark)
 ;;
 ;;(setq! doom-theme 'doom-ir-black) ;; Third favourite
-;;(setq! doom-theme 'doom-meltbus) ;; First favourite
+(setq! doom-theme 'doom-meltbus) ;; First favourite
 
 ; Custom syntax highlighting for doom-meltbus
 (if (equal doom-theme 'doom-meltbus)
@@ -303,6 +303,7 @@
   (dashboard-banner-logo-title "[EMACS is my operating system]")
   (dashboard-startup-banner (concat doom-user-dir "assets/splash.png"))
   :config
+  (setq! doom-fallback-buffer-name "*dashboard*")
   (dashboard-setup-startup-hook)
   (setq! dashboard-footer-icon (nerd-icons-codicon "nf-cod-calendar"
                                                   :height 1.1
@@ -592,8 +593,9 @@
 
 ;; Treemacs
 (use-package treemacs
-  :init
-  (setq! doom-themes-treemacs-theme "doom-colors"))
+  :config
+  (setq! doom-themes-treemacs-theme "doom-colors")
+  (treemacs-project-follow-mode 1))
 
 ; Dap
 (use-package dap-mode
