@@ -21,9 +21,9 @@ $
 
 # Command Line History (newest to oldest):
 :q!
-|2,0,1695926363,,"q!"
+|2,0,1695929796,,"q!"
 :wq
-|2,0,1695244060,,"wq"
+|2,0,1695929605,,"wq"
 :w
 |2,0,1695244011,,"w"
 :%s/%F{red}/\[\033[31m\]
@@ -207,385 +207,234 @@ $
 |3,0,36,0,1,0,1695212539," "
 
 # File marks:
-'0  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
-|4,48,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
-'1  31  0  ~/dev/BitHunt-Node/public/html/game.html
-|4,49,31,0,1695926277,"~/dev/BitHunt-Node/public/html/game.html"
-'2  30  13  ~/Downloads/main.cpp
-|4,50,30,13,1695608861,"~/Downloads/main.cpp"
-'3  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,51,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
-'4  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,52,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
-'5  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,53,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
-'6  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,54,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
-'7  5  0  ~/dev/tests/csharp_playground/Program.cs
-|4,55,5,0,1695243897,"~/dev/tests/csharp_playground/Program.cs"
-'8  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,56,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
-'9  2  36  ~/dev/tests/csharp_playground/Program.cs
-|4,57,2,36,1695243810,"~/dev/tests/csharp_playground/Program.cs"
+'0  37  0  ~/.zshrc
+|4,48,37,0,1695929796,"~/.zshrc"
+'1  133  0  ~/common_conf
+|4,49,133,0,1695929746,"~/common_conf"
+'2  133  0  ~/common_conf
+|4,50,133,0,1695929646,"~/common_conf"
+'3  247  0  ~/.zshrc
+|4,51,247,0,1695929627,"~/.zshrc"
+'4  247  0  ~/.zshrc
+|4,52,247,0,1695929627,"~/.zshrc"
+'5  6  0  ~/.git/MERGE_MSG
+|4,53,6,0,1695929605,"~/.git/MERGE_MSG"
+'6  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,54,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+'7  31  0  ~/dev/BitHunt-Node/public/html/game.html
+|4,55,31,0,1695926277,"~/dev/BitHunt-Node/public/html/game.html"
+'8  30  13  ~/Downloads/main.cpp
+|4,56,30,13,1695608861,"~/Downloads/main.cpp"
+'9  1  0  ~/dev/tests/cpp_playground/.projectile
+|4,57,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
 
 # Jumplist (newest first):
+-'  37  0  ~/.zshrc
+|4,39,37,0,1695929796,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1695929748,"~/.zshrc"
+-'  133  0  ~/common_conf
+|4,39,133,0,1695929746,"~/common_conf"
+-'  133  0  ~/common_conf
+|4,39,133,0,1695929746,"~/common_conf"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695929686,"~/common_conf"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695929686,"~/common_conf"
+-'  133  0  ~/common_conf
+|4,39,133,0,1695929646,"~/common_conf"
+-'  133  0  ~/common_conf
+|4,39,133,0,1695929646,"~/common_conf"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695929639,"~/common_conf"
+-'  1  0  ~/common_conf
+|4,39,1,0,1695929639,"~/common_conf"
+-'  247  0  ~/.zshrc
+|4,39,247,0,1695929627,"~/.zshrc"
+-'  247  0  ~/.zshrc
+|4,39,247,0,1695929627,"~/.zshrc"
+-'  247  0  ~/.zshrc
+|4,39,247,0,1695929627,"~/.zshrc"
+-'  247  0  ~/.zshrc
+|4,39,247,0,1695929627,"~/.zshrc"
+-'  247  0  ~/.zshrc
+|4,39,247,0,1695929627,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1695929616,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1695929616,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1695929616,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1695929616,"~/.zshrc"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  6  0  ~/.git/MERGE_MSG
+|4,39,6,0,1695929605,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  1  0  ~/.git/MERGE_MSG
+|4,39,1,0,1695929589,"~/.git/MERGE_MSG"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
+-'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+|4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
 -'  267  26  ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
 |4,39,267,26,1695926363,"~/dev/BitHunt-Node/public/scripts/worldgen_script.js"
 -'  13  0  ~/dev/BitHunt-Node/public
 |4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
--'  31  0  ~/dev/BitHunt-Node/public/html/game.html
-|4,39,31,0,1695926277,"~/dev/BitHunt-Node/public/html/game.html"
--'  31  0  ~/dev/BitHunt-Node/public/html/game.html
-|4,39,31,0,1695926277,"~/dev/BitHunt-Node/public/html/game.html"
--'  1  0  ~/dev/BitHunt-Node/public/html/game.html
-|4,39,1,0,1695926271,"~/dev/BitHunt-Node/public/html/game.html"
--'  1  0  ~/dev/BitHunt-Node/public/html/game.html
-|4,39,1,0,1695926271,"~/dev/BitHunt-Node/public/html/game.html"
--'  30  13  ~/Downloads/main.cpp
-|4,39,30,13,1695608861,"~/Downloads/main.cpp"
--'  30  13  ~/Downloads/main.cpp
-|4,39,30,13,1695608861,"~/Downloads/main.cpp"
--'  30  13  ~/Downloads/main.cpp
-|4,39,30,13,1695608861,"~/Downloads/main.cpp"
--'  30  13  ~/Downloads/main.cpp
-|4,39,30,13,1695608861,"~/Downloads/main.cpp"
--'  1  0  ~/Downloads/main.cpp
-|4,39,1,0,1695608842,"~/Downloads/main.cpp"
--'  1  0  ~/Downloads/main.cpp
-|4,39,1,0,1695608842,"~/Downloads/main.cpp"
--'  1  0  ~/Downloads/main.cpp
-|4,39,1,0,1695608842,"~/Downloads/main.cpp"
--'  1  0  ~/Downloads/main.cpp
-|4,39,1,0,1695608842,"~/Downloads/main.cpp"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  1  0  ~/dev/tests/cpp_playground/.projectile
-|4,39,1,0,1695571930,"~/dev/tests/cpp_playground/.projectile"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  2  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,2,0,1695244060,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  1  0  ~/dev/tests/csharp_playground/csharp_playground.csproj
-|4,39,1,0,1695244002,"~/dev/tests/csharp_playground/csharp_playground.csproj"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  21  11  ~/dev/tests/csharp_playground/Program.cs
-|4,39,21,11,1695243943,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
--'  31  4  ~/dev/tests/csharp_playground/Program.cs
-|4,39,31,4,1695243928,"~/dev/tests/csharp_playground/Program.cs"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
+-'  13  0  ~/dev/BitHunt-Node/public
+|4,39,13,0,1695926284,"~/dev/BitHunt-Node/public"
 
 # History of marks within files (newest to oldest):
 
-> ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
-	*	1695926362	0
-	"	267	26
-
-> ~/dev/BitHunt-Node/public/html/game.html
-	*	1695926277	0
-	"	31	0
-
-> ~/Downloads/main.cpp
-	*	1695608858	0
-	"	30	13
-
-> ~/dev/tests/cpp_playground/.projectile
-	*	1695571929	0
-	"	1	0
-
-> ~/dev/tests/csharp_playground/csharp_playground.csproj
-	*	1695244060	0
-	"	2	0
-	^	2	0
-	.	2	0
-	+	3	0
-	+	2	0
-
-> ~/dev/tests/csharp_playground/Program.cs
-	*	1695243942	0
-	"	21	11
-	^	21	12
-	.	21	11
-	+	33	0
-	+	32	0
-	+	31	4
-	+	30	8
-	+	29	11
-	+	34	0
-	+	29	11
-	+	2	36
-	+	26	12
-	+	26	5
-	+	27	0
-	+	7	24
-	+	23	4
-	+	9	40
-	+	17	8
-	+	10	8
-	+	11	8
-	+	12	8
-	+	13	8
-	+	14	8
-	+	15	8
-	+	16	8
-	+	6	40
-	+	19	32
-	+	19	23
-	+	22	8
-	+	21	11
-
-> ~/dev/emacs/config.bat
-	*	1695236039	0
-	"	66	0
-
-> ~/common_conf
-	*	1695234681	0
-	"	120	27
-	^	120	28
-	.	57	35
-	+	49	0
-	+	41	4
-	+	42	4
-	+	43	4
-	+	43	72
-	+	49	4
-	+	49	1
-	+	50	0
-	+	51	42
-	+	55	17
-	+	56	0
-	+	60	0
-	+	56	55
-	+	55	55
-	+	60	0
-	+	53	41
-	+	52	22
-	+	54	19
-	+	107	20
-	+	62	31
-	+	55	61
-	+	42	59
-	+	63	22
-	+	64	8
-	+	53	14
-	+	40	12
-	+	64	55
-	+	65	74
-	+	66	31
-	+	65	3
-	+	66	35
-	+	67	32
-	+	68	0
-	+	65	76
-	+	66	0
-	+	64	36
-	+	103	21
-	+	105	0
-	+	113	42
-	+	114	25
-	+	76	30
-	+	120	26
-	+	86	18
-	+	87	20
-	+	88	66
-	+	88	0
-	+	88	62
-	+	89	3
-	+	88	3
-	+	91	0
-	+	89	9
-	+	90	61
-	+	98	20
-	+	104	23
-	+	108	23
-	+	33	39
-	+	35	5
-	+	34	7
-	+	45	0
-	+	49	0
-	+	46	7
-	+	47	7
-	+	48	0
-	+	45	8
-	+	33	8
-	+	57	0
-	+	57	8
-	+	60	0
-	+	58	0
-	+	33	35
-	+	57	35
-
-> ~/.cache/yay/emacs-git/PKGBUILD
-	*	1695234521	0
-	"	50	0
-	^	98	9
-	.	43	8
-	+	43	8
-	+	54	9
-	+	27	9
-	+	43	8
-	+	54	9
-	+	27	9
-	+	25	6
-	+	27	9
-	+	43	8
-
 > ~/.zshrc
-	*	1695212919	0
-	"	19	0
+	*	1695929796	0
+	"	37	0
 	^	199	29
 	.	188	6
 	+	158	34
@@ -687,6 +536,163 @@ $
 	+	189	0
 	+	189	237
 	+	188	6
+
+> ~/common_conf
+	*	1695929746	0
+	"	133	0
+	^	120	28
+	.	57	35
+	+	49	0
+	+	41	4
+	+	42	4
+	+	43	4
+	+	43	72
+	+	49	4
+	+	49	1
+	+	50	0
+	+	51	42
+	+	55	17
+	+	56	0
+	+	60	0
+	+	56	55
+	+	55	55
+	+	60	0
+	+	53	41
+	+	52	22
+	+	54	19
+	+	107	20
+	+	62	31
+	+	55	61
+	+	42	59
+	+	63	22
+	+	64	8
+	+	53	14
+	+	40	12
+	+	64	55
+	+	65	74
+	+	66	31
+	+	65	3
+	+	66	35
+	+	67	32
+	+	68	0
+	+	65	76
+	+	66	0
+	+	64	36
+	+	103	21
+	+	105	0
+	+	113	42
+	+	114	25
+	+	76	30
+	+	120	26
+	+	86	18
+	+	87	20
+	+	88	66
+	+	88	0
+	+	88	62
+	+	89	3
+	+	88	3
+	+	91	0
+	+	89	9
+	+	90	61
+	+	98	20
+	+	104	23
+	+	108	23
+	+	33	39
+	+	35	5
+	+	34	7
+	+	45	0
+	+	49	0
+	+	46	7
+	+	47	7
+	+	48	0
+	+	45	8
+	+	33	8
+	+	57	0
+	+	57	8
+	+	60	0
+	+	58	0
+	+	33	35
+	+	57	35
+
+> ~/.git/MERGE_MSG
+	*	1695929603	0
+	"	6	0
+
+> ~/dev/BitHunt-Node/public/scripts/worldgen_script.js
+	*	1695926362	0
+	"	267	26
+
+> ~/dev/BitHunt-Node/public/html/game.html
+	*	1695926277	0
+	"	31	0
+
+> ~/Downloads/main.cpp
+	*	1695608858	0
+	"	30	13
+
+> ~/dev/tests/cpp_playground/.projectile
+	*	1695571929	0
+	"	1	0
+
+> ~/dev/tests/csharp_playground/csharp_playground.csproj
+	*	1695244060	0
+	"	2	0
+	^	2	0
+	.	2	0
+	+	3	0
+	+	2	0
+
+> ~/dev/tests/csharp_playground/Program.cs
+	*	1695243942	0
+	"	21	11
+	^	21	12
+	.	21	11
+	+	33	0
+	+	32	0
+	+	31	4
+	+	30	8
+	+	29	11
+	+	34	0
+	+	29	11
+	+	2	36
+	+	26	12
+	+	26	5
+	+	27	0
+	+	7	24
+	+	23	4
+	+	9	40
+	+	17	8
+	+	10	8
+	+	11	8
+	+	12	8
+	+	13	8
+	+	14	8
+	+	15	8
+	+	16	8
+	+	6	40
+	+	19	32
+	+	19	23
+	+	22	8
+	+	21	11
+
+> ~/dev/emacs/config.bat
+	*	1695236039	0
+	"	66	0
+
+> ~/.cache/yay/emacs-git/PKGBUILD
+	*	1695234521	0
+	"	50	0
+	^	98	9
+	.	43	8
+	+	43	8
+	+	54	9
+	+	27	9
+	+	43	8
+	+	54	9
+	+	27	9
+	+	25	6
+	+	27	9
+	+	43	8
 
 > ~/.gitignore
 	*	1695173954	0
@@ -2319,15 +2325,3 @@ $
 > ~/dev/gprox/Proxyman/Server.h
 	*	1691870643	0
 	"	53	0
-
-> ~/dev/gprox/Proxyman/main.cpp
-	*	1691870466	0
-	"	3	20
-	^	3	21
-	.	3	20
-	+	4	0
-	+	13	1
-	+	20	1
-	+	11	31
-	+	4	1
-	+	3	20
