@@ -45,6 +45,9 @@ elif [[ "$PLATFORM_OS" == "darwin" ]]; then
 elif [[ "$PLATFORM_OS" =~ ^(msys|cygwin|mingw) ]]; then
 	PLATFORM_ALIAS="mswin"
 	PLATFORM_LOGO=""
+
+	alias tmux='script -c tmux /dev/null'
+	alias msbuild=msbuild.exe
 fi
 
 if [[ $UID -eq 0 ]]; then
@@ -60,15 +63,12 @@ alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -Always
 export EDITOR=vim
 export PATH=$PATH:~/dev/ALVM/bin
 
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_PLUGINS="$ZSH/custom/plugins"
-
-source $ZSH/oh-my-zsh.sh
 
 # Check if the plugins directory exists, and create it if not
 if [[ ! -d "$ZSH_PLUGINS" ]]; then
@@ -177,9 +177,7 @@ ENABLE_CORRECTION="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git jump zsh-autosuggestions zsh-syntax-highlighting)
 
-if [[ "$PLATFORM_ALIAS" != "mswin" ]]; then
-	source $ZSH/oh-my-zsh.sh
-fi
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
