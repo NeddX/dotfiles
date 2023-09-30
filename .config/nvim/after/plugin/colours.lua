@@ -3,4 +3,4 @@ function initColours(colour)
 	vim.cmd.colorscheme(colour)
 end
 
-initColours();
+initColours("ayu");
