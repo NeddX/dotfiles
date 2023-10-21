@@ -97,7 +97,7 @@ configure_neovim() {
 # Determine OS and configure accordingly
 if [ "$(uname -s)" == "Darwin" ]; then
     echo "[!]: Detected OSX."
-    install_packages_oxs
+    install_packages_osx
     install_fonts
     configure_neovim
 elif [ "$(uname -s)" == "Linux" ]; then

@@ -56,6 +56,13 @@ else
     export PS1="%F{green}┌─%F{green}(%B%F{blue}$PLATFORM_LOGO%b%F{green})%F{green}──%F{green}[%B%F{blue}%n%F{reset}%b@%B%F{blue}%m%F{green}%b]%F{green}─%F{green}[%B%F{yellow}%~%F{green}%b]%F{reset}"$'\n'"%F{green}└─%F{blue}%B$%F{reset}%b: "
 fi
 
+if [[ "$PLATFORM_OS" == "darwin" ]]; then
+    export PATH="/usr/local/opt/llvm/bin:$PATH"
+    export LDFLAGS="-L/usr/local/opt/llvm/lib"
+    export CPPFLAGS="-I/usr/local/opt/llvm/include"
+    export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
+fi
+
 # Im env varery
 #alias emacs="emacsclient -c -a emacs"
 alias doom="$HOME/.emacs.d/bin/doom"
