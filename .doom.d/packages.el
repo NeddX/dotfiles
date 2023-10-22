@@ -99,3 +99,4 @@
 (package! rustic)
 (package! beacon)
 (package! clippy)
+;;(package! flycheck-clang-tidy)

@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/nedd/dev/netfs/.git'
 let g:netrw_dirhist_9='/home/nedd/dev/BitHunt-Node/public/scripts'
 let g:netrw_dirhist_8='/home/nedd/dev/BitHunt-Node/public'
 let g:netrw_dirhist_7='/home/nedd/dev/ALVM/ALASM/src'

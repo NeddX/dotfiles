@@ -178,7 +178,7 @@
   :ensure t
   :init
   (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
-  ;;(add-hook! 'doom-after-init-hook #'centaur-tabs-mode)
+  ;;(doom-add! 'hook-after-init-hook #'centaur-tabs-mode)
   :config
   (global-set-key (kbd "<C-S-left>")  'centaur-tabs-backward)
   (global-set-key (kbd "<C-S-right>") 'centaur-tabs-forward)
@@ -215,12 +215,12 @@
 (use-package rustic)
 
 ;; nerd icons
-(use-package! nerd-icons :ensure t)
+(use-package! nerd-icons)
 
 ;; Org
 (after! org-mode
   (org +pretty)
-  (setq org-ellipsis " ▾ ")
+  (setq! org-ellipsis " ▾ ")
   (appendq! +ligatures-extra-symbols
             `(:checkbox      "☐"
               :pending       "◼"
@@ -284,6 +284,26 @@
     :roam_tags     "#+roam_tags:"
     :filetags      "#+filetags:")
   (plist-put +ligatures-extra-symbols :name "⁍"))
+
+(defun my-org-mode-hook ()
+  (define-key org-mode-map (kbd "<M-S-up>") nil)
+  (define-key org-mode-map (kbd "<M-S-down>") nil)
+  (define-key org-mode-map (kbd "<M-up>") nil)
+  (define-key org-mode-map (kbd "<M-down>") nil)
+  (define-key org-mode-map (kbd "<C-S-left>") nil)
+  (define-key org-mode-map (kbd "<C-S-right>") nil)
+  (define-key org-mode-map (kbd "<M-left>") nil)
+  (define-key org-mode-map (kbd "<S-left>") nil)
+  (define-key org-mode-map (kbd "<S-right>") nil)
+  (define-key org-mode-map (kbd "<S-up>") nil)
+  (define-key org-mode-map (kbd "<S-down>") nil)
+  (define-key org-mode-map (kbd "<M-right>") nil)
+  (define-key org-mode-map (kbd "C-<tab>") nil)
+  (define-key org-mode-map (kbd "C-S-<tab>") nil)
+  (define-key org-mode-map (kbd "<C-up>") nil)
+  (define-key org-mode-map (kbd "<C-down>") nil))
+
+(add-hook 'org-mode-hook 'my-org-mode-hook)
 
 ;; dashboard
 (use-package dashboard
@@ -646,12 +666,11 @@
   :ensure t
   :commands lsp-ui-mode
   :config
-  (setq! lsp-ui-doc-enable t
-        lsp-ui-sideline-enable t)
+  (setq! lsp-ui-sideline-enable t)
   :custom
   (lsp-ui-peek-always-show t)
   (lsp-ui-sideline-show-hover t)
-  (lsp-ui-doc-enable t))
+  (lsp-ui-doc-enable nil))
 
 ;; lsp-mode
 (use-package lsp-mode
@@ -662,9 +681,10 @@
         lsp-modeline-code-actions-enable t
         lsp-diagnostics-provider :flycheck
         lsp-completion-show-detail t
-        lsp-completion-show-kind t)
+        lsp-completion-show-kind t
+        lsp-clients-clangd-args '("--header-insertion=never" "--background-index=false" "--clang-tidy"))
   :custom
-  (lsp-eldoc-render-all t)
+  (lsp-eldoc-render-all nil)
   (lsp-idle-delay 0.6)
   (lsp-inlay-hint-enable t)
   ;; These are optional configurations. See https://emacs-lsp.github.io/lsp-mode/page/lsp-rust-analyzer/#lsp-rust-analyzer-display-chaining-hints for a full list
