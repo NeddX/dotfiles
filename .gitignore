@@ -34,3 +34,5 @@
 !/.config/termsystemd**/**
 !/.config/termyakuakerc**/**
 !/.config/termpicom**/**
+!/.config/sway
+!/.config/i3

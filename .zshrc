@@ -65,13 +65,17 @@ fi
 
 # Im env varery
 #alias emacs="emacsclient -c -a emacs"
+alias icpy=xsel --clipboard --input
+alias logoff='sudo systemctl restart sddm'
 alias doom="$HOME/.emacs.d/bin/doom"
 alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
+alias open=xdg-open
 export EDITOR=vim
 export PATH=$PATH:~/dev/ALVM/bin
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH
+export TERMINAL=konsole
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"

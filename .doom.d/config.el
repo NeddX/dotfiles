@@ -7,7 +7,7 @@
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq! user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+       user-mail-address "john@doe.com")
 
 ;;
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
@@ -78,9 +78,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Doom/Emacs (Global)
-;(setq! doom-debug-mode t)
+                                        ;(setq! doom-debug-mode t)
 (setq! fancy-splash-image (concat doom-user-dir "assets/splash.png"))
-;(setq! doom-font (font-spec :family "Hack Nerd Font Mono" :size 16))
+                                        ;(setq! doom-font (font-spec :family "Hack Nerd Font Mono" :size 16))
 (setq! doom-font (font-spec :family "JetBrainsMono Nerd Font Mono" :size 16))
 (setq! scroll-margin 8)
 (setq! inhibit-compacting-font-caches t)
@@ -92,10 +92,10 @@
 (setq! confirm-kill-emacs nil)
 (after! doom-themes
   (setq! doom-themes-enable-bold t
-        doom-themes-enable-italic t))
+         doom-themes-enable-italic t))
 ;;(setq! all-the-icons-completion-mode t)
 (setq! better-gc-cons-threshold (* 300 1024 1024))
-; Set the GC threshold to 300 MB (becasue garbage collected languages first need to collect themselves out of this world)
+                                        ; Set the GC threshold to 300 MB (becasue garbage collected languages first need to collect themselves out of this world)
 (setq! gc-cons-threshold better-gc-cons-threshold)
 (setq! evil-want-fine-undo t)
 (setq! display-line-numbers-type 't)
@@ -108,7 +108,7 @@
 ;; :ui ligatures
 ;; :ui
 
-; Set the current theme
+                                        ; Set the current theme
 ;; Cool themes
 ;;(setq! doom-theme 'doom-one)
 ;;(setq! doom-theme 'doom-tomorrow-night)
@@ -123,7 +123,7 @@
 ;;(setq! doom-theme 'doom-ir-black) ;; Third favourite
 (setq! doom-theme 'doom-meltbus) ;; First favourite
 
-; Custom syntax highlighting for doom-meltbus
+                                        ; Custom syntax highlighting for doom-meltbus
 (if (equal doom-theme 'doom-meltbus)
     (progn
       (custom-set-faces!
@@ -182,19 +182,21 @@
   :config
   (global-set-key (kbd "<C-S-left>")  'centaur-tabs-backward)
   (global-set-key (kbd "<C-S-right>") 'centaur-tabs-forward)
+  (global-set-key (kbd "<S-left>") 'centaur-tabs-move-current-tab-to-left)
+  (global-set-key (kbd "<S-right>") 'centaur-tabs-move-current-tab-to-right)
   (global-set-key (kbd "C-S-n") 'centaur-tabs--create-new-empty-buffer)
   (global-set-key (kbd "C-S-w") 'centaur-tabs--kill-this-buffer-dont-ask)
   (setq!
-        centaur-tabs-cycle-scope 'tabs
-        centaur-tabs-style "alternate"
-        centaur-tabs-height 32
-        centaur-tabs-set-icons t
-        centaur-tabs-gray-out-icons 'buffer
-        centaur-tabs-set-bar 'left)
+   centaur-tabs-cycle-scope 'tabs
+   centaur-tabs-style "alternate"
+   centaur-tabs-height 32
+   centaur-tabs-set-icons t
+   centaur-tabs-gray-out-icons 'buffer
+   centaur-tabs-set-bar 'left)
   (centaur-tabs-group-by-projectile-project)
   (centaur-tabs-headline-match)
   (centaur-tabs-mode t)
-)
+  )
 
 ;; Toggle centaur-tabs-mode based on the visibility of '*dashboard*' buffer."
 (defun my-toggle-centaur-tabs-mode ()
@@ -326,46 +328,46 @@
   (setq! doom-fallback-buffer-name "*dashboard*")
   (dashboard-setup-startup-hook)
   (setq! dashboard-footer-icon (nerd-icons-codicon "nf-cod-calendar"
-                                                  :height 1.1
-                                                  :v-adjust -0.05
-                                                  :face 'font-lock-keyword-face))
+                                                   :height 1.1
+                                                   :v-adjust -0.05
+                                                   :face 'font-lock-keyword-face))
 
   (setq! dashboard-navigator-buttons
-        `(;; line1
-          ((,(nerd-icons-codicon "nf-cod-octoface" :height 1.5 :v-adjust 0.0)
-            "GitHub"
-            "Browse your github... nedd..."
-            (lambda (&rest _) (browse-url "https://github.com/NeddX")) nil "" " |")
-           (,(nerd-icons-codicon "nf-cod-refresh" :height 1.5 :v-adjust 0.0)
-            "Update"
-            "Update Emacs"
-            (lambda (&rest _) (auto-package-update-maybe)) warning "" " "))
+         `(;; line1
+           ((,(nerd-icons-codicon "nf-cod-octoface" :height 1.5 :v-adjust 0.0)
+             "GitHub"
+             "Browse your github... nedd..."
+             (lambda (&rest _) (browse-url "https://github.com/NeddX")) nil "" " |")
+            (,(nerd-icons-codicon "nf-cod-refresh" :height 1.5 :v-adjust 0.0)
+             "Update"
+             "Update Emacs"
+             (lambda (&rest _) (auto-package-update-maybe)) warning "" " "))
            ;;(,(nerd-icons-faicon "nf-fa-flag" :height 1.5 :v-adjust 0.0) nil
            ;; "Report a BUG"
-            ;;(lambda (&rest _) (browse-url "https://github.com/Likhon-baRoy/.emacs.d/issues/new")) error "" ""))
+           ;;(lambda (&rest _) (browse-url "https://github.com/Likhon-baRoy/.emacs.d/issues/new")) error "" ""))
 
-          ;; line 2
-          ;; ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
-          ;;   "AlienFriend"
-          ;;   "Browse Alien Page"
-          ;;   (lambda (&rest _) (browse-url "https://github.com/b-coimbra/.emacs.d")) nil "" ""))
-          ;; Empty line
-          (("" "\n" "" nil nil "" ""))
+           ;; line 2
+           ;; ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+           ;;   "AlienFriend"
+           ;;   "Browse Alien Page"
+           ;;   (lambda (&rest _) (browse-url "https://github.com/b-coimbra/.emacs.d")) nil "" ""))
+           ;; Empty line
+           (("" "\n" "" nil nil "" ""))
 
-          ;; Keybindings
-          ((,(nerd-icons-faicon "nf-fa-search" :height 0.9 :v-adjust -0.1)
-            " Find file" nil
-            (lambda (&rest _) (interactive) (call-interactively 'find-file)) nil "" "            SPC SPC"))
-          ((,(nerd-icons-octicon "nf-oct-file_directory" :height 1.0 :v-adjust -0.1)
-            " Open project" nil
-            (lambda (&rest _) (interactive) (call-interactively 'projectile-switch-project)) nil "" "         SPC p p"))
-          ((,(nerd-icons-octicon "nf-oct-three_bars" :height 1.1 :v-adjust -0.1)
-            " File explorer" nil
-            (lambda (&rest _) (interactive) (call-interactively 'dired)) nil "" "          C-x d"))
-          ;;((,(nerd-icons-codicon "nf-cod-settings" :height 0.9 :v-adjust -0.1)
-          ;;  " Open settings" nil
-          ;;  (lambda (&rest _) (open-config-file)) nil "" "        C-c e  "))
-          ))
+           ;; Keybindings
+           ((,(nerd-icons-faicon "nf-fa-search" :height 0.9 :v-adjust -0.1)
+             " Find file" nil
+             (lambda (&rest _) (interactive) (call-interactively 'find-file)) nil "" "            SPC SPC"))
+           ((,(nerd-icons-octicon "nf-oct-file_directory" :height 1.0 :v-adjust -0.1)
+             " Open project" nil
+             (lambda (&rest _) (interactive) (call-interactively 'projectile-switch-project)) nil "" "         SPC p p"))
+           ((,(nerd-icons-octicon "nf-oct-three_bars" :height 1.1 :v-adjust -0.1)
+             " File explorer" nil
+             (lambda (&rest _) (interactive) (call-interactively 'dired)) nil "" "          C-x d"))
+           ;;((,(nerd-icons-codicon "nf-cod-settings" :height 0.9 :v-adjust -0.1)
+           ;;  " Open settings" nil
+           ;;  (lambda (&rest _) (open-config-file)) nil "" "        C-c e  "))
+           ))
   (setq!
    dashboard-items '((recents        . 3)
                      (projects       . 3)
@@ -442,7 +444,8 @@
 (use-package nyan-mode
   :ensure t ; most definetly ensure the cat (-50% chance of smashing your keyboard when debugging)
   :init
-  (nyan-mode)
+  (if (window-system)
+      (nyan-mode))
   :config
   (setq! nyan-animate-nyancat t
          nyan-wavy-trail t))
@@ -457,7 +460,7 @@
 ;; Doom theme
 (after! doom-themes
   (setq! doom-themes-enable-bold t
-        doom-themes-enable-italic t))
+         doom-themes-enable-italic t))
 
 ;; Info colors
 (use-package info-colors
@@ -520,14 +523,14 @@
  "d S" (lambda ()
          (interactive)
          (dap-mode 1)
-         ;(setq! dap-auto-configure-features nil)
+                                        ;(setq! dap-auto-configure-features nil)
          (map! :map dap-mode-map
                "<f5>" #'dap-continue
                "<f10>" #'dap-next
                "<f11>" #'dap-step-in
                "<S-f11>" #'dap-step-out)
          (call-interactively 'dap-debug-last)
-        )
+         )
  )
 (map!
  :leader
@@ -548,28 +551,28 @@
          (interactive)
          (dap-mode 0)
          (call-interactively 'dap-disconnect)
-        )
-)
+         )
+ )
 (map!
  :leader
  :desc "Delete saved workspace"
  "TAB D" #'lsp-workspace-folders-remove)
-  ;(setq dap-ui-buffer-configurations
-  ;      '((,"*DAP Debug Output*"
-  ;         (side . bottom)
-  ;         (slot . 1)
-  ;         (window-width . 0.20)
-  ;         (window-height . 0.20))
-  ;        (,"*DAP Locals*"
-  ;         (side . right)
-  ;         (slot . 1)
-  ;         (window-width . 0.20)
-  ;         (window-height . 0.50))
-  ;        (,"*DAP Call Stack*"
-  ;         (side . right)
-  ;         (slot . 2)
-  ;         (window-width . 0.20)
-  ;         (window-height . 0.50)))))
+                                        ;(setq dap-ui-buffer-configurations
+                                        ;      '((,"*DAP Debug Output*"
+                                        ;         (side . bottom)
+                                        ;         (slot . 1)
+                                        ;         (window-width . 0.20)
+                                        ;         (window-height . 0.20))
+                                        ;        (,"*DAP Locals*"
+                                        ;         (side . right)
+                                        ;         (slot . 1)
+                                        ;         (window-width . 0.20)
+                                        ;         (window-height . 0.50))
+                                        ;        (,"*DAP Call Stack*"
+                                        ;         (side . right)
+                                        ;         (slot . 2)
+                                        ;         (window-width . 0.20)
+                                        ;         (window-height . 0.50)))))
 
 (map!
  :leader
@@ -588,16 +591,16 @@
  :desc "Delete all breakpoints"
  "d R" #'dap-breakpoint-delete-all)
 
-;(use-package! dap-ui
-;  :ensure t
-;  :config
-;  ;; Set the layout for the DAP-Debug windows
-;  (setq! dap-ui-buffer-configurations
-;        '((sidebar . ((side . right) (slot . 1) (window-width . 0.35)))
-;          (locals . ((side . right) (slot . 2) (window-width . 0.35)))
-;          (sessions . ((side . left) (slot . 1) (window-width . 0.35)))
-;          (breakpoints . ((side . left) (slot . 2) (window-width . 0.35)))
-;          (debug . ((side . bottom) (slot . 3) (window-height . 0.4) (window-width . 0.35)))))
+                                        ;(use-package! dap-ui
+                                        ;  :ensure t
+                                        ;  :config
+                                        ;  ;; Set the layout for the DAP-Debug windows
+                                        ;  (setq! dap-ui-buffer-configurations
+                                        ;        '((sidebar . ((side . right) (slot . 1) (window-width . 0.35)))
+                                        ;          (locals . ((side . right) (slot . 2) (window-width . 0.35)))
+                                        ;          (sessions . ((side . left) (slot . 1) (window-width . 0.35)))
+                                        ;          (breakpoints . ((side . left) (slot . 2) (window-width . 0.35)))
+                                        ;          (debug . ((side . bottom) (slot . 3) (window-height . 0.4) (window-width . 0.35)))))
 
 ;; Treesitter
 (use-package tree-sitter
@@ -606,7 +609,7 @@
   :config
   (require 'tree-sitter-langs)
   (setq! tree-sitter-debug-jump-buttons t
-        tree-sitter-debug-highlight-jump-region t))
+         tree-sitter-debug-highlight-jump-region t))
 
 ;; Dired
 ;;(add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
@@ -617,7 +620,7 @@
   (setq! doom-themes-treemacs-theme "doom-colors")
   (treemacs-project-follow-mode 1))
 
-; Dap
+                                        ; Dap
 (use-package dap-mode
   :init
   (dap-mode 0)
@@ -641,12 +644,12 @@
 
   :custom
   (dap-auto-configure-features '(locals expressions))
-  ;(dap-auto-configure-features nil)
+                                        ;(dap-auto-configure-features nil)
 
   :config
   (dap-ui-mode 1)
   (setq! dap-gdb-lldb-debug-window nil)
-)
+  )
 
 ;; Elcord
 (use-package elcord
@@ -676,13 +679,13 @@
 (use-package lsp-mode
   :init
   (setq! lsp-enable-symbol-highlighting t
-        lsp-lens-enable t
-        lsp-headerline-breadcrumb-enable t
-        lsp-modeline-code-actions-enable t
-        lsp-diagnostics-provider :flycheck
-        lsp-completion-show-detail t
-        lsp-completion-show-kind t
-        lsp-clients-clangd-args '("--header-insertion=never" "--background-index=false" "--clang-tidy"))
+         lsp-lens-enable t
+         lsp-headerline-breadcrumb-enable t
+         lsp-modeline-code-actions-enable t
+         lsp-diagnostics-provider :flycheck
+         lsp-completion-show-detail t
+         lsp-completion-show-kind t
+         lsp-clients-clangd-args '("--header-insertion=never" "--background-index=false" "--clang-tidy"))
   :custom
   (lsp-eldoc-render-all nil)
   (lsp-idle-delay 0.6)
@@ -707,10 +710,10 @@
                           company-complete-common company-manual-begin company-grab-line)
   :config
   (setq! company-idle-delay 0.5
-        company-tooltip-limit 10
-        company-dabbrev-downcase nil
-        company-dabbrev-ignore-case nil
-        company-minimum-prefix-length 1))
+         company-tooltip-limit 10
+         company-dabbrev-downcase nil
+         company-dabbrev-ignore-case nil
+         company-minimum-prefix-length 1))
 
 ;; flycheck
 (use-package flycheck)
