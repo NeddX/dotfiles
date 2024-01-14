@@ -21,11 +21,13 @@ $
 
 # Command Line History (newest to oldest):
 :wq
-|2,0,1705266991,,"wq"
+|2,0,1705269515,,"wq"
+:w
+|2,0,1705269481,,"w"
+:q1
+|2,0,1705267640,,"q1"
 :q!
 |2,0,1705266974,,"q!"
-:w
-|2,0,1705266971,,"w"
 :q
 |2,0,1705266856,,"q"
 :w!
@@ -78,8 +80,6 @@ $
 |2,0,1689422491,,"x"
 :%s/RLA
 |2,0,1689422482,,"%s/RLA"
-:q1
-|2,0,1689265139,,"q1"
 :%s/RVM/RLVM
 |2,0,1689262014,,"%s/RVM/RLVM"
 :%s/RVM_/RLVM_
@@ -207,75 +207,106 @@ $
 "0	LINE	0
 	output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 |3,0,0,1,1,0,1705266815,"output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill"
-""1	LINE	0
-	    left_handed enabled
-|3,1,1,1,1,0,1705266822,"    left_handed enabled"
+"1	LINE	0
+	    }
+|3,0,1,1,1,0,1705269344,"    }"
 "2	LINE	0
-	    left_handed enabled
-|3,0,2,1,1,0,1705266643,"    left_handed enabled"
+	    xkb_options {
+|3,0,2,1,1,0,1705269343,"    xkb_options {"
 "3	LINE	0
-	# My stuff
-|3,0,3,1,1,0,1705266208,"# My stuff"
+	    left_handed enabled
+|3,0,3,1,1,0,1705266822,"    left_handed enabled"
 "4	LINE	0
-	exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111
-|3,0,4,1,1,0,1705266207,"exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111"
+	    left_handed enabled
+|3,0,4,1,1,0,1705266643,"    left_handed enabled"
 "5	LINE	0
-	exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111
-|3,0,5,1,1,0,1705244777,"exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111"
+	# My stuff
+|3,0,5,1,1,0,1705266208,"# My stuff"
 "6	LINE	0
-	    cmake_build_generator="Visual Studio 17"
-|3,0,6,1,1,0,1703963731,"    cmake_build_generator=\"Visual Studio 17\""
+	exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111
+|3,0,6,1,1,0,1705266207,"exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111"
 "7	LINE	0
-	
-|3,0,7,1,1,0,1703963575,""
+	exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111
+|3,0,7,1,1,0,1705244777,"exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111"
 "8	LINE	0
-	
-|3,0,8,1,1,0,1703962867,""
+	    cmake_build_generator="Visual Studio 17"
+|3,0,8,1,1,0,1703963731,"    cmake_build_generator=\"Visual Studio 17\""
 "9	LINE	0
-	if [ -z ${CODEX_BINARY_DIR+x} ]; then
-	    echo "Couldn't find Codex build directory."
-	    exit -1
-	fi
-|3,0,9,1,4,0,1703962867,"if [ -z ${CODEX_BINARY_DIR+x} ]; then","    echo \"Couldn't find Codex build directory.\"","    exit -1","fi"
-"-	CHAR	0
-	0
-|3,0,36,0,1,0,1705266056,"0"
+	
+|3,0,9,1,1,0,1703963575,""
+""-	CHAR	0
+	d
+|3,1,36,0,1,0,1705269446,"d"
 
 # File marks:
-'0  38  11  ~/.gitignore
-|4,48,38,11,1705266991,"~/.gitignore"
-'1  198  55  ~/.config/sway/config
-|4,49,198,55,1705266974,"~/.config/sway/config"
-'2  26  0  /etc/sway/config
-|4,50,26,0,1705266856,"/etc/sway/config"
-'3  195  23  ~/.config/sway/config
-|4,51,195,23,1705266223,"~/.config/sway/config"
-'4  195  23  ~/.config/sway/config
-|4,52,195,23,1705266223,"~/.config/sway/config"
-'5  33  17  ~/.config/sway/config
-|4,53,33,17,1705266113,"~/.config/sway/config"
-'6  33  17  ~/.config/sway/config
-|4,54,33,17,1705266113,"~/.config/sway/config"
-'7  33  17  ~/.config/sway/config
-|4,55,33,17,1705266113,"~/.config/sway/config"
-'8  33  17  ~/.config/sway/config
-|4,56,33,17,1705266113,"~/.config/sway/config"
-'9  33  22  ~/.config/sway/config
-|4,57,33,22,1705266098,"~/.config/sway/config"
+'0  210  17  ~/.config/sway/config
+|4,48,210,17,1705269515,"~/.config/sway/config"
+'1  206  20  ~/.config/sway/config
+|4,49,206,20,1705267640,"~/.config/sway/config"
+'2  206  20  ~/.config/sway/config
+|4,50,206,20,1705267640,"~/.config/sway/config"
+'3  38  11  ~/.gitignore
+|4,51,38,11,1705266991,"~/.gitignore"
+'4  38  11  ~/.gitignore
+|4,52,38,11,1705266991,"~/.gitignore"
+'5  198  55  ~/.config/sway/config
+|4,53,198,55,1705266974,"~/.config/sway/config"
+'6  198  55  ~/.config/sway/config
+|4,54,198,55,1705266974,"~/.config/sway/config"
+'7  198  55  ~/.config/sway/config
+|4,55,198,55,1705266974,"~/.config/sway/config"
+'8  198  55  ~/.config/sway/config
+|4,56,198,55,1705266974,"~/.config/sway/config"
+'9  26  0  /etc/sway/config
+|4,57,26,0,1705266856,"/etc/sway/config"
 
 # Jumplist (newest first):
+-'  210  17  ~/.config/sway/config
+|4,39,210,17,1705269515,"~/.config/sway/config"
+-'  1  0  ~/.config/sway/config
+|4,39,1,0,1705267694,"~/.config/sway/config"
+-'  206  20  ~/.config/sway/config
+|4,39,206,20,1705267640,"~/.config/sway/config"
+-'  206  20  ~/.config/sway/config
+|4,39,206,20,1705267640,"~/.config/sway/config"
+-'  1  0  ~/.config/sway/config
+|4,39,1,0,1705267535,"~/.config/sway/config"
 -'  38  11  ~/.gitignore
 |4,39,38,11,1705266991,"~/.gitignore"
+-'  38  11  ~/.gitignore
+|4,39,38,11,1705266991,"~/.gitignore"
+-'  38  11  ~/.gitignore
+|4,39,38,11,1705266991,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1705266978,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1705266978,"~/.gitignore"
 -'  1  0  ~/.gitignore
 |4,39,1,0,1705266978,"~/.gitignore"
 -'  198  55  ~/.config/sway/config
 |4,39,198,55,1705266974,"~/.config/sway/config"
 -'  198  55  ~/.config/sway/config
 |4,39,198,55,1705266974,"~/.config/sway/config"
+-'  198  55  ~/.config/sway/config
+|4,39,198,55,1705266974,"~/.config/sway/config"
+-'  198  55  ~/.config/sway/config
+|4,39,198,55,1705266974,"~/.config/sway/config"
 -'  26  0  /etc/sway/config
 |4,39,26,0,1705266856,"/etc/sway/config"
 -'  26  0  /etc/sway/config
 |4,39,26,0,1705266856,"/etc/sway/config"
+-'  26  0  /etc/sway/config
+|4,39,26,0,1705266856,"/etc/sway/config"
+-'  26  0  /etc/sway/config
+|4,39,26,0,1705266856,"/etc/sway/config"
+-'  26  0  /etc/sway/config
+|4,39,26,0,1705266856,"/etc/sway/config"
+-'  1  0  /etc/sway/config
+|4,39,1,0,1705266809,"/etc/sway/config"
+-'  1  0  /etc/sway/config
+|4,39,1,0,1705266809,"/etc/sway/config"
+-'  1  0  /etc/sway/config
+|4,39,1,0,1705266809,"/etc/sway/config"
 -'  1  0  /etc/sway/config
 |4,39,1,0,1705266809,"/etc/sway/config"
 -'  1  0  /etc/sway/config
@@ -296,6 +327,14 @@ $
 |4,39,195,23,1705266223,"~/.config/sway/config"
 -'  195  23  ~/.config/sway/config
 |4,39,195,23,1705266223,"~/.config/sway/config"
+-'  195  23  ~/.config/sway/config
+|4,39,195,23,1705266223,"~/.config/sway/config"
+-'  195  23  ~/.config/sway/config
+|4,39,195,23,1705266223,"~/.config/sway/config"
+-'  66  0  ~/.config/sway/config
+|4,39,66,0,1705266205,"~/.config/sway/config"
+-'  66  0  ~/.config/sway/config
+|4,39,66,0,1705266205,"~/.config/sway/config"
 -'  66  0  ~/.config/sway/config
 |4,39,66,0,1705266205,"~/.config/sway/config"
 -'  66  0  ~/.config/sway/config
@@ -316,6 +355,10 @@ $
 |4,39,1,0,1705266199,"~/.config/sway/config"
 -'  1  0  ~/.config/sway/config
 |4,39,1,0,1705266199,"~/.config/sway/config"
+-'  33  17  ~/.config/sway/config
+|4,39,33,17,1705266113,"~/.config/sway/config"
+-'  33  17  ~/.config/sway/config
+|4,39,33,17,1705266113,"~/.config/sway/config"
 -'  33  17  ~/.config/sway/config
 |4,39,33,17,1705266113,"~/.config/sway/config"
 -'  33  17  ~/.config/sway/config
@@ -396,6 +439,10 @@ $
 |4,39,10,12,1705265820,"~/.config/sway/config"
 -'  10  12  ~/.config/sway/config
 |4,39,10,12,1705265820,"~/.config/sway/config"
+-'  10  12  ~/.config/sway/config
+|4,39,10,12,1705265820,"~/.config/sway/config"
+-'  10  12  ~/.config/sway/config
+|4,39,10,12,1705265820,"~/.config/sway/config"
 -'  1  0  ~/.config/sway/config
 |4,39,1,0,1705265814,"~/.config/sway/config"
 -'  1  0  ~/.config/sway/config
@@ -404,56 +451,6 @@ $
 |4,39,1,0,1705265814,"~/.config/sway/config"
 -'  1  0  ~/.config/sway/config
 |4,39,1,0,1705265814,"~/.config/sway/config"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
 -'  8  0  ~/.config/sway
 |4,39,8,0,1705265812,"~/.config/sway"
 -'  8  0  ~/.config/sway
@@ -466,6 +463,68 @@ $
 |4,39,8,0,1705265812,"~/.config/sway"
 
 # History of marks within files (newest to oldest):
+
+> ~/.config/sway/config
+	*	1705269515	0
+	"	210	17
+	^	210	17
+	.	210	16
+	+	15	24
+	+	10	4
+	+	11	4
+	+	12	4
+	+	13	4
+	+	14	4
+	+	15	0
+	+	8	0
+	+	7	4
+	+	6	4
+	+	5	4
+	+	4	4
+	+	3	4
+	+	2	4
+	+	1	34
+	+	17	16
+	+	33	47
+	+	10	12
+	+	33	17
+	+	213	0
+	+	195	23
+	+	196	0
+	+	195	35
+	+	196	21
+	+	197	0
+	+	207	0
+	+	202	4
+	+	203	4
+	+	204	4
+	+	205	4
+	+	206	4
+	+	201	35
+	+	202	0
+	+	206	21
+	+	201	44
+	+	206	20
+	+	200	54
+	+	198	0
+	+	199	0
+	+	198	54
+	+	206	20
+	+	209	6
+	+	209	46
+	+	210	17
+	+	210	25
+	+	211	25
+	+	210	0
+	+	212	0
+	+	211	4
+	+	210	10
+	+	211	10
+	+	210	16
+	+	211	18
+	+	210	17
+	+	209	34
+	+	210	16
 
 > ~/.gitignore
 	*	1705266991	0
@@ -549,52 +608,6 @@ $
 	+	21	1
 	+	13	11
 	+	38	11
-
-> ~/.config/sway/config
-	*	1705266974	0
-	"	198	55
-	^	198	55
-	.	198	54
-	+	15	24
-	+	10	4
-	+	11	4
-	+	12	4
-	+	13	4
-	+	14	4
-	+	15	0
-	+	8	0
-	+	7	4
-	+	6	4
-	+	5	4
-	+	4	4
-	+	3	4
-	+	2	4
-	+	1	34
-	+	17	16
-	+	33	47
-	+	10	12
-	+	33	17
-	+	209	0
-	+	195	23
-	+	196	0
-	+	195	35
-	+	196	21
-	+	197	0
-	+	207	0
-	+	202	4
-	+	203	4
-	+	204	4
-	+	205	4
-	+	206	4
-	+	201	35
-	+	202	0
-	+	206	21
-	+	201	44
-	+	206	20
-	+	200	54
-	+	198	0
-	+	199	0
-	+	198	54
 
 > /etc/sway/config
 	*	1705266855	0
