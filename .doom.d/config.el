@@ -130,7 +130,7 @@
         '(font-lock-keyword-face :foreground "#eb2672")
         '(font-lock-function-name-face :foreground "#60d7db")
         '(font-lock-type-face :foreground "#78c241")
-        '(font-lock-operator-face :forceground "#bf984a")
+        '(font-lock-operator-face :foreground "#bf984a") ; Fix typo here
         '(font-lock-constant-face :foreground "#57d0e9")
         '(show-paren-match-face :foreground "#78c241")
         '(font-lock-string-face :foreground "#bf984a")

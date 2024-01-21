@@ -11,7 +11,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/\<enabled\>
+~MSle0~/Return
 
 # Last Substitute Search Pattern:
 ~MSle0&CMAKE_CURRENT_DIR
@@ -20,14 +20,18 @@
 $
 
 # Command Line History (newest to oldest):
+:q!
+|2,0,1705836782,,"q!"
 :wq
-|2,0,1705269515,,"wq"
+|2,0,1705521275,,"wq"
+:w1q
+|2,0,1705521274,,"w1q"
 :w
-|2,0,1705269481,,"w"
+|2,0,1705521269,,"w"
+:'<,'>%y*
+|2,0,1705424470,,"'<,'>%y*"
 :q1
 |2,0,1705267640,,"q1"
-:q!
-|2,0,1705266974,,"q!"
 :q
 |2,0,1705266856,,"q"
 :w!
@@ -40,8 +44,6 @@ $
 |2,0,1702680836,,"'<,'>y%*"
 :%s/CMAKE_CURRENT_DIR/CMAKE_CURRENT_SOURCE_DIR
 |2,0,1700228863,,"%s/CMAKE_CURRENT_DIR/CMAKE_CURRENT_SOURCE_DIR"
-:'<,'>%y*
-|2,0,1699616792,,"'<,'>%y*"
 :!
 |2,0,1698284408,,"!"
 :%s/%F{red}/\[\033[31m\]
@@ -96,6 +98,18 @@ $
 |2,0,1689191638,,"set nu"
 
 # Search String History (newest to oldest):
+?/Return
+|2,1,1705521250,47,"Return"
+?/TERMINAL
+|2,1,1705521239,47,"TERMINAL"
+?/alias
+|2,1,1705425069,47,"alias"
+?/cust
+|2,1,1705424449,47,"cust"
+?/shippig
+|2,1,1705344773,47,"shippig"
+?/CE_INSTALL
+|2,1,1705316894,47,"CE_INSTALL"
 ? @$
 |2,1,1705265811,,"@$"
 ? \<enabled\>
@@ -112,8 +126,6 @@ $
 |2,1,1705243736,47,"mod+R"
 ?/dmenu
 |2,1,1705243368,47,"dmenu"
-?/alias
-|2,1,1705243272,47,"alias"
 ?/dmenu_run
 |2,1,1705243147,47,"dmenu_run"
 ?/install
@@ -186,16 +198,6 @@ $
 |2,1,1691071571,,"mylib"
 ??\a
 |2,1,1691062113,63,"\\a"
-? .end
-|2,1,1690700370,,".end"
-?/l2
-|2,1,1690481154,47,"l2"
-?/community
-|2,1,1690055976,47,"community"
-? \<4\>
-|2,1,1689773208,,"\\<4\\>"
-? \<Wants\>
-|2,1,1689520673,,"\\<Wants\\>"
 
 # Expression History (newest to oldest):
 
@@ -205,270 +207,403 @@ $
 
 # Registers:
 "0	LINE	0
-	output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-|3,0,0,1,1,0,1705266815,"output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill"
+	# Create a custom build command and a dummy target for it to copy
+	# compile_commands.json to the source directory for LSPs.
+	add_custom_command(
+	  OUTPUT ${CMAKE_SOURCE_DIR}/compile_commands.json
+	  COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/compile_commands.json
+	          ${CMAKE_SOURCE_DIR}/compile_commands.json
+	  DEPENDS ${CMAKE_BINARY_DIR}/compile_commands.json
+	  COMMENT "Copying compile_commands.json...")
+	
+	add_custom_target(copy_compile_commands ALL
+	                  DEPENDS ${CMAKE_SOURCE_DIR}/compile_commands.json)
+|3,0,0,1,11,0,1705424463,"# Create a custom build command and a dummy target for it to copy","# compile_commands.json to the source directory for LSPs.","add_custom_command(","  OUTPUT ${CMAKE_SOURCE_DIR}/compile_commands.json","  COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/compile_commands.json","          ${CMAKE_SOURCE_DIR}/compile_commands.json","  DEPENDS ${CMAKE_BINARY_DIR}/compile_commands.json",>49
+|<"  COMMENT \"Copying compile_commands.json...\")","","add_custom_target(copy_compile_commands ALL","                  DEPENDS ${CMAKE_SOURCE_DIR}/compile_commands.json)"
 "1	LINE	0
-	    }
-|3,0,1,1,1,0,1705269344,"    }"
+	
+|3,0,1,1,1,0,1705424265,""
 "2	LINE	0
-	    xkb_options {
-|3,0,2,1,1,0,1705269343,"    xkb_options {"
+	message(":: BRUH :: ${SUB_DIRS}")
+|3,0,2,1,1,0,1705424265,"message(\":: BRUH :: ${SUB_DIRS}\")"
 "3	LINE	0
-	    left_handed enabled
-|3,0,3,1,1,0,1705266822,"    left_handed enabled"
+	#
+|3,0,3,1,1,0,1705424247,"#"
 "4	LINE	0
-	    left_handed enabled
-|3,0,4,1,1,0,1705266643,"    left_handed enabled"
+	# Same with every subdirectory of src/.
+	#foreach(SUB_DIRS ${DIR})
+	#  message("SRC :: ${DIR}")
+	#  target_include_directories(MinLib PUBLIC ${DIR})
+	#endforeach()
+|3,0,4,1,5,0,1705424246,"# Same with every subdirectory of src/.","#foreach(SUB_DIRS ${DIR})","#  message(\"SRC :: ${DIR}\")","#  target_include_directories(MinLib PUBLIC ${DIR})","#endforeach()"
 "5	LINE	0
-	# My stuff
-|3,0,5,1,1,0,1705266208,"# My stuff"
+	file(
+	  GLOB SRC_SUB_DIRS
+	  LIST_DIRECTORIES true
+	  "${CMAKE_CURRENT_SOURCE_DIR}/src")
+|3,0,5,1,4,0,1705424169,"file(","  GLOB SRC_SUB_DIRS","  LIST_DIRECTORIES true","  \"${CMAKE_CURRENT_SOURCE_DIR}/src\")"
 "6	LINE	0
-	exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111
-|3,0,6,1,1,0,1705266207,"exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111"
+	foreach(SRC_SUB_DIRS ${DIR})
+	  message("SRC :: ${DIR}")
+	  target_include_directories(MinLib PUBLIC ${DIR})
+	endforeach()
+|3,0,6,1,4,0,1705424165,"foreach(SRC_SUB_DIRS ${DIR})","  message(\"SRC :: ${DIR}\")","  target_include_directories(MinLib PUBLIC ${DIR})","endforeach()"
 "7	LINE	0
-	exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111
-|3,0,7,1,1,0,1705244777,"exec --no-startup-id nmcli device wifi connect 34:60:F9:C0:37:AF password 11111111"
+	file(
+	  GLOB SRC_SUB_DIRS
+	  LIST_DIRECTORIES true
+	  "${CMAKE_CURRENT_SOURCE_DIR}/src")
+|3,0,7,1,4,0,1705424157,"file(","  GLOB SRC_SUB_DIRS","  LIST_DIRECTORIES true","  \"${CMAKE_CURRENT_SOURCE_DIR}/src\")"
 "8	LINE	0
-	    cmake_build_generator="Visual Studio 17"
-|3,0,8,1,1,0,1703963731,"    cmake_build_generator=\"Visual Studio 17\""
+	foreach(SRC_SUB_DIRS ${DIR})
+	  message("SRC :: ${DIR}")
+	  target_include_directories(MinLib PUBLIC ${DIR})
+	endforeach()
+|3,0,8,1,4,0,1705424063,"foreach(SRC_SUB_DIRS ${DIR})","  message(\"SRC :: ${DIR}\")","  target_include_directories(MinLib PUBLIC ${DIR})","endforeach()"
 "9	LINE	0
 	
-|3,0,9,1,1,0,1703963575,""
+|3,0,9,1,1,0,1705347906,""
 ""-	CHAR	0
-	d
-|3,1,36,0,1,0,1705269446,"d"
+	"
+|3,1,36,0,1,0,1705521268,"\""
 
 # File marks:
-'0  210  17  ~/.config/sway/config
-|4,48,210,17,1705269515,"~/.config/sway/config"
-'1  206  20  ~/.config/sway/config
-|4,49,206,20,1705267640,"~/.config/sway/config"
-'2  206  20  ~/.config/sway/config
-|4,50,206,20,1705267640,"~/.config/sway/config"
-'3  38  11  ~/.gitignore
-|4,51,38,11,1705266991,"~/.gitignore"
-'4  38  11  ~/.gitignore
-|4,52,38,11,1705266991,"~/.gitignore"
-'5  198  55  ~/.config/sway/config
-|4,53,198,55,1705266974,"~/.config/sway/config"
-'6  198  55  ~/.config/sway/config
-|4,54,198,55,1705266974,"~/.config/sway/config"
-'7  198  55  ~/.config/sway/config
-|4,55,198,55,1705266974,"~/.config/sway/config"
-'8  198  55  ~/.config/sway/config
-|4,56,198,55,1705266974,"~/.config/sway/config"
-'9  26  0  /etc/sway/config
-|4,57,26,0,1705266856,"/etc/sway/config"
+'0  9  0  ~/.zshrc
+|4,48,9,0,1705836782,"~/.zshrc"
+'1  54  34  ~/.config/sway/config
+|4,49,54,34,1705521275,"~/.config/sway/config"
+'2  79  7  ~/.zshrc
+|4,50,79,7,1705521240,"~/.zshrc"
+'3  79  7  ~/.zshrc
+|4,51,79,7,1705521240,"~/.zshrc"
+'4  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,52,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+'5  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,53,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+'6  68  7  ~/.zshrc
+|4,54,68,7,1705425129,"~/.zshrc"
+'7  68  7  ~/.zshrc
+|4,55,68,7,1705425129,"~/.zshrc"
+'8  68  7  ~/.zshrc
+|4,56,68,7,1705425129,"~/.zshrc"
+'9  68  7  ~/.zshrc
+|4,57,68,7,1705425129,"~/.zshrc"
 
 # Jumplist (newest first):
--'  210  17  ~/.config/sway/config
-|4,39,210,17,1705269515,"~/.config/sway/config"
+-'  9  0  ~/.zshrc
+|4,39,9,0,1705836782,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1705836779,"~/.zshrc"
+-'  54  34  ~/.config/sway/config
+|4,39,54,34,1705521275,"~/.config/sway/config"
+-'  54  34  ~/.config/sway/config
+|4,39,54,34,1705521275,"~/.config/sway/config"
+-'  17  0  ~/.config/sway/config
+|4,39,17,0,1705521250,"~/.config/sway/config"
+-'  17  0  ~/.config/sway/config
+|4,39,17,0,1705521250,"~/.config/sway/config"
 -'  1  0  ~/.config/sway/config
-|4,39,1,0,1705267694,"~/.config/sway/config"
--'  206  20  ~/.config/sway/config
-|4,39,206,20,1705267640,"~/.config/sway/config"
--'  206  20  ~/.config/sway/config
-|4,39,206,20,1705267640,"~/.config/sway/config"
+|4,39,1,0,1705521244,"~/.config/sway/config"
 -'  1  0  ~/.config/sway/config
-|4,39,1,0,1705267535,"~/.config/sway/config"
--'  38  11  ~/.gitignore
-|4,39,38,11,1705266991,"~/.gitignore"
--'  38  11  ~/.gitignore
-|4,39,38,11,1705266991,"~/.gitignore"
--'  38  11  ~/.gitignore
-|4,39,38,11,1705266991,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1705266978,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1705266978,"~/.gitignore"
--'  1  0  ~/.gitignore
-|4,39,1,0,1705266978,"~/.gitignore"
--'  198  55  ~/.config/sway/config
-|4,39,198,55,1705266974,"~/.config/sway/config"
--'  198  55  ~/.config/sway/config
-|4,39,198,55,1705266974,"~/.config/sway/config"
--'  198  55  ~/.config/sway/config
-|4,39,198,55,1705266974,"~/.config/sway/config"
--'  198  55  ~/.config/sway/config
-|4,39,198,55,1705266974,"~/.config/sway/config"
--'  26  0  /etc/sway/config
-|4,39,26,0,1705266856,"/etc/sway/config"
--'  26  0  /etc/sway/config
-|4,39,26,0,1705266856,"/etc/sway/config"
--'  26  0  /etc/sway/config
-|4,39,26,0,1705266856,"/etc/sway/config"
--'  26  0  /etc/sway/config
-|4,39,26,0,1705266856,"/etc/sway/config"
--'  26  0  /etc/sway/config
-|4,39,26,0,1705266856,"/etc/sway/config"
--'  1  0  /etc/sway/config
-|4,39,1,0,1705266809,"/etc/sway/config"
--'  1  0  /etc/sway/config
-|4,39,1,0,1705266809,"/etc/sway/config"
--'  1  0  /etc/sway/config
-|4,39,1,0,1705266809,"/etc/sway/config"
--'  1  0  /etc/sway/config
-|4,39,1,0,1705266809,"/etc/sway/config"
--'  1  0  /etc/sway/config
-|4,39,1,0,1705266809,"/etc/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266266,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266266,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  195  23  ~/.config/sway/config
-|4,39,195,23,1705266223,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  66  0  ~/.config/sway/config
-|4,39,66,0,1705266205,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266199,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266199,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266199,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266199,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  33  17  ~/.config/sway/config
-|4,39,33,17,1705266113,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266107,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266107,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266107,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705266107,"~/.config/sway/config"
--'  33  22  ~/.config/sway/config
-|4,39,33,22,1705266098,"~/.config/sway/config"
--'  33  22  ~/.config/sway/config
-|4,39,33,22,1705266098,"~/.config/sway/config"
--'  33  22  ~/.config/sway/config
-|4,39,33,22,1705266098,"~/.config/sway/config"
--'  33  22  ~/.config/sway/config
-|4,39,33,22,1705266098,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265846,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265846,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265846,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265846,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  10  12  ~/.config/sway/config
-|4,39,10,12,1705265820,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265814,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265814,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265814,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705265814,"~/.config/sway/config"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
--'  8  0  ~/.config/sway
-|4,39,8,0,1705265812,"~/.config/sway"
+|4,39,1,0,1705521244,"~/.config/sway/config"
+-'  79  7  ~/.zshrc
+|4,39,79,7,1705521240,"~/.zshrc"
+-'  79  7  ~/.zshrc
+|4,39,79,7,1705521240,"~/.zshrc"
+-'  79  7  ~/.zshrc
+|4,39,79,7,1705521240,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1705521239,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1705521239,"~/.zshrc"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  1  0  ~/dev/MyContainers/CMakeLists.txt
+|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  68  7  ~/.zshrc
+|4,39,68,7,1705425129,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  67  1  ~/.zshrc
+|4,39,67,1,1705425074,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  50  1  ~/.zshrc
+|4,39,50,1,1705425073,"~/.zshrc"
+-'  49  1  ~/.zshrc
+|4,39,49,1,1705425073,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  218  2  ~/.zshrc
+|4,39,218,2,1705425072,"~/.zshrc"
+-'  217  2  ~/.zshrc
+|4,39,217,2,1705425072,"~/.zshrc"
+-'  216  10  ~/.zshrc
+|4,39,216,10,1705425071,"~/.zshrc"
+-'  214  42  ~/.zshrc
+|4,39,214,42,1705425071,"~/.zshrc"
+-'  216  10  ~/.zshrc
+|4,39,216,10,1705425071,"~/.zshrc"
+-'  214  42  ~/.zshrc
+|4,39,214,42,1705425071,"~/.zshrc"
+-'  216  10  ~/.zshrc
+|4,39,216,10,1705425071,"~/.zshrc"
 
 # History of marks within files (newest to oldest):
 
+> ~/.zshrc
+	*	1705836781	0
+	"	9	0
+	^	68	8
+	.	68	8
+	+	187	5
+	+	190	5
+	+	193	28
+	+	196	0
+	+	168	0
+	+	162	54
+	+	196	0
+	+	169	19
+	+	250	0
+	+	215	0
+	+	213	0
+	+	125	36
+	+	6	38
+	+	8	0
+	+	13	0
+	+	12	0
+	+	11	0
+	+	10	14
+	+	11	29
+	+	14	0
+	+	36	0
+	+	14	19
+	+	15	27
+	+	17	51
+	+	23	5
+	+	19	36
+	+	20	14
+	+	19	11
+	+	20	47
+	+	22	42
+	+	25	0
+	+	36	0
+	+	35	60
+	+	36	0
+	+	15	21
+	+	16	21
+	+	17	22
+	+	16	22
+	+	25	0
+	+	28	70
+	+	9	23
+	+	32	0
+	+	35	0
+	+	32	0
+	+	1	0
+	+	250	0
+	+	213	0
+	+	217	0
+	+	154	0
+	+	29	40
+	+	37	14
+	+	38	32
+	+	39	0
+	+	44	0
+	+	41	4
+	+	42	4
+	+	43	4
+	+	40	14
+	+	39	0
+	+	208	16
+	+	165	9
+	+	164	14
+	+	162	14
+	+	166	45
+	+	196	0
+	+	173	13
+	+	171	90
+	+	171	16
+	+	172	8
+	+	172	0
+	+	196	0
+	+	197	19
+	+	200	14
+	+	204	1
+	+	202	3
+	+	200	15
+	+	203	3
+	+	206	0
+	+	203	3
+	+	204	0
+	+	202	3
+	+	202	0
+	+	202	239
+	+	200	7
+	+	202	201
+	+	202	0
+	+	202	5
+	+	202	0
+	+	202	218
+	+	201	0
+	+	201	237
+	+	200	6
+	+	59	41
+	+	60	47
+	+	63	53
+	+	69	9
+	+	73	18
+	+	70	41
+	+	79	22
+	+	68	8
+
 > ~/.config/sway/config
-	*	1705269515	0
-	"	210	17
-	^	210	17
-	.	210	16
+	*	1705521275	0
+	"	54	34
+	^	54	35
+	.	54	34
 	+	15	24
 	+	10	4
 	+	11	4
@@ -524,7 +659,185 @@ $
 	+	211	18
 	+	210	17
 	+	209	34
-	+	210	16
+	+	210	17
+	+	12	12
+	+	54	34
+
+> ~/dev/MyContainers/CMakeLists.txt
+	*	1705520942	0
+	"	1	0
+	^	38	30
+	.	41	4
+	+	5	25
+	+	20	43
+	+	21	8
+	+	20	8
+	+	22	42
+	+	13	1
+	+	4	13
+	+	1	0
+	+	1	60
+	+	14	79
+	+	19	75
+	+	25	25
+	+	5	14
+	+	25	58
+	+	28	65
+	+	28	20
+	+	24	27
+	+	5	29
+	+	22	0
+	+	24	20
+	+	24	15
+	+	20	18
+	+	21	18
+	+	22	27
+	+	21	27
+	+	20	27
+	+	24	0
+	+	8	32
+	+	10	49
+	+	7	17
+	+	11	105
+	+	11	14
+	+	43	0
+	+	43	26
+	+	28	52
+	+	43	0
+	+	28	0
+	+	27	54
+	+	38	22
+	+	43	0
+	+	27	20
+	+	43	0
+	+	38	33
+	+	38	0
+	+	27	13
+	+	38	0
+	+	40	48
+	+	38	28
+	+	42	0
+	+	41	4
+
+> ~/dev/Codex/CMakeLists.txt
+	*	1705424477	0
+	"	54	3
+	^	1	0
+	.	18	0
+	+	18	0
+
+> ~/dev/Codex/Codex/CMakeLists.txt
+	*	1705424449	0
+	"	10	0
+	^	248	23
+	.	251	22
+	+	251	22
+
+> ~/dev/MyContainers/CMake
+	*	1705424032	0
+	"	1	0
+
+> ~/dev/MyContainers/.gitignore
+	*	1705348382	0
+	"	5	9
+	^	5	10
+	.	5	9
+	+	3	14
+	+	6	0
+	+	1	0
+	+	2	0
+	+	5	9
+
+> ~/dev/MyContainers/build.sh
+	*	1705348164	0
+	"	3	29
+	^	3	30
+	.	3	29
+	+	4	0
+	+	1	9
+	+	3	24
+	+	3	10
+	+	3	29
+
+> ~/dev/MyContainers/src/sdafx.cpp
+	*	1705347738	0
+	"	7	18
+	^	7	19
+	.	7	18
+	+	2	24
+	+	6	17
+	+	6	18
+	+	7	18
+
+> ~/dev/MyContainers/CMakePresets.json
+	*	1705347184	0
+	"	10	8
+	.	54	0
+	+	74	0
+	+	69	0
+	+	57	0
+	+	54	0
+	+	49	0
+	+	37	0
+	+	74	0
+	+	73	9
+	+	54	0
+
+> ~/dev/MyContainers/Tests/main.cpp
+	*	1705347039	0
+	"	8	17
+	^	8	18
+	.	8	17
+	+	14	0
+	+	11	0
+	+	14	0
+	+	13	12
+	+	12	26
+	+	1	19
+	+	8	17
+
+> ~/dev/Codex/CMakePresets.json
+	*	1705344784	0
+	"	88	40
+	^	88	41
+	.	88	40
+	+	20	0
+	+	21	25
+	+	23	39
+	+	27	41
+	+	28	45
+	+	33	26
+	+	64	0
+	+	63	9
+	+	65	25
+	+	67	29
+	+	77	25
+	+	79	29
+	+	85	25
+	+	87	29
+	+	89	43
+	+	61	42
+	+	57	42
+	+	88	40
+
+> ~/dev/Codex/builds/linux-x86_64-debug/CodexEditor/CMakeFiles/CodexEditor.dir/flags.make
+	*	1705317581	0
+	"	7	0
+
+> ~/dev/Codex/builds/linux-x86_64-debug/CodexEditor/Makefile
+	*	1705316922	0
+	"	439	0
+
+> ~/dev/Codex/.gitignore
+	*	1705279264	0
+	"	8	8
+	^	8	9
+	.	8	8
+	+	11	8
+	+	12	3
+	+	13	3
+	+	14	0
+	+	8	8
 
 > ~/.gitignore
 	*	1705266991	0
@@ -650,112 +963,6 @@ $
 	.	5	28
 	+	5	28
 
-> ~/.zshrc
-	*	1705244090	0
-	"	78	22
-	^	78	23
-	.	78	22
-	+	183	5
-	+	186	5
-	+	189	5
-	+	192	28
-	+	195	0
-	+	167	0
-	+	161	54
-	+	195	0
-	+	168	19
-	+	249	0
-	+	214	0
-	+	212	0
-	+	124	36
-	+	6	38
-	+	8	0
-	+	13	0
-	+	12	0
-	+	11	0
-	+	10	14
-	+	11	29
-	+	14	0
-	+	36	0
-	+	14	19
-	+	15	27
-	+	17	51
-	+	23	5
-	+	19	36
-	+	20	14
-	+	19	11
-	+	20	47
-	+	22	42
-	+	25	0
-	+	36	0
-	+	35	60
-	+	36	0
-	+	15	21
-	+	16	21
-	+	17	22
-	+	16	22
-	+	25	0
-	+	28	70
-	+	9	23
-	+	32	0
-	+	35	0
-	+	32	0
-	+	1	0
-	+	249	0
-	+	212	0
-	+	216	0
-	+	153	0
-	+	29	40
-	+	37	14
-	+	38	32
-	+	39	0
-	+	44	0
-	+	41	4
-	+	42	4
-	+	43	4
-	+	40	14
-	+	39	0
-	+	207	16
-	+	164	9
-	+	163	14
-	+	161	14
-	+	165	45
-	+	195	0
-	+	172	13
-	+	170	90
-	+	170	16
-	+	171	8
-	+	171	0
-	+	195	0
-	+	196	19
-	+	199	14
-	+	203	1
-	+	201	3
-	+	199	15
-	+	202	3
-	+	205	0
-	+	202	3
-	+	203	0
-	+	201	3
-	+	201	0
-	+	201	239
-	+	199	7
-	+	201	201
-	+	201	0
-	+	201	5
-	+	201	0
-	+	201	218
-	+	200	0
-	+	200	237
-	+	199	6
-	+	59	41
-	+	60	47
-	+	63	53
-	+	68	9
-	+	72	18
-	+	69	41
-	+	78	22
-
 > ~/.config/hypr/hyprland.conf
 	*	1705242128	0
 	"	179	18
@@ -770,13 +977,6 @@ $
 > ~/dev/Codex/builds/linux-x86_64-debug/Codex/cmake_install.cmake
 	*	1705181073	0
 	"	1	0
-
-> ~/dev/Codex/Codex/CMakeLists.txt
-	*	1705181022	0
-	"	251	22
-	^	248	23
-	.	251	22
-	+	251	22
 
 > ~/dev/Codex/grassar.h
 	*	1705158217	0
@@ -812,28 +1012,6 @@ $
 	^	4	23
 	.	4	22
 	+	4	22
-
-> ~/dev/Codex/CMakePresets.json
-	*	1704661134	0
-	"	61	42
-	^	61	43
-	.	61	42
-	+	20	0
-	+	21	25
-	+	23	39
-	+	27	41
-	+	28	45
-	+	33	26
-	+	64	0
-	+	63	9
-	+	65	25
-	+	67	29
-	+	77	25
-	+	79	29
-	+	85	25
-	+	87	29
-	+	89	43
-	+	61	42
 
 > ~/dev/Codex/build.sh
 	*	1703964081	0
@@ -952,16 +1130,6 @@ $
 	+	46	6
 	+	11	59
 	+	31	6
-
-> ~/dev/Codex/.gitignore
-	*	1703960912	0
-	"	12	3
-	^	12	4
-	.	13	0
-	+	10	8
-	+	11	3
-	+	12	3
-	+	13	0
 
 > /etc/default/grub
 	*	1703761508	0
@@ -1142,13 +1310,6 @@ $
 > ~/dev/Codex/Codex/assets/GLShaders/texture2d.glsl
 	*	1698092314	0
 	"	46	22
-
-> ~/dev/Codex/CMakeLists.txt
-	*	1698071519	0
-	"	1	0
-	^	1	0
-	.	18	0
-	+	18	0
 
 > ~/dev/Codex/.gitmodules
 	*	1698067855	0
@@ -1737,208 +1898,3 @@ $
 	+	26	100
 	+	25	54
 	+	26	6
-
-> ~/dev/ALVM/CMakeLists.txt
-	*	1694135223	0
-	"	38	0
-	^	30	2
-	.	39	0
-	+	3	15
-	+	5	38
-	+	5	9
-	+	6	0
-	+	14	0
-	+	4	0
-	+	6	3
-	+	7	7
-	+	8	7
-	+	9	7
-	+	10	7
-	+	11	7
-	+	12	3
-	+	26	2
-	+	27	2
-	+	28	2
-	+	29	2
-	+	28	2
-	+	27	2
-	+	26	2
-	+	29	2
-	+	24	0
-	+	23	1
-	+	31	1
-	+	35	0
-	+	39	0
-
-> ~/dev/tests/ccpinit
-	*	1694115508	0
-	"	6	0
-	^	6	0
-	.	5	21
-	+	1	17
-	+	5	20
-	+	3	8
-	+	5	21
-
-> ~/dev/tests/ccpinit.oy
-	*	1694115009	0
-	"	1	0
-
-> ~/dev/ALVM/Test/src/main.cpp
-	*	1694114536	0
-	"	163	0
-
-> ~/dev/ALVM/.gitignore
-	*	1694114485	0
-	"	7	0
-	^	7	1
-	.	8	0
-	+	6	4
-	+	7	21
-	+	9	10
-	+	8	0
-
-> ~/dev/ALVM/examples/testi.asl
-	*	1694113004	0
-	"	2	11
-	^	2	12
-	.	2	11
-	+	7	11
-	+	6	16
-	+	2	11
-
-> ~/dev/ALVM/examples/test.asl
-	*	1694112708	0
-	"	53	0
-	^	115	11
-	.	116	11
-	+	71	17
-	+	72	7
-	+	4	35
-	+	116	11
-
-> ~/dev/ALVM/examples/.ignore_sandbox/test.asl
-	*	1694089948	0
-	"	14	13
-	^	14	18
-	.	14	13
-	+	8	6
-	+	7	15
-	+	17	6
-	+	16	8
-	+	11	13
-	+	12	16
-	+	1	12
-	+	2	8
-	+	14	13
-	+	2	41
-	+	14	13
-	+	4	3
-	+	3	42
-	+	14	13
-
-> ~/dev/ALVM/examples/basic.asl
-	*	1694086318	0
-	"	1	1
-	^	138	7
-	.	30	36
-	+	44	4
-	+	44	0
-	+	45	10
-	+	86	10
-	+	134	9
-	+	115	10
-	+	104	9
-	+	75	0
-	+	73	0
-	+	47	39
-	+	48	43
-	+	49	33
-	+	48	9
-	+	60	4
-	+	67	10
-	+	69	2
-	+	61	8
-	+	59	15
-	+	61	15
-	+	55	4
-	+	58	0
-	+	59	0
-	+	58	29
-	+	66	10
-	+	64	27
-	+	42	14
-	+	41	43
-	+	42	51
-	+	43	0
-	+	64	7
-	+	42	9
-	+	41	50
-	+	42	8
-	+	64	20
-	+	65	0
-	+	3	7
-	+	2	19
-	+	3	28
-	+	2	31
-	+	3	40
-	+	4	36
-	+	71	13
-	+	72	0
-	+	70	20
-	+	65	3
-	+	52	17
-	+	51	37
-	+	65	18
-	+	56	0
-	+	55	17
-	+	56	10
-	+	54	38
-	+	23	12
-	+	27	20
-	+	29	9
-	+	30	10
-	+	29	15
-	+	30	4
-	+	56	0
-	+	64	0
-	+	55	17
-	+	65	4
-	+	64	13
-	+	56	0
-	+	52	12
-	+	53	17
-	+	55	16
-	+	53	0
-	+	64	14
-	+	56	10
-	+	3	35
-	+	22	0
-	+	22	20
-	+	22	16
-	+	22	47
-	+	30	16
-	+	30	29
-	+	30	16
-	+	30	23
-	+	22	0
-	+	30	23
-	+	30	19
-	+	30	33
-	+	30	43
-	+	30	31
-	+	29	4
-	+	30	16
-	+	31	0
-	+	22	0
-	+	29	4
-	+	22	34
-	+	24	0
-	+	23	57
-	+	24	62
-	+	25	65
-	+	26	60
-	+	27	68
-	+	28	51
-	+	29	51
-	+	30	36

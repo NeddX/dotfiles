@@ -17,6 +17,7 @@
 !.tmux**/**
 !.doom.d**/**
 !.themes**/**
+!.zprofile
 !Wallpapers**/**
 !scripts**/**
 
