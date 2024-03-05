@@ -20,20 +20,20 @@
 $
 
 # Command Line History (newest to oldest):
-:q!
-|2,0,1705836782,,"q!"
 :wq
-|2,0,1705521275,,"wq"
+|2,0,1709622241,,"wq"
+:q
+|2,0,1709553510,,"q"
+:q!
+|2,0,1709467233,,"q!"
+:w
+|2,0,1709459836,,"w"
 :w1q
 |2,0,1705521274,,"w1q"
-:w
-|2,0,1705521269,,"w"
 :'<,'>%y*
 |2,0,1705424470,,"'<,'>%y*"
 :q1
 |2,0,1705267640,,"q1"
-:q
-|2,0,1705266856,,"q"
 :w!
 |2,0,1705265700,,"w!"
 :wq!
@@ -221,383 +221,409 @@ $
 |3,0,0,1,11,0,1705424463,"# Create a custom build command and a dummy target for it to copy","# compile_commands.json to the source directory for LSPs.","add_custom_command(","  OUTPUT ${CMAKE_SOURCE_DIR}/compile_commands.json","  COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/compile_commands.json","          ${CMAKE_SOURCE_DIR}/compile_commands.json","  DEPENDS ${CMAKE_BINARY_DIR}/compile_commands.json",>49
 |<"  COMMENT \"Copying compile_commands.json...\")","","add_custom_target(copy_compile_commands ALL","                  DEPENDS ${CMAKE_SOURCE_DIR}/compile_commands.json)"
 "1	LINE	0
-	
-|3,0,1,1,1,0,1705424265,""
+	figlet 'Welcome back' | lolcat
+|3,0,1,1,1,0,1709459807,"figlet 'Welcome back' | lolcat"
 "2	LINE	0
-	message(":: BRUH :: ${SUB_DIRS}")
-|3,0,2,1,1,0,1705424265,"message(\":: BRUH :: ${SUB_DIRS}\")"
+	
+|3,0,2,1,1,0,1709456638,""
 "3	LINE	0
-	#
-|3,0,3,1,1,0,1705424247,"#"
+	    // gay party :))))
+|3,0,3,1,1,0,1709456637,"    // gay party :))))"
 "4	LINE	0
+	
+|3,0,4,1,1,0,1705424265,""
+"5	LINE	0
+	message(":: BRUH :: ${SUB_DIRS}")
+|3,0,5,1,1,0,1705424265,"message(\":: BRUH :: ${SUB_DIRS}\")"
+"6	LINE	0
+	#
+|3,0,6,1,1,0,1705424247,"#"
+"7	LINE	0
 	# Same with every subdirectory of src/.
 	#foreach(SUB_DIRS ${DIR})
 	#  message("SRC :: ${DIR}")
 	#  target_include_directories(MinLib PUBLIC ${DIR})
 	#endforeach()
-|3,0,4,1,5,0,1705424246,"# Same with every subdirectory of src/.","#foreach(SUB_DIRS ${DIR})","#  message(\"SRC :: ${DIR}\")","#  target_include_directories(MinLib PUBLIC ${DIR})","#endforeach()"
-"5	LINE	0
-	file(
-	  GLOB SRC_SUB_DIRS
-	  LIST_DIRECTORIES true
-	  "${CMAKE_CURRENT_SOURCE_DIR}/src")
-|3,0,5,1,4,0,1705424169,"file(","  GLOB SRC_SUB_DIRS","  LIST_DIRECTORIES true","  \"${CMAKE_CURRENT_SOURCE_DIR}/src\")"
-"6	LINE	0
-	foreach(SRC_SUB_DIRS ${DIR})
-	  message("SRC :: ${DIR}")
-	  target_include_directories(MinLib PUBLIC ${DIR})
-	endforeach()
-|3,0,6,1,4,0,1705424165,"foreach(SRC_SUB_DIRS ${DIR})","  message(\"SRC :: ${DIR}\")","  target_include_directories(MinLib PUBLIC ${DIR})","endforeach()"
-"7	LINE	0
-	file(
-	  GLOB SRC_SUB_DIRS
-	  LIST_DIRECTORIES true
-	  "${CMAKE_CURRENT_SOURCE_DIR}/src")
-|3,0,7,1,4,0,1705424157,"file(","  GLOB SRC_SUB_DIRS","  LIST_DIRECTORIES true","  \"${CMAKE_CURRENT_SOURCE_DIR}/src\")"
+|3,0,7,1,5,0,1705424246,"# Same with every subdirectory of src/.","#foreach(SUB_DIRS ${DIR})","#  message(\"SRC :: ${DIR}\")","#  target_include_directories(MinLib PUBLIC ${DIR})","#endforeach()"
 "8	LINE	0
+	file(
+	  GLOB SRC_SUB_DIRS
+	  LIST_DIRECTORIES true
+	  "${CMAKE_CURRENT_SOURCE_DIR}/src")
+|3,0,8,1,4,0,1705424169,"file(","  GLOB SRC_SUB_DIRS","  LIST_DIRECTORIES true","  \"${CMAKE_CURRENT_SOURCE_DIR}/src\")"
+"9	LINE	0
 	foreach(SRC_SUB_DIRS ${DIR})
 	  message("SRC :: ${DIR}")
 	  target_include_directories(MinLib PUBLIC ${DIR})
 	endforeach()
-|3,0,8,1,4,0,1705424063,"foreach(SRC_SUB_DIRS ${DIR})","  message(\"SRC :: ${DIR}\")","  target_include_directories(MinLib PUBLIC ${DIR})","endforeach()"
-"9	LINE	0
-	
-|3,0,9,1,1,0,1705347906,""
+|3,0,9,1,4,0,1705424165,"foreach(SRC_SUB_DIRS ${DIR})","  message(\"SRC :: ${DIR}\")","  target_include_directories(MinLib PUBLIC ${DIR})","endforeach()"
 ""-	CHAR	0
-	"
-|3,1,36,0,1,0,1705521268,"\""
+	e
+|3,1,36,0,1,0,1709553508,"e"
 
 # File marks:
-'0  9  0  ~/.zshrc
-|4,48,9,0,1705836782,"~/.zshrc"
-'1  54  34  ~/.config/sway/config
-|4,49,54,34,1705521275,"~/.config/sway/config"
-'2  79  7  ~/.zshrc
-|4,50,79,7,1705521240,"~/.zshrc"
-'3  79  7  ~/.zshrc
-|4,51,79,7,1705521240,"~/.zshrc"
-'4  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,52,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
-'5  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,53,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
-'6  68  7  ~/.zshrc
-|4,54,68,7,1705425129,"~/.zshrc"
-'7  68  7  ~/.zshrc
-|4,55,68,7,1705425129,"~/.zshrc"
-'8  68  7  ~/.zshrc
-|4,56,68,7,1705425129,"~/.zshrc"
-'9  68  7  ~/.zshrc
-|4,57,68,7,1705425129,"~/.zshrc"
+'0  15  4  ~/dev/FrankList/.gitignore
+|4,48,15,4,1709622241,"~/dev/FrankList/.gitignore"
+'1  1  9  ~/dev/aarch64/main.c
+|4,49,1,9,1709553511,"~/dev/aarch64/main.c"
+'2  5  56  ~/dev/aarch64/main.c
+|4,50,5,56,1709553495,"~/dev/aarch64/main.c"
+'3  5  56  ~/dev/aarch64/main.c
+|4,51,5,56,1709553495,"~/dev/aarch64/main.c"
+'4  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,52,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+'5  3  27  ~/.zshrc
+|4,53,3,27,1709460047,"~/.zshrc"
+'6  3  37  ~/.zshrc
+|4,54,3,37,1709459817,"~/.zshrc"
+'7  4  29  ~/.zshrc
+|4,55,4,29,1709459597,"~/.zshrc"
+'8  3  29  ~/.zshrc
+|4,56,3,29,1709459597,"~/.zshrc"
+'9  4  29  ~/.zshrc
+|4,57,4,29,1709459597,"~/.zshrc"
 
 # Jumplist (newest first):
--'  9  0  ~/.zshrc
-|4,39,9,0,1705836782,"~/.zshrc"
+-'  15  4  ~/dev/FrankList/.gitignore
+|4,39,15,4,1709622241,"~/dev/FrankList/.gitignore"
+-'  1  0  ~/dev/FrankList/.gitignore
+|4,39,1,0,1709622236,"~/dev/FrankList/.gitignore"
+-'  1  9  ~/dev/aarch64/main.c
+|4,39,1,9,1709553511,"~/dev/aarch64/main.c"
+-'  1  9  ~/dev/aarch64/main.c
+|4,39,1,9,1709553511,"~/dev/aarch64/main.c"
+-'  5  56  ~/dev/aarch64/main.c
+|4,39,5,56,1709553495,"~/dev/aarch64/main.c"
+-'  5  56  ~/dev/aarch64/main.c
+|4,39,5,56,1709553495,"~/dev/aarch64/main.c"
+-'  5  56  ~/dev/aarch64/main.c
+|4,39,5,56,1709553495,"~/dev/aarch64/main.c"
+-'  5  56  ~/dev/aarch64/main.c
+|4,39,5,56,1709553495,"~/dev/aarch64/main.c"
+-'  1  0  ~/dev/aarch64/main.c
+|4,39,1,0,1709553473,"~/dev/aarch64/main.c"
+-'  1  0  ~/dev/aarch64/main.c
+|4,39,1,0,1709553473,"~/dev/aarch64/main.c"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  27  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,27,0,1709467233,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  1  0  ~/dev/Codex/Codex/CMakeLists.txt
+|4,39,1,0,1709466886,"~/dev/Codex/Codex/CMakeLists.txt"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
+-'  3  27  ~/.zshrc
+|4,39,3,27,1709460047,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1705836779,"~/.zshrc"
--'  54  34  ~/.config/sway/config
-|4,39,54,34,1705521275,"~/.config/sway/config"
--'  54  34  ~/.config/sway/config
-|4,39,54,34,1705521275,"~/.config/sway/config"
--'  17  0  ~/.config/sway/config
-|4,39,17,0,1705521250,"~/.config/sway/config"
--'  17  0  ~/.config/sway/config
-|4,39,17,0,1705521250,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705521244,"~/.config/sway/config"
--'  1  0  ~/.config/sway/config
-|4,39,1,0,1705521244,"~/.config/sway/config"
--'  79  7  ~/.zshrc
-|4,39,79,7,1705521240,"~/.zshrc"
--'  79  7  ~/.zshrc
-|4,39,79,7,1705521240,"~/.zshrc"
--'  79  7  ~/.zshrc
-|4,39,79,7,1705521240,"~/.zshrc"
+|4,39,1,0,1709459829,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1705521239,"~/.zshrc"
+|4,39,1,0,1709459829,"~/.zshrc"
 -'  1  0  ~/.zshrc
-|4,39,1,0,1705521239,"~/.zshrc"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705520943,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  1  0  ~/dev/MyContainers/CMakeLists.txt
-|4,39,1,0,1705425186,"~/dev/MyContainers/CMakeLists.txt"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  68  7  ~/.zshrc
-|4,39,68,7,1705425129,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  67  1  ~/.zshrc
-|4,39,67,1,1705425074,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  50  1  ~/.zshrc
-|4,39,50,1,1705425073,"~/.zshrc"
--'  49  1  ~/.zshrc
-|4,39,49,1,1705425073,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  218  2  ~/.zshrc
-|4,39,218,2,1705425072,"~/.zshrc"
--'  217  2  ~/.zshrc
-|4,39,217,2,1705425072,"~/.zshrc"
--'  216  10  ~/.zshrc
-|4,39,216,10,1705425071,"~/.zshrc"
--'  214  42  ~/.zshrc
-|4,39,214,42,1705425071,"~/.zshrc"
--'  216  10  ~/.zshrc
-|4,39,216,10,1705425071,"~/.zshrc"
--'  214  42  ~/.zshrc
-|4,39,214,42,1705425071,"~/.zshrc"
--'  216  10  ~/.zshrc
-|4,39,216,10,1705425071,"~/.zshrc"
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459829,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  3  37  ~/.zshrc
+|4,39,3,37,1709459817,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1709459804,"~/.zshrc"
+-'  4  29  ~/.zshrc
+|4,39,4,29,1709459597,"~/.zshrc"
+-'  4  29  ~/.zshrc
+|4,39,4,29,1709459597,"~/.zshrc"
+-'  3  29  ~/.zshrc
+|4,39,3,29,1709459597,"~/.zshrc"
+-'  4  29  ~/.zshrc
+|4,39,4,29,1709459597,"~/.zshrc"
+-'  4  29  ~/.zshrc
+|4,39,4,29,1709459597,"~/.zshrc"
+-'  3  29  ~/.zshrc
+|4,39,3,29,1709459597,"~/.zshrc"
+-'  4  29  ~/.zshrc
+|4,39,4,29,1709459597,"~/.zshrc"
+-'  4  29  ~/.zshrc
+|4,39,4,29,1709459597,"~/.zshrc"
+-'  3  29  ~/.zshrc
+|4,39,3,29,1709459597,"~/.zshrc"
+-'  4  29  ~/.zshrc
+|4,39,4,29,1709459597,"~/.zshrc"
 
 # History of marks within files (newest to oldest):
 
+> ~/dev/FrankList/.gitignore
+	*	1709622241	0
+	"	15	4
+	^	15	5
+	.	15	4
+	+	15	4
+
+> ~/dev/aarch64/main.c
+	*	1709553511	0
+	"	1	9
+	^	1	8
+	.	1	7
+	+	7	0
+	+	6	12
+	+	5	56
+	+	1	7
+
+> ~/dev/Codex/Codex/CMakeLists.txt
+	*	1709467232	0
+	"	27	0
+	^	248	23
+	.	251	22
+	+	251	22
+
 > ~/.zshrc
-	*	1705836781	0
-	"	9	0
-	^	68	8
-	.	68	8
-	+	187	5
-	+	190	5
-	+	193	28
-	+	196	0
-	+	168	0
-	+	162	54
-	+	196	0
-	+	169	19
-	+	250	0
-	+	215	0
-	+	213	0
-	+	125	36
-	+	6	38
-	+	8	0
-	+	13	0
-	+	12	0
+	*	1709460047	0
+	"	3	27
+	^	3	28
+	.	3	28
+	+	196	28
+	+	199	0
+	+	171	0
+	+	165	54
+	+	199	0
+	+	172	19
+	+	253	0
+	+	218	0
+	+	216	0
+	+	128	36
+	+	9	38
 	+	11	0
-	+	10	14
-	+	11	29
+	+	16	0
+	+	15	0
 	+	14	0
-	+	36	0
-	+	14	19
-	+	15	27
-	+	17	51
-	+	23	5
-	+	19	36
-	+	20	14
-	+	19	11
-	+	20	47
-	+	22	42
-	+	25	0
-	+	36	0
-	+	35	60
-	+	36	0
-	+	15	21
-	+	16	21
-	+	17	22
-	+	16	22
-	+	25	0
-	+	28	70
-	+	9	23
-	+	32	0
+	+	13	14
+	+	14	29
+	+	17	0
+	+	39	0
+	+	17	19
+	+	18	27
+	+	20	51
+	+	26	5
+	+	22	36
+	+	23	14
+	+	22	11
+	+	23	47
+	+	25	42
+	+	28	0
+	+	39	0
+	+	38	60
+	+	39	0
+	+	18	21
+	+	19	21
+	+	20	22
+	+	19	22
+	+	28	0
+	+	31	70
+	+	12	23
 	+	35	0
-	+	32	0
+	+	38	0
+	+	35	0
 	+	1	0
-	+	250	0
-	+	213	0
-	+	217	0
-	+	154	0
-	+	29	40
-	+	37	14
-	+	38	32
-	+	39	0
-	+	44	0
-	+	41	4
-	+	42	4
-	+	43	4
+	+	253	0
+	+	216	0
+	+	220	0
+	+	157	0
+	+	32	40
 	+	40	14
-	+	39	0
-	+	208	16
-	+	165	9
-	+	164	14
-	+	162	14
-	+	166	45
-	+	196	0
-	+	173	13
-	+	171	90
-	+	171	16
-	+	172	8
-	+	172	0
-	+	196	0
-	+	197	19
-	+	200	14
-	+	204	1
-	+	202	3
-	+	200	15
-	+	203	3
-	+	206	0
-	+	203	3
+	+	41	32
+	+	42	0
+	+	47	0
+	+	44	4
+	+	45	4
+	+	46	4
+	+	43	14
+	+	42	0
+	+	211	16
+	+	168	9
+	+	167	14
+	+	165	14
+	+	169	45
+	+	199	0
+	+	176	13
+	+	174	90
+	+	174	16
+	+	175	8
+	+	175	0
+	+	199	0
+	+	200	19
+	+	203	14
+	+	207	1
+	+	205	3
+	+	203	15
+	+	206	3
+	+	209	0
+	+	206	3
+	+	207	0
+	+	205	3
+	+	205	0
+	+	205	239
+	+	203	7
+	+	205	201
+	+	205	0
+	+	205	5
+	+	205	0
+	+	205	218
 	+	204	0
-	+	202	3
-	+	202	0
-	+	202	239
-	+	200	7
-	+	202	201
-	+	202	0
-	+	202	5
-	+	202	0
-	+	202	218
-	+	201	0
-	+	201	237
-	+	200	6
-	+	59	41
-	+	60	47
-	+	63	53
-	+	69	9
-	+	73	18
-	+	70	41
-	+	79	22
-	+	68	8
+	+	204	237
+	+	203	6
+	+	62	41
+	+	63	47
+	+	66	53
+	+	72	9
+	+	76	18
+	+	73	41
+	+	82	22
+	+	71	8
+	+	4	0
+	+	3	28
+
+> ~/dev/ShitList/main.cpp
+	*	1709456666	0
+	"	7	74
+	^	7	75
+	.	7	74
+	+	13	0
+	+	7	74
 
 > ~/.config/sway/config
 	*	1705521275	0
@@ -725,13 +751,6 @@ $
 	^	1	0
 	.	18	0
 	+	18	0
-
-> ~/dev/Codex/Codex/CMakeLists.txt
-	*	1705424449	0
-	"	10	0
-	^	248	23
-	.	251	22
-	+	251	22
 
 > ~/dev/MyContainers/CMake
 	*	1705424032	0
@@ -1758,143 +1777,3 @@ $
 	+	11	0
 	+	14	0
 	+	13	19
-
-> ~/dev/ALVM/examples/snake.asl
-	*	1694138944	0
-	"	80	4
-	^	108	0
-	.	108	0
-	+	129	16
-	+	131	11
-	+	126	14
-	+	130	13
-	+	138	0
-	+	133	24
-	+	136	27
-	+	22	26
-	+	23	22
-	+	24	22
-	+	25	22
-	+	26	22
-	+	22	43
-	+	21	43
-	+	22	47
-	+	20	43
-	+	22	44
-	+	23	44
-	+	24	44
-	+	25	44
-	+	26	43
-	+	19	43
-	+	12	43
-	+	11	43
-	+	4	0
-	+	30	0
-	+	40	0
-	+	48	43
-	+	19	18
-	+	20	18
-	+	21	18
-	+	22	18
-	+	23	18
-	+	24	18
-	+	25	18
-	+	26	18
-	+	19	47
-	+	20	47
-	+	21	47
-	+	22	47
-	+	23	47
-	+	24	47
-	+	25	47
-	+	26	47
-	+	4	0
-	+	30	0
-	+	40	0
-	+	48	35
-	+	133	15
-	+	132	15
-	+	136	29
-	+	137	25
-	+	139	32
-	+	67	19
-	+	61	3
-	+	68	10
-	+	62	19
-	+	63	16
-	+	64	10
-	+	70	3
-	+	83	11
-	+	84	6
-	+	107	6
-	+	84	13
-	+	103	8
-	+	90	3
-	+	2	16
-	+	14	14
-	+	15	7
-	+	14	12
-	+	15	58
-	+	90	13
-	+	87	10
-	+	101	9
-	+	89	17
-	+	89	22
-	+	95	12
-	+	90	4
-	+	92	22
-	+	89	0
-	+	91	0
-	+	90	17
-	+	16	49
-	+	95	16
-	+	99	10
-	+	98	3
-	+	49	3
-	+	47	26
-	+	49	47
-	+	48	48
-	+	49	0
-	+	28	19
-	+	35	21
-	+	36	48
-	+	119	0
-	+	124	0
-	+	123	18
-	+	136	6
-	+	137	6
-	+	108	0
-
-> ~/dev/ALVM/ALASM/src/main.cpp
-	*	1694135973	0
-	"	350	0
-	^	410	1
-	.	311	39
-	+	154	0
-	+	173	0
-	+	172	12
-	+	171	0
-	+	381	12
-	+	385	12
-	+	311	39
-
-> ~/dev/ALVM/README.md
-	*	1694135945	0
-	"	25	6
-	^	25	7
-	.	26	6
-	+	2	5
-	+	2	0
-	+	2	253
-	+	6	0
-	+	2	70
-	+	3	58
-	+	4	56
-	+	27	6
-	+	26	91
-	+	27	86
-	+	26	92
-	+	4	55
-	+	26	100
-	+	25	54
-	+	26	6

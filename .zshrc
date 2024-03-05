@@ -1,4 +1,7 @@
 # My stuff
+
+cowsay -f tux "sudo rm -rf /" | lolcat
+
 export PLATFORM_LOGO="?"
 export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
 export PLATFORM_ALIAS="?"
@@ -65,14 +68,16 @@ fi
 
 # Im env varery
 #alias emacs="emacsclient -c -a emacs"
-alias ed=emacsclient -nc
+alias ed=emacsclient -nw -c
 alias icpy=xsel --clipboard --input
 alias logoff='sudo systemctl restart sddm'
 alias doom="$HOME/.emacs.d/bin/doom"
 alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
 alias open=xdg-open
-alias vim=echo kys dude
 export EDITOR=vim
+
+# Tell ld to also look into ./ or ./lib for when dynamically linking.
+export LD_LIBRARY_PATH=./:./lib:$LD_LIBRARY_PATH
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH
