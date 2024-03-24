@@ -1,6 +1,6 @@
 # My stuff
 
-cowsay -f tux "sudo rm -rf /" | lolcat
+cowsay -f tux "The talking penguin." | lolcat
 
 export PLATFORM_LOGO="?"
 export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
