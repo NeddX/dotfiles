@@ -1,6 +1,9 @@
 # My stuff
 
-cowsay -f tux "The talking penguin." | lolcat
+#cowsay -f tux "The talking penguin." | lolcat
+
+export CC=clang
+export CXX=clang++
 
 export PLATFORM_LOGO="?"
 export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
@@ -68,19 +71,20 @@ fi
 
 # Im env varery
 #alias emacs="emacsclient -c -a emacs"
-alias ed=emacsclient -nw -c
-alias icpy=xsel --clipboard --input
+alias ed='emacsclient -nw -c'
+alias icpy='xsel --clipboard --input'
 alias logoff='sudo systemctl restart sddm'
 alias doom="$HOME/.emacs.d/bin/doom"
 alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
 alias open=xdg-open
-export EDITOR=vim
+export EDITOR=lvim
+alias vim=lvim
 
 # Tell ld to also look into ./ or ./lib for when dynamically linking.
 export LD_LIBRARY_PATH=./:./lib:$LD_LIBRARY_PATH
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH
+export PATH=$HOME/bin:/usr/local/bin:~/scripts:$PATH:$HOME/.local/bin
 export TERMINAL=konsole
 
 # Path to your oh-my-zsh installation.
