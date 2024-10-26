@@ -173,7 +173,6 @@
 
 ;; Centaur
 (use-package! centaur-tabs
-  :ensure t
   :init
   (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
   ;;(doom-add! 'hook-after-init-hook #'centaur-tabs-mode)
@@ -301,14 +300,16 @@
 
 ;; dashboard
 (use-package dashboard
-  :ensure t
   :bind (:map dashboard-mode-map
               ;; ("j" . nil)
               ;; ("k" . nil)
               ("n" . 'dashboard-next-line)
               ("p" . 'dashboard-previous-line)
               )
-  :init (add-hook 'dashboard-mode-hook (lambda () (setq! show-trailing-whitespace nil)))
+
+  :init
+  (setq! initial-buffer-choice (lambda () (switch-to-buffer "*dashboard*")))
+  (add-hook 'dashboard-mode-hook (lambda () (setq! show-trailing-whitespace nil)))
   :custom
   (dashboard-set-navigator t)
   (dashboard-center-content t)
@@ -384,7 +385,6 @@
 
 ;; Nyan mode
 (use-package nyan-mode
-  :ensure t ; most definetly ensure the cat
   :init
   (if (window-system)
       (nyan-mode))
@@ -668,6 +668,8 @@
 
 (map! "M-<down>" (lambda () (interactive) (drag-stuff-down 1)))
 (map! "M-<up>" (lambda () (interactive) (drag-stuff-up 1)))
+(map! "M-j" (lambda () (interactive) (drag-stuff-down 1)))
+(map! "M-k" (lambda () (interactive) (drag-stuff-up 1)))
 
 ;; Because my $HOME is a git repo.
 (after! projectile (setq projectile-project-root-files-bottom-up (remove ".git"
