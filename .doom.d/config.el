@@ -177,12 +177,20 @@
   (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
   ;;(doom-add! 'hook-after-init-hook #'centaur-tabs-mode)
   :config
-  (global-set-key (kbd "<C-S-left>")  'centaur-tabs-backward)
-  (global-set-key (kbd "<C-S-right>") 'centaur-tabs-forward)
-  (global-set-key (kbd "<S-left>") 'centaur-tabs-move-current-tab-to-left)
-  (global-set-key (kbd "<S-right>") 'centaur-tabs-move-current-tab-to-right)
-  (global-set-key (kbd "C-S-n") 'centaur-tabs--create-new-empty-buffer)
-  (global-set-key (kbd "C-S-w") 'centaur-tabs--kill-this-buffer-dont-ask)
+  (map! :after centaur-tabs
+        :map centaur-tabs-mode-map
+        ;; Moving tabs left/right
+        "<C-S-left>"  #'centaur-tabs-backward
+        "<C-S-right>" #'centaur-tabs-forward
+        "<S-left>"    #'centaur-tabs-move-current-tab-to-left
+        "<S-right>"   #'centaur-tabs-move-current-tab-to-right
+        "<C-S-h>"     #'centaur-tabs-backward
+        "<C-S-l>"     #'centaur-tabs-forward
+        "<S-h>"       #'centaur-tabs-move-current-tab-to-left
+        "<S-l>"       #'centaur-tabs-move-current-tab-to-right
+        ;; Creating and killing tabs
+        "C-S-n"       #'centaur-tabs--create-new-empty-buffer
+        "C-S-w"       #'centaur-tabs--kill-this-buffer-dont-ask)
   (setq!
    centaur-tabs-cycle-scope 'tabs
    centaur-tabs-style "alternate"
@@ -664,17 +672,16 @@
 (use-package drag-stuff
   :defer t
   :config
+  (map! "M-<down>" (lambda () (interactive) (drag-stuff-down 1)))
+  (map! "M-<up>" (lambda () (interactive) (drag-stuff-up 1)))
+  (map! "M-j" (lambda () (interactive) (drag-stuff-down 1)))
+  (map! "M-k" (lambda () (interactive) (drag-stuff-up 1)))
   (drag-stuff-mode 1))
 
-(map! "M-<down>" (lambda () (interactive) (drag-stuff-down 1)))
-(map! "M-<up>" (lambda () (interactive) (drag-stuff-up 1)))
-(map! "M-j" (lambda () (interactive) (drag-stuff-down 1)))
-(map! "M-k" (lambda () (interactive) (drag-stuff-up 1)))
-
+;; Because my $HOME is a git repo.
 ;; Because my $HOME is a git repo.
 (after! projectile (setq projectile-project-root-files-bottom-up (remove ".git"
                                                                          projectile-project-root-files-bottom-up)))
-
 
 ;; Useful stuff
 ;; SPC-h-k: Describe key.
