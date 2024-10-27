@@ -73,7 +73,7 @@ fi
 #alias emacs="emacsclient -c -a emacs"
 alias ed='emacsclient -c -nw'
 alias icpy='xsel --clipboard --input'
-alias logoff='sudo systemctl restart sddm'
+alias logoff='sudo systemctl restart display-manager'
 alias doom="$HOME/.emacs.d/bin/doom"
 alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
 alias open=xdg-open
