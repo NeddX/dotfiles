@@ -17,12 +17,12 @@
 $
 
 # Command Line History (newest to oldest):
+:q!
+|2,0,1730635974,,"q!"
 :wq
 |2,0,1729446524,,"wq"
 :w
 |2,0,1729446521,,"w"
-:q!
-|2,0,1729446484,,"q!"
 :q
 |2,0,1729445335,,"q"
 
@@ -95,36 +95,92 @@ $
 |3,0,36,0,1,0,1729445082,"e"
 
 # File marks:
-'0  41  11  ~/.gitignore
-|4,48,41,11,1729446524,"~/.gitignore"
-'1  1  0  ~/.config/tmux/.gitignore
-|4,49,1,0,1729446484,"~/.config/tmux/.gitignore"
-'2  81  13  ~/.zshrc
-|4,50,81,13,1729445587,"~/.zshrc"
-'3  1  0  ~/.config/tmux/tmux.conf
-|4,51,1,0,1729445566,"~/.config/tmux/tmux.conf"
-'4  2  0  ~/.config/tmux/tmux.conf
-|4,52,2,0,1729445410,"~/.config/tmux/tmux.conf"
-'5  5  0  ~/.config/tmux/tmux.conf
-|4,53,5,0,1729445410,"~/.config/tmux/tmux.conf"
+'0  37  1  /tmp/git-blob-QFmxPK/ImGuiLayer.h
+|4,48,37,1,1730635974,"/tmp/git-blob-QFmxPK/ImGuiLayer.h"
+'1  1  0  ~/dev/Codex/CodexEditor/src/EditorApplication.cpp
+|4,49,1,0,1730632873,"~/dev/Codex/CodexEditor/src/EditorApplication.cpp"
+'2  41  11  ~/.gitignore
+|4,50,41,11,1729446524,"~/.gitignore"
+'3  1  0  ~/.config/tmux/.gitignore
+|4,51,1,0,1729446484,"~/.config/tmux/.gitignore"
+'4  81  13  ~/.zshrc
+|4,52,81,13,1729445587,"~/.zshrc"
+'5  1  0  ~/.config/tmux/tmux.conf
+|4,53,1,0,1729445566,"~/.config/tmux/tmux.conf"
 '6  2  0  ~/.config/tmux/tmux.conf
-|4,54,2,0,1729445336,"~/.config/tmux/tmux.conf"
+|4,54,2,0,1729445410,"~/.config/tmux/tmux.conf"
 '7  5  0  ~/.config/tmux/tmux.conf
-|4,55,5,0,1729445336,"~/.config/tmux/tmux.conf"
+|4,55,5,0,1729445410,"~/.config/tmux/tmux.conf"
 '8  2  0  ~/.config/tmux/tmux.conf
-|4,56,2,0,1729445284,"~/.config/tmux/tmux.conf"
-'9  2  0  ~/.config/tmux/tmux.conf
-|4,57,2,0,1729445284,"~/.config/tmux/tmux.conf"
+|4,56,2,0,1729445336,"~/.config/tmux/tmux.conf"
+'9  5  0  ~/.config/tmux/tmux.conf
+|4,57,5,0,1729445336,"~/.config/tmux/tmux.conf"
 
 # Jumplist (newest first):
+-'  37  1  /tmp/git-blob-QFmxPK/ImGuiLayer.h
+|4,39,37,1,1730635974,"/tmp/git-blob-QFmxPK/ImGuiLayer.h"
+-'  1  0  /tmp/git-blob-QFmxPK/ImGuiLayer.h
+|4,39,1,0,1730635964,"/tmp/git-blob-QFmxPK/ImGuiLayer.h"
+-'  1  0  ~/dev/Codex/CodexEditor/src/EditorApplication.cpp
+|4,39,1,0,1730632873,"~/dev/Codex/CodexEditor/src/EditorApplication.cpp"
+-'  1  0  ~/dev/Codex/CodexEditor/src/EditorApplication.cpp
+|4,39,1,0,1730632873,"~/dev/Codex/CodexEditor/src/EditorApplication.cpp"
 -'  41  11  ~/.gitignore
 |4,39,41,11,1729446524,"~/.gitignore"
+-'  41  11  ~/.gitignore
+|4,39,41,11,1729446524,"~/.gitignore"
+-'  41  11  ~/.gitignore
+|4,39,41,11,1729446524,"~/.gitignore"
+-'  41  11  ~/.gitignore
+|4,39,41,11,1729446524,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1729446488,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1729446488,"~/.gitignore"
+-'  1  0  ~/.gitignore
+|4,39,1,0,1729446488,"~/.gitignore"
 -'  1  0  ~/.gitignore
 |4,39,1,0,1729446488,"~/.gitignore"
 -'  1  0  ~/.config/tmux/.gitignore
 |4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
 -'  1  0  ~/.config/tmux/.gitignore
 |4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
+-'  1  0  ~/.config/tmux/.gitignore
+|4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
+-'  1  0  ~/.config/tmux/.gitignore
+|4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
+-'  1  0  ~/.config/tmux/.gitignore
+|4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
+-'  1  0  ~/.config/tmux/.gitignore
+|4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
+-'  1  0  ~/.config/tmux/.gitignore
+|4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
+-'  1  0  ~/.config/tmux/.gitignore
+|4,39,1,0,1729446484,"~/.config/tmux/.gitignore"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
+-'  81  13  ~/.zshrc
+|4,39,81,13,1729445587,"~/.zshrc"
 -'  81  13  ~/.zshrc
 |4,39,81,13,1729445587,"~/.zshrc"
 -'  81  13  ~/.zshrc
@@ -141,6 +197,54 @@ $
 |4,39,56,1,1729445578,"~/.zshrc"
 -'  56  1  ~/.zshrc
 |4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  56  1  ~/.zshrc
+|4,39,56,1,1729445578,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
+-'  1  0  ~/.zshrc
+|4,39,1,0,1729445576,"~/.zshrc"
 -'  1  0  ~/.zshrc
 |4,39,1,0,1729445576,"~/.zshrc"
 -'  1  0  ~/.zshrc
@@ -165,160 +269,71 @@ $
 |4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
 |4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  2  0  ~/.config/tmux/tmux.conf
-|4,39,2,0,1729445562,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445410,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445404,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
--'  5  0  ~/.config/tmux/tmux.conf
-|4,39,5,0,1729445336,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 -'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445309,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445284,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445284,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445284,"~/.config/tmux/tmux.conf"
--'  1  0  ~/.config/tmux/tmux.conf
-|4,39,1,0,1729445284,"~/.config/tmux/tmux.conf"
+|4,39,1,0,1729445566,"~/.config/tmux/tmux.conf"
 
 # History of marks within files (newest to oldest):
+
+> /tmp/git-blob-QFmxPK/ImGuiLayer.h
+	*	1730635974	0
+	"	37	1
+	^	37	2
+	.	37	0
+	+	37	0
+
+> ~/dev/Codex/CodexEngine/src/Engine/ImGui/ImGuiLayer.h
+	*	1730635969	0
+	"	37	0
+
+> ~/dev/Codex/CodexEditor/src/EditorApplication.cpp
+	*	1730631779	0
+	"	1	0
 
 > ~/.gitignore
 	*	1729446523	0
@@ -520,3 +535,6 @@ $
 	.	2147	61
 	+	50	78
 	+	2147	61
+
+> /tmp/git-blob-Tzudss/EditorApplication.cpp
+	"	1	0

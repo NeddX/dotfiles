@@ -171,7 +171,7 @@
   :config
   (beacon-mode t))
 
-;; Centaur
+;; centaur
 (use-package! centaur-tabs
   :init
   (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
@@ -180,14 +180,14 @@
   (map! :after centaur-tabs
         :map centaur-tabs-mode-map
         ;; Moving tabs left/right
-        "<C-S-left>"  #'centaur-tabs-backward
-        "<C-S-right>" #'centaur-tabs-forward
-        "<S-left>"    #'centaur-tabs-move-current-tab-to-left
-        "<S-right>"   #'centaur-tabs-move-current-tab-to-right
-        "<C-S-h>"     #'centaur-tabs-backward
-        "<C-S-l>"     #'centaur-tabs-forward
-        "<S-h>"       #'centaur-tabs-move-current-tab-to-left
-        "<S-l>"       #'centaur-tabs-move-current-tab-to-right
+        ;;"<CrS-left>"  #'centaur-tabs-backward
+        ;;"<C-S-right>" #'centaur-tabs-forward
+        ;;"<S-left>"    #'centaur-tabs-move-current-tab-to-left
+        ;;"<S-right>"   #'centaur-tabs-move-current-tab-to-right
+        "C-h"     #'centaur-tabs-backward
+        "C-l"     #'centaur-tabs-forward
+        "C-M-h"       #'centaur-tabs-move-current-tab-to-left
+        "C-M-l"       #'centaur-tabs-move-current-tab-to-right
         ;; Creating and killing tabs
         "C-S-n"       #'centaur-tabs--create-new-empty-buffer
         "C-S-w"       #'centaur-tabs--kill-this-buffer-dont-ask)
@@ -422,6 +422,13 @@
 
 ;;class
 ;; Syntax highlighting if doom-meltbus
+;;
+(use-package evil
+  :config
+  ;; Unbind Shift+h & Shift+l for centaur tabs.
+  (map! :after evil "H" nil)
+  (map! :after evil "L" nil)
+  )
 
 ;; Multiedit
 (use-package evil-multiedit
