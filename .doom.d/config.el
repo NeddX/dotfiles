@@ -685,6 +685,11 @@
   (map! "M-k" (lambda () (interactive) (drag-stuff-up 1)))
   (drag-stuff-mode 1))
 
+;; Match emacs theme on the terminal
+(use-package color-theme-approximate
+  :config
+  (color-theme-approximate-on))
+
 ;; Because my $HOME is a git repo.
 ;; Because my $HOME is a git repo.
 (after! projectile (setq projectile-project-root-files-bottom-up (remove ".git"
