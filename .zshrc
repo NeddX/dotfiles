@@ -23,6 +23,9 @@ if [[ "$PLATFORM_OS" == "linux"  ]]; then
         android)
 	        PLATFORM_LOGO="󰀲"	
             ;; 
+        ubuntu)
+	        PLATFORM_LOGO=""	
+            ;; 
         arch)
             PLATFORM_LOGO="󰣇"
             ;;
@@ -69,17 +72,50 @@ if [[ "$PLATFORM_OS" == "darwin" ]]; then
     export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 fi
 
+# ======== Aliases ========
 # Im env varery
-#alias emacs="emacsclient -c -a emacs"
-alias ed='emacsclient -c -nw'
+ed() {
+    if [ $# -eq 0 ]; then
+        # No arguments, just open emacsclient in the terminal.
+        emacsclient -c -nw
+    else
+        # Argument is present, check if it's a valid file or directory.
+        if [ -e "$1" ]; then
+            # File or directory exists, pass it to ec.
+            emacsclient -c -nw -e "(find-file \"$1\")"
+        else
+            # Is not a file/directory, just pass it to ec.
+            emacsclient -c -nw "$1"
+        fi
+    fi
+}
+
+ec() {
+    if [ $# -eq 0 ]; then
+        # No arguments, just open emacsclient in the terminal.
+        emacsclient -c
+    else
+        # Argument is present, check if it's a valid file or directory.
+        if [ -e "$1" ]; then
+            # File or directory exists, pass it to ec.
+            emacsclient -c -e "(find-file \"$1\")"
+        else
+            # Is not a file/directory, just pass it to ec.
+            emacsclient -c "$1"
+        fi
+    fi
+}
+
 alias icpy='xsel --clipboard --input'
 alias logoff='sudo systemctl restart display-manager'
 alias doom="$HOME/.emacs.d/bin/doom"
 alias remotedekstop='x0vncserver -PasswordFile=/home/loghost/.vnc/passwd -AlwaysShared -AcceptPointerEvents=false AcceptKeyEvents=false SecurityTypes=None'
 alias open=xdg-open
-export EDITOR=lvim
-alias vim=lvim
-alias userctrl='systemctl --user'
+alias userctl='systemctl --user'
+alias vim='lvim'
+alias tmux='tmux -2'
+
+export PATH=$PATH:/opt/st/stm32cubeide_1.10.1
 
 # Tell ld to also look into ./ or ./lib for when dynamically linking.
 export LD_LIBRARY_PATH=./:./lib:$LD_LIBRARY_PATH

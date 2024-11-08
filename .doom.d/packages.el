@@ -106,3 +106,4 @@
 
 ;; Disabled packages
 (package! eldoc :disable t)
+(package! color-theme-approximate)
