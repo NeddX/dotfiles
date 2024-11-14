@@ -103,9 +103,9 @@ if [ "$(uname -s)" == "Darwin" ]; then
 elif [ "$(uname -s)" == "Linux" ]; then
     echo "[!]: Detected Linux."
     if is_package_installed "apt"; then
-        install_packages_apt
+        #install_packages_apt
         install_fonts
-        configure_neovim
+        #configure_neovim
     elif is_package_installed "pacman"; then
         install_packages_pacman
         install_fonts

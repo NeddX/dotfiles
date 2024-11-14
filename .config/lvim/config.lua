@@ -58,4 +58,4 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 lvim.builtin.treesitter.ident = { enable = true }
-lvim.format_on_save.enabled = true
+lvim.format_on_save.enabled = false

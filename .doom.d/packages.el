@@ -107,3 +107,5 @@
 ;; Disabled packages
 (package! eldoc :disable t)
 (package! color-theme-approximate)
+(package! vdiff)
+(package! vdiff-magit)

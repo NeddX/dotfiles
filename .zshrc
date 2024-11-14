@@ -5,6 +5,7 @@
 export CC=clang
 export CXX=clang++
 
+export TERM=xterm-256color
 export PLATFORM_LOGO="?"
 export PLATFORM_OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
 export PLATFORM_ALIAS="?"
