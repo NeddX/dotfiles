@@ -82,6 +82,7 @@
 (package! multi-vterm)
 (package! lsp-treemacs)
 (package! dap-mode)
+(package! realgud-lldb)
 (package! one-themes)
 (package! atom-one-dark-theme)
 (package! spacemacs-theme)
