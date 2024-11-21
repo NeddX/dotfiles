@@ -300,7 +300,7 @@
   (define-key org-mode-map (kbd "<C-up>") nil)
   (define-key org-mode-map (kbd "<C-down>") nil))
 
-(add-hook 'org-mode-hook 'my-org-mode-hook)
+;;(add-hook 'org-mode-hook 'my-org-mode-hook)
 
 ;; dashboard
 (use-package dashboard
