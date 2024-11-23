@@ -108,5 +108,8 @@
 ;; Disabled packages
 (package! eldoc :disable t)
 (package! color-theme-approximate)
+<<<<<<< HEAD
 (package! vdiff)
 (package! vdiff-magit)
+=======
+>>>>>>> remotes/origin/main

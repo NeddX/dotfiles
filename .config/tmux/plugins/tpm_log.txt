@@ -1,0 +1,358 @@
+[2024-10-20 21:44:53.155]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-20 21:44:53.190]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-20 21:44:53.329]	Installing "tmux-sensible"
+[2024-10-20 21:44:53.405]	Installing "tmux-cpu"
+[2024-10-20 21:44:53.488]	Installing "vim-tmux-navigator"
+[2024-10-20 21:44:53.543]	Already installed "tpm"
+[2024-10-20 21:44:53.832]	  "vim-tmux-navigator" download fail
+[2024-10-20 21:44:54.175]	  "tmux-sensible" download success
+[2024-10-20 21:44:54.426]	  "tmux-cpu" download success
+[2024-10-20 21:44:54.463]	Done.
+
+[2024-10-20 21:45:16.388]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-20 21:45:16.433]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-20 21:45:16.640]	Already installed "tmux-cpu"
+[2024-10-20 21:45:16.700]	Installing "vim-tmux-navigator"
+[2024-10-20 21:45:16.741]	Already installed "tmux-sensible"
+[2024-10-20 21:45:16.779]	Already installed "tpm"
+[2024-10-20 21:45:17.228]	  "vim-tmux-navigator" download fail
+[2024-10-20 21:45:17.286]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-10-20 21:45:17.375]	Updating all plugins!
+[2024-10-20 21:45:17.428]	
+[2024-10-20 21:45:18.100]	  "tmux-sensible" update success
+[2024-10-20 21:45:18.148]	    | Already up to date.
+[2024-10-20 21:45:18.212]	  "tmux-cpu" update success
+[2024-10-20 21:45:18.280]	    | Already up to date.
+[2024-10-20 21:45:20.323]	  "tpm" update success
+[2024-10-20 21:45:20.355]	    | Already up to date.
+[2024-10-20 21:45:20.387]	    | Submodule 'lib/tmux-test' (https://github.com/tmux-plugins/tmux-test.git) registered for path 'lib/tmux-test'
+[2024-10-20 21:45:20.420]	    | Cloning into '/home/nedd/.config/tmux/plugins/tpm/lib/tmux-test'...
+[2024-10-20 21:45:20.452]	    | From https://github.com/tmux-plugins/tmux-test
+[2024-10-20 21:45:20.484]	    |  * branch            33fa65fbfb72ba6dd106c21bf5ee6cc353ecdbb6 -> FETCH_HEAD
+[2024-10-20 21:45:20.516]	    | Submodule path 'lib/tmux-test': checked out '33fa65fbfb72ba6dd106c21bf5ee6cc353ecdbb6'
+[2024-10-20 21:45:20.551]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-10-20 21:45:20.666]	Done.
+
+[2024-10-20 21:47:31.456]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-20 21:47:31.493]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-20 21:47:31.626]	Installing "vim-tmux-navigator"
+[2024-10-20 21:47:31.660]	Already installed "tpm"
+[2024-10-20 21:47:31.694]	Already installed "tmux-sensible"
+[2024-10-20 21:47:31.734]	Already installed "tmux-cpu"
+[2024-10-20 21:47:32.128]	  "vim-tmux-navigator" download fail
+[2024-10-20 21:47:32.179]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-10-20 21:47:32.274]	Updating all plugins!
+[2024-10-20 21:47:32.332]	
+[2024-10-20 21:47:33.030]	  "tpm" update success
+[2024-10-20 21:47:33.088]	    | Already up to date.
+[2024-10-20 21:47:33.148]	  "tmux-sensible" update success
+[2024-10-20 21:47:33.215]	    | Already up to date.
+[2024-10-20 21:47:33.252]	  "tmux-cpu" update success
+[2024-10-20 21:47:33.286]	    | Already up to date.
+[2024-10-20 21:47:33.326]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-10-20 21:47:33.447]	Done.
+
+[2024-10-26 13:16:00.770]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-26 13:16:00.800]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-26 13:16:00.902]	Installing "vim-tmux-navigator"
+[2024-10-26 13:16:00.929]	Already installed "tpm"
+[2024-10-26 13:16:00.955]	Already installed "tmux-cpu"
+[2024-10-26 13:16:00.981]	Already installed "tmux-sensible"
+[2024-10-26 13:16:01.396]	  "vim-tmux-navigator" download fail
+[2024-10-26 13:16:01.422]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-10-26 13:16:01.490]	Updating all plugins!
+[2024-10-26 13:16:01.528]	
+[2024-10-26 13:16:02.150]	  "tpm" update success
+[2024-10-26 13:16:02.183]	    | Already up to date.
+[2024-10-26 13:16:02.211]	  "tmux-cpu" update success
+[2024-10-26 13:16:02.235]	    | Already up to date.
+[2024-10-26 13:16:02.260]	  "tmux-sensible" update success
+[2024-10-26 13:16:02.288]	    | Already up to date.
+[2024-10-26 13:16:02.325]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-10-26 13:16:02.423]	Done.
+
+[2024-10-26 13:16:23.937]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-26 13:16:23.963]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-26 13:16:24.081]	Installing "vim-tmux-navigator"
+[2024-10-26 13:16:24.108]	Already installed "tmux-sensible"
+[2024-10-26 13:16:24.133]	Already installed "tmux-cpu"
+[2024-10-26 13:16:24.159]	Already installed "tpm"
+[2024-10-26 13:16:24.572]	  "vim-tmux-navigator" download fail
+[2024-10-26 13:16:24.599]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-10-26 13:16:24.664]	Updating all plugins!
+[2024-10-26 13:16:24.703]	
+[2024-10-26 13:16:25.332]	  "tmux-cpu" update success
+[2024-10-26 13:16:25.357]	  "tpm" update success
+[2024-10-26 13:16:25.382]	    | Already up to date.
+[2024-10-26 13:16:25.407]	  "tmux-sensible" update success
+[2024-10-26 13:16:25.432]	    | Already up to date.
+[2024-10-26 13:16:25.457]	    | Already up to date.
+[2024-10-26 13:16:25.500]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-10-26 13:16:25.601]	Done.
+
+[2024-10-26 20:06:47.335]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-26 20:06:47.395]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-26 20:06:47.518]	Installing "vim-tmux-navigator"
+[2024-10-26 20:06:47.556]	Already installed "tpm"
+[2024-10-26 20:06:47.586]	Already installed "tmux-cpu"
+[2024-10-26 20:06:47.616]	Already installed "tmux-sensible"
+[2024-10-26 20:06:48.046]	  "vim-tmux-navigator" download fail
+[2024-10-26 20:06:48.078]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-10-26 20:06:48.195]	Updating all plugins!
+[2024-10-26 20:06:48.238]	
+[2024-10-26 20:06:48.879]	  "tpm" update success
+[2024-10-26 20:06:48.918]	    | Already up to date.
+[2024-10-26 20:06:48.966]	  "tmux-sensible" update success
+[2024-10-26 20:06:48.995]	    | Already up to date.
+[2024-10-26 20:06:49.022]	  "tmux-cpu" update success
+[2024-10-26 20:06:49.050]	    | Already up to date.
+[2024-10-26 20:06:49.079]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-10-26 20:06:49.174]	Done.
+
+[2024-10-26 20:22:13.968]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-26 20:22:14.029]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-26 20:22:14.144]	Installing "vim-tmux-navigator"
+[2024-10-26 20:22:14.191]	Already installed "tpm"
+[2024-10-26 20:22:14.263]	Already installed "tmux-sensible"
+[2024-10-26 20:22:14.301]	Already installed "tmux-cpu"
+[2024-10-26 20:22:14.680]	  "vim-tmux-navigator" download fail
+[2024-10-26 20:22:14.709]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-10-26 20:22:14.778]	Updating all plugins!
+[2024-10-26 20:22:14.816]	
+[2024-10-26 20:22:15.482]	  "tpm" update success
+[2024-10-26 20:22:15.516]	    | Already up to date.
+[2024-10-26 20:22:15.547]	  "tmux-cpu" update success
+[2024-10-26 20:22:15.579]	    | Already up to date.
+[2024-10-26 20:22:15.612]	  "tmux-sensible" update success
+[2024-10-26 20:22:15.644]	    | Already up to date.
+[2024-10-26 20:22:15.678]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-10-26 20:22:15.777]	Done.
+
+[2024-10-27 10:04:50.496]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-10-27 10:04:50.540]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-10-27 10:04:50.659]	Installing "vim-tmux-navigator"
+[2024-10-27 10:04:50.687]	Already installed "tpm"
+[2024-10-27 10:04:50.712]	Already installed "tmux-sensible"
+[2024-10-27 10:04:50.740]	Already installed "tmux-cpu"
+[2024-10-27 10:04:51.135]	  "vim-tmux-navigator" download fail
+[2024-10-27 10:04:51.165]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-10-27 10:04:51.232]	Updating all plugins!
+[2024-10-27 10:04:51.270]	
+[2024-10-27 10:04:51.873]	  "tpm" update success
+[2024-10-27 10:04:51.903]	    | Already up to date.
+[2024-10-27 10:04:51.929]	  "tmux-sensible" update success
+[2024-10-27 10:04:51.953]	    | Already up to date.
+[2024-10-27 10:04:51.978]	  "tmux-cpu" update success
+[2024-10-27 10:04:52.003]	    | Already up to date.
+[2024-10-27 10:04:52.039]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-10-27 10:04:52.140]	Done.
+
+[2024-11-02 13:22:16.690]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-02 13:22:16.725]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-02 13:22:16.854]	Installing "vim-tmux-navigator"
+[2024-11-02 13:22:16.894]	Already installed "tpm"
+[2024-11-02 13:22:16.931]	Already installed "tmux-sensible"
+[2024-11-02 13:22:16.964]	Already installed "tmux-cpu"
+[2024-11-02 13:22:17.325]	  "vim-tmux-navigator" download fail
+[2024-11-02 13:22:17.359]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-02 13:22:17.441]	Updating all plugins!
+[2024-11-02 13:22:17.499]	
+[2024-11-02 13:22:18.162]	  "tmux-sensible" update success
+[2024-11-02 13:22:18.199]	  "tmux-cpu" update success
+[2024-11-02 13:22:18.231]	    | Already up to date.
+[2024-11-02 13:22:18.265]	    | Already up to date.
+[2024-11-02 13:22:18.302]	  "tpm" update success
+[2024-11-02 13:22:18.336]	    | Already up to date.
+[2024-11-02 13:22:18.371]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-02 13:22:18.496]	Done.
+
+[2024-11-02 21:35:29.487]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-02 21:35:29.517]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-02 21:35:29.639]	Installing "vim-tmux-navigator"
+[2024-11-02 21:35:29.672]	Already installed "tpm"
+[2024-11-02 21:35:29.705]	Already installed "tmux-sensible"
+[2024-11-02 21:35:29.738]	Already installed "tmux-cpu"
+[2024-11-02 21:35:30.188]	  "vim-tmux-navigator" download fail
+[2024-11-02 21:35:30.219]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-02 21:35:30.289]	Updating all plugins!
+[2024-11-02 21:35:30.331]	
+[2024-11-02 21:35:31.132]	  "tpm" update success
+[2024-11-02 21:35:31.166]	    | Already up to date.
+[2024-11-02 21:35:31.394]	  "tmux-sensible" update success
+[2024-11-02 21:35:31.436]	    | Already up to date.
+[2024-11-02 21:35:31.473]	  "tmux-cpu" update success
+[2024-11-02 21:35:31.500]	    | Already up to date.
+[2024-11-02 21:35:31.529]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-02 21:35:31.630]	Done.
+
+[2024-11-03 12:51:46.694]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-03 12:51:46.724]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-03 12:51:46.845]	Installing "vim-tmux-navigator"
+[2024-11-03 12:51:46.873]	Already installed "tpm"
+[2024-11-03 12:51:46.897]	Already installed "tmux-sensible"
+[2024-11-03 12:51:46.926]	Already installed "tmux-cpu"
+[2024-11-03 12:51:47.360]	  "vim-tmux-navigator" download fail
+[2024-11-03 12:51:47.388]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-03 12:51:47.456]	Updating all plugins!
+[2024-11-03 12:51:47.493]	
+[2024-11-03 12:51:48.202]	  "tmux-sensible" update success
+[2024-11-03 12:51:48.234]	  "tpm" update success
+[2024-11-03 12:51:48.266]	    | Already up to date.
+[2024-11-03 12:51:48.290]	    | Already up to date.
+[2024-11-03 12:51:48.315]	  "tmux-cpu" update success
+[2024-11-03 12:51:48.340]	    | Already up to date.
+[2024-11-03 12:51:48.381]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-03 12:51:48.494]	Done.
+
+[2024-11-03 13:02:35.756]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-03 13:02:35.802]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-03 13:02:35.912]	Installing "vim-tmux-navigator"
+[2024-11-03 13:02:35.939]	Already installed "tpm"
+[2024-11-03 13:02:35.965]	Already installed "tmux-cpu"
+[2024-11-03 13:02:35.992]	Already installed "tmux-sensible"
+[2024-11-03 13:02:36.463]	  "vim-tmux-navigator" download fail
+[2024-11-03 13:02:36.505]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-03 13:02:36.585]	Updating all plugins!
+[2024-11-03 13:02:36.625]	
+[2024-11-03 13:02:37.232]	  "tpm" update success
+[2024-11-03 13:02:37.280]	    | Already up to date.
+[2024-11-03 13:02:37.322]	  "tmux-sensible" update success
+[2024-11-03 13:02:37.359]	    | Already up to date.
+[2024-11-03 13:02:37.399]	  "tmux-cpu" update success
+[2024-11-03 13:02:37.434]	    | Already up to date.
+[2024-11-03 13:02:37.461]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-03 13:02:37.562]	Done.
+
+[2024-11-03 15:02:04.497]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-03 15:02:04.525]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-03 15:02:04.629]	Installing "vim-tmux-navigator"
+[2024-11-03 15:02:04.657]	Already installed "tpm"
+[2024-11-03 15:02:04.685]	Already installed "tmux-cpu"
+[2024-11-03 15:02:04.719]	Already installed "tmux-sensible"
+[2024-11-03 15:02:05.133]	  "vim-tmux-navigator" download fail
+[2024-11-03 15:02:05.163]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-03 15:02:05.230]	Updating all plugins!
+[2024-11-03 15:02:05.272]	
+[2024-11-03 15:02:05.896]	  "tmux-sensible" update success
+[2024-11-03 15:02:05.926]	  "tpm" update success
+[2024-11-03 15:02:05.953]	    | Already up to date.
+[2024-11-03 15:02:05.979]	    | Already up to date.
+[2024-11-03 15:02:06.006]	  "tmux-cpu" update success
+[2024-11-03 15:02:06.032]	    | Already up to date.
+[2024-11-03 15:02:06.064]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-03 15:02:06.166]	Done.
+
+[2024-11-04 00:15:45.861]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-04 00:15:45.893]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-04 00:15:46.008]	Installing "vim-tmux-navigator"
+[2024-11-04 00:15:46.039]	Already installed "tpm"
+[2024-11-04 00:15:46.067]	Already installed "tmux-cpu"
+[2024-11-04 00:15:46.101]	Already installed "tmux-sensible"
+[2024-11-04 00:15:46.485]	  "vim-tmux-navigator" download fail
+[2024-11-04 00:15:46.516]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-04 00:15:46.588]	Updating all plugins!
+[2024-11-04 00:15:46.632]	
+[2024-11-04 00:15:47.242]	  "tpm" update success
+[2024-11-04 00:15:47.280]	    | Already up to date.
+[2024-11-04 00:15:47.309]	  "tmux-sensible" update success
+[2024-11-04 00:15:47.336]	    | Already up to date.
+[2024-11-04 00:15:47.365]	  "tmux-cpu" update success
+[2024-11-04 00:15:47.395]	    | Already up to date.
+[2024-11-04 00:15:47.426]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-04 00:15:47.531]	Done.
+
+[2024-11-09 11:42:57.266]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-09 11:42:57.309]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-09 11:42:57.447]	Installing "vim-tmux-navigator"
+[2024-11-09 11:42:57.487]	Already installed "tpm"
+[2024-11-09 11:42:57.527]	Already installed "tmux-cpu"
+[2024-11-09 11:42:57.567]	Already installed "tmux-sensible"
+[2024-11-09 11:42:58.157]	  "vim-tmux-navigator" download fail
+[2024-11-09 11:42:58.198]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-09 11:42:58.282]	Updating all plugins!
+[2024-11-09 11:42:58.341]	
+[2024-11-09 11:42:59.217]	  "tpm" update success
+[2024-11-09 11:42:59.262]	    | Already up to date.
+[2024-11-09 11:42:59.304]	  "tmux-cpu" update success
+[2024-11-09 11:42:59.334]	    | Already up to date.
+[2024-11-09 11:42:59.364]	  "tmux-sensible" update success
+[2024-11-09 11:42:59.394]	    | Already up to date.
+[2024-11-09 11:42:59.427]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-09 11:42:59.537]	Done.
+
+[2024-11-09 18:24:13.316]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-09 18:24:13.349]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-09 18:24:13.464]	Installing "vim-tmux-navigator"
+[2024-11-09 18:24:13.496]	Already installed "tpm"
+[2024-11-09 18:24:13.525]	Already installed "tmux-cpu"
+[2024-11-09 18:24:13.560]	Already installed "tmux-sensible"
+[2024-11-09 18:24:13.943]	  "vim-tmux-navigator" download fail
+[2024-11-09 18:24:13.975]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-09 18:24:14.049]	Updating all plugins!
+[2024-11-09 18:24:14.095]	
+[2024-11-09 18:24:14.688]	  "tpm" update success
+[2024-11-09 18:24:14.731]	    | Already up to date.
+[2024-11-09 18:24:14.775]	  "tmux-sensible" update success
+[2024-11-09 18:24:14.818]	    | Already up to date.
+[2024-11-09 18:24:14.851]	  "tmux-cpu" update success
+[2024-11-09 18:24:14.887]	    | Already up to date.
+[2024-11-09 18:24:14.926]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-09 18:24:15.041]	Done.
+
+[2024-11-09 18:45:16.396]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-09 18:45:16.429]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-09 18:45:16.550]	Installing "vim-tmux-navigator"
+[2024-11-09 18:45:16.587]	Already installed "tpm"
+[2024-11-09 18:45:16.620]	Already installed "tmux-sensible"
+[2024-11-09 18:45:16.654]	Already installed "tmux-cpu"
+[2024-11-09 18:45:17.030]	  "vim-tmux-navigator" download fail
+[2024-11-09 18:45:17.109]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-09 18:45:17.212]	Updating all plugins!
+[2024-11-09 18:45:17.274]	
+[2024-11-09 18:45:17.911]	  "tpm" update success
+[2024-11-09 18:45:17.954]	    | Already up to date.
+[2024-11-09 18:45:17.989]	  "tmux-sensible" update success
+[2024-11-09 18:45:18.021]	    | Already up to date.
+[2024-11-09 18:45:18.052]	  "tmux-cpu" update success
+[2024-11-09 18:45:18.083]	    | Already up to date.
+[2024-11-09 18:45:18.117]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-09 18:45:18.229]	Done.
+
+[2024-11-09 18:45:32.683]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-09 18:45:32.716]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-09 18:45:32.841]	Installing "vim-tmux-navigator"
+[2024-11-09 18:45:32.873]	Already installed "tmux-sensible"
+[2024-11-09 18:45:32.906]	Already installed "tpm"
+[2024-11-09 18:45:32.942]	Already installed "tmux-cpu"
+[2024-11-09 18:45:33.348]	  "vim-tmux-navigator" download fail
+[2024-11-09 18:45:33.389]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-09 18:45:33.465]	Updating all plugins!
+[2024-11-09 18:45:33.512]	
+[2024-11-09 18:45:34.205]	  "tpm" update success
+[2024-11-09 18:45:34.249]	    | Already up to date.
+[2024-11-09 18:45:34.280]	  "tmux-sensible" update success
+[2024-11-09 18:45:34.313]	    | Already up to date.
+[2024-11-09 18:45:34.344]	  "tmux-cpu" update success
+[2024-11-09 18:45:34.376]	    | Already up to date.
+[2024-11-09 18:45:34.409]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-09 18:45:34.521]	Done.
+
+[2024-11-09 18:45:51.064]	List of discovered tpm plugins: tmux-plugins/tpm tmux-plugins/tmux-sensible tmux-plugins/tmux-cpu tmux-plugins/vim-tmux-navigator
+[2024-11-09 18:45:51.098]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/install_plugins
+[2024-11-09 18:45:51.229]	Installing "vim-tmux-navigator"
+[2024-11-09 18:45:51.262]	Already installed "tmux-cpu"
+[2024-11-09 18:45:51.295]	Already installed "tmux-sensible"
+[2024-11-09 18:45:51.332]	Already installed "tpm"
+[2024-11-09 18:45:51.706]	  "vim-tmux-navigator" download fail
+[2024-11-09 18:45:51.740]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/update_plugins all
+[2024-11-09 18:45:51.819]	Updating all plugins!
+[2024-11-09 18:45:51.869]	
+[2024-11-09 18:45:52.481]	  "tpm" update success
+[2024-11-09 18:45:52.524]	    | Already up to date.
+[2024-11-09 18:45:52.561]	  "tmux-cpu" update success
+[2024-11-09 18:45:52.592]	    | Already up to date.
+[2024-11-09 18:45:52.623]	  "tmux-sensible" update success
+[2024-11-09 18:45:52.655]	    | Already up to date.
+[2024-11-09 18:45:52.691]	Invoking /home/nedd/.config/tmux/plugins/tpm/bin/clean_plugins all
+[2024-11-09 18:45:52.803]	Done.
+

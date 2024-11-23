@@ -171,7 +171,7 @@
   :config
   (beacon-mode t))
 
-;; Centaur
+;; centaur
 (use-package! centaur-tabs
   :init
   (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
@@ -180,10 +180,14 @@
   (map! :after centaur-tabs
         :map centaur-tabs-mode-map
         ;; Moving tabs left/right
-        "C-S-h"     #'centaur-tabs-backward
-        "C-S-l"     #'centaur-tabs-forward
-        "S-h"       #'centaur-tabs-move-current-tab-to-left
-        "S-l"       #'centaur-tabs-move-current-tab-to-right
+        ;;"<CrS-left>"  #'centaur-tabs-backward
+        ;;"<C-S-right>" #'centaur-tabs-forward
+        ;;"<S-left>"    #'centaur-tabs-move-current-tab-to-left
+        ;;"<S-right>"   #'centaur-tabs-move-current-tab-to-right
+        "C-h"     #'centaur-tabs-backward
+        "C-l"     #'centaur-tabs-forward
+        "C-M-h"       #'centaur-tabs-move-current-tab-to-left
+        "C-M-l"       #'centaur-tabs-move-current-tab-to-right
         ;; Creating and killing tabs
         "C-S-n"       #'centaur-tabs--create-new-empty-buffer
         "C-S-w"       #'centaur-tabs--kill-this-buffer-dont-ask)
@@ -300,7 +304,7 @@
   (define-key org-mode-map (kbd "<C-up>") nil)
   (define-key org-mode-map (kbd "<C-down>") nil))
 
-;;(add-hook 'org-mode-hook 'my-org-mode-hook)
+(add-hook 'org-mode-hook 'my-org-mode-hook)
 
 ;; dashboard
 (use-package dashboard
@@ -710,61 +714,6 @@
 (use-package color-theme-approximate
   :config
   (color-theme-approximate-on))
-
-(use-package vdiff
-  :config
-  ;; Whether to lock scrolling by default when starting vdiff
-  (setq vdiff-lock-scrolling t)
-
-  ;; diff program/algorithm to use. Allows choice of diff or git diff along with
-  ;; the various algorithms provided by these commands. See
-  ;; `vdiff-diff-algorithms' for the associated command line arguments.
-  (setq vdiff-diff-algorithm 'diff)
-
-  ;; diff3 command to use. Specify as a list where the car is the command to use
-  ;; and the remaining elements are the arguments to the command.
-  (setq vdiff-diff3-command '("diff3"))
-
-  ;; Don't use folding in vdiff buffers if non-nil.
-  (setq vdiff-disable-folding nil)
-
-  ;; Unchanged lines to leave unfolded around a fold
-  (setq vdiff-fold-padding 6)
-
-  ;; Minimum number of lines to fold
-  (setq vdiff-min-fold-size 4)
-
-  ;; If non-nil, allow closing new folds around point after updates.
-  (setq vdiff-may-close-fold-on-point t)
-
-  ;; Function that returns the string printed for a closed fold. The arguments
-  ;; passed are the number of lines folded, the text on the first line, and the
-  ;; width of the buffer.
-  (setq vdiff-fold-string-function 'vdiff-fold-string-default)
-
-  ;; Default syntax table class code to use for identifying "words" in
-  ;; `vdiff-refine-this-change'. Some useful options are
-  ;;
-  ;; "w"   (default) words
-  ;; "w_"  symbols (words plus symbol constituents)
-  ;;
-  ;; For more information see
-  ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Class-Table.html
-  (setq vdiff-default-refinement-syntax-code "w")
-
-  ;; If non-nil, automatically refine all hunks.
-  (setq vdiff-auto-refine nil)
-
-  ;; How to represent subtractions (i.e., deleted lines). The
-  ;; default is full which means add the same number of (fake) lines
-  ;; as those that were removed. The choice single means add only one
-  ;; fake line. The choice fringe means don't add lines but do
-  ;; indicate the subtraction location in the fringe.
-  (setq vdiff-subtraction-style 'full)
-
-;; Character to use for filling subtraction lines. See also
-;; `vdiff-subtraction-style'.
-(setq vdiff-subtraction-fill-char ?-))
 
 ;; Because my $HOME is a git repo.
 ;; Because my $HOME is a git repo.

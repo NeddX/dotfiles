@@ -112,7 +112,7 @@
 
                                         ; Set the current theme
 ;; Cool themes
-;;(setq! doom-theme 'doom-one)
+;(setq! doom-theme 'doom-one)
 ;;(setq! doom-theme 'doom-tomorrow-night)
 ;;(setq! doom-theme 'doom-tokyo-night)
 ;;(setq! doom-theme 'atom-one-dark)
@@ -171,7 +171,7 @@
   :config
   (beacon-mode t))
 
-;; Centaur
+;; centaur
 (use-package! centaur-tabs
   :init
   (add-hook! 'server-after-make-frame-hook 'centaur-tabs-mode)
@@ -180,10 +180,21 @@
   (map! :after centaur-tabs
         :map centaur-tabs-mode-map
         ;; Moving tabs left/right
+<<<<<<< HEAD
         "C-S-h"     #'centaur-tabs-backward
         "C-S-l"     #'centaur-tabs-forward
         "S-h"       #'centaur-tabs-move-current-tab-to-left
         "S-l"       #'centaur-tabs-move-current-tab-to-right
+=======
+        ;;"<CrS-left>"  #'centaur-tabs-backward
+        ;;"<C-S-right>" #'centaur-tabs-forward
+        ;;"<S-left>"    #'centaur-tabs-move-current-tab-to-left
+        ;;"<S-right>"   #'centaur-tabs-move-current-tab-to-right
+        "C-h"     #'centaur-tabs-backward
+        "C-l"     #'centaur-tabs-forward
+        "C-M-h"       #'centaur-tabs-move-current-tab-to-left
+        "C-M-l"       #'centaur-tabs-move-current-tab-to-right
+>>>>>>> remotes/origin/main
         ;; Creating and killing tabs
         "C-S-n"       #'centaur-tabs--create-new-empty-buffer
         "C-S-w"       #'centaur-tabs--kill-this-buffer-dont-ask)
@@ -711,6 +722,7 @@
   :config
   (color-theme-approximate-on))
 
+<<<<<<< HEAD
 (use-package vdiff
   :config
   ;; Whether to lock scrolling by default when starting vdiff
@@ -766,6 +778,8 @@
 ;; `vdiff-subtraction-style'.
 (setq vdiff-subtraction-fill-char ?-))
 
+=======
+>>>>>>> remotes/origin/main
 ;; Because my $HOME is a git repo.
 ;; Because my $HOME is a git repo.
 (after! projectile (setq projectile-project-root-files-bottom-up (remove ".git"

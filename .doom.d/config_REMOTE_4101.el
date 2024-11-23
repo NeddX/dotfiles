@@ -112,7 +112,7 @@
 
                                         ; Set the current theme
 ;; Cool themes
-;;(setq! doom-theme 'doom-one)
+;(setq! doom-theme 'doom-one)
 ;;(setq! doom-theme 'doom-tomorrow-night)
 ;;(setq! doom-theme 'doom-tokyo-night)
 ;;(setq! doom-theme 'atom-one-dark)
@@ -300,7 +300,7 @@
   (define-key org-mode-map (kbd "<C-up>") nil)
   (define-key org-mode-map (kbd "<C-down>") nil))
 
-;;(add-hook 'org-mode-hook 'my-org-mode-hook)
+(add-hook 'org-mode-hook 'my-org-mode-hook)
 
 ;; dashboard
 (use-package dashboard
@@ -415,6 +415,9 @@
 
 (add-hook 'Info-selection-hook
           'info-colors-fontify-node)
+
+;;class
+;; Syntax highlighting if doom-meltbus
 
 ;; Multiedit
 (use-package evil-multiedit
@@ -559,71 +562,36 @@
   (treemacs-project-follow-mode 1))
 
                                         ; Dap
-;;use-package dap-mode
-;; :defer t
-;; :init
-;; (dap-mode 0)
-;; :config
-;; (dap-ui-mode)
-;; (dap-ui-controls-mode 1)
-;; (require 'dap-cpptools)
-;; (require 'dap-lldb)
-;; (require 'dap-gdb-lldb)
-;;
-;; ;; Extensions from vscode
-;; (dap-gdb-lldb-setup)
-;; (dap-register-debug-template
-;;  "Rust: LLDB Run Configuration"
-;;  (list :type "lldb"
-;;        :request "launch"
-;;        :name "LLDB:Run"
-;;        :gdpath "rust-lldb"
-;;        :target nil
-;;        :cwd nil))
-;;
-;; :custom
-;; (dap-auto-configure-features '(locals expressions))
-;;                                       ;(dap-auto-configure-features nil)
-;;
-;; :config
-;; (dap-ui-mode 1)
-;; (setq! dap-gdb-lldb-debug-window nil)
-;; )
-;;
-
 (use-package dap-mode
-  :defer
-  :custom
-  (dap-auto-configure-mode t                           "Automatically configure dap.")
-  (dap-auto-configure-features
-   '(sessions locals breakpoints expressions tooltip)  "Remove the button panel in the top.")
+  :defer t
+  :init
+  (dap-mode 0)
   :config
-  ;;; dap for c++
+  (dap-ui-mode)
+  (dap-ui-controls-mode 1)
+  (require 'dap-cpptools)
   (require 'dap-lldb)
+  (require 'dap-gdb-lldb)
 
-  ;;; set the debugger executable (c++)
-  (setq dap-lldb-debug-program '("/usr/bin/lldb-mi"))
-
-  ;;; ask user for executable to debug if not specified explicitly (c++)
-  (setq dap-lldb-debugged-program-function (lambda () (read-file-name "Select file to debug.")))
-
-  ;;; default debug template for (c++)
+  ;; Extensions from vscode
+  (dap-gdb-lldb-setup)
   (dap-register-debug-template
-   "C++ LLDB dap"
-   (list :type "lldb-vscode"
-         :cwd nil
-         :args nil
+   "Rust: LLDB Run Configuration"
+   (list :type "lldb"
          :request "launch"
-         :program nil))
+         :name "LLDB:Run"
+         :gdpath "rust-lldb"
+         :target nil
+         :cwd nil))
 
-  (defun dap-debug-create-or-edit-json-template ()
-    "Edit the C++ debugging configuration or create + edit if none exists yet."
-    (interactive)
-    (let ((filename (concat (lsp-workspace-root) "/launch.json"))
-	  (default "~/.emacs.d/default-launch.json"))
-      (unless (file-exists-p filename)
-	(copy-file default filename))
-      (find-file-existing filename))))
+  :custom
+  (dap-auto-configure-features '(locals expressions))
+                                        ;(dap-auto-configure-features nil)
+
+  :config
+  (dap-ui-mode 1)
+  (setq! dap-gdb-lldb-debug-window nil)
+  )
 
 ;; Elcord
 (use-package elcord
