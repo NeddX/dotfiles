@@ -3,10 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(magit-todos-insert-after '(bottom) nil nil "Changed by setter of obsolete option `magit-todos-insert-at'")
- '(package-selected-packages
-   '(flycheck-clang-tidy dashboard ligature treemacs-all-the-icons nyan-mode))
- '(warning-suppress-types '((initialization) (defvaralias))))
+ '(package-selected-packages '(pdf-tools vdiff)))
 
                                         ;(custom-set-faces
 ;;; custom-set-faces was added by Custom.
@@ -43,3 +40,9 @@
 ;;(put 'narrow-to-region 'disabled nil)
 ;;(put 'customize-face 'disabled nil)
 ;;(put 'projectile-grep 'disabled nil)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

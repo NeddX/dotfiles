@@ -422,6 +422,13 @@
   :config
   (evil-multiedit-default-keybinds))
 
+;; Bind ctrl+h and ctrl+l for jumping between words in Normal, Insert and Visual modes.
+(map! :i "C-h" #'left-word
+      :i "C-l" #'right-word
+      :n "C-h" #'left-word
+      :n "C-l" #'right-word
+      :v "C-h" #'left-word
+      :v "C-l" #'right-word)
 
 (map! :leader
       :desc "Goto line"
@@ -630,6 +637,21 @@
   :defer t
   :config
   (elcord-mode 0)) ; no discord for now.
+
+;; pdf-tools
+(use-package pdf-tools
+  :defer t
+  :commands (pdf-loader-install)
+  :mode "\\.pdf\\'"
+  :bind (:map pdf-view-mode-map
+              ("j" . pdf-view-next-line-or-next-page)
+              ("k" . pdf-view-previous-line-or-previous-page)
+              ("C-=" . pdf-view-enlarge)
+              ("C--" . pdf-view-shrink))
+  :init (pdf-loader-install)
+  :config (add-to-list 'revert-without-query ".pdf"))
+
+(add-hook 'pdf-view-mode-hook #'(lambda () (interactive) (display-line-numbers -1)))
 
 ;;(use-package fast-scroll
 ;; :init
