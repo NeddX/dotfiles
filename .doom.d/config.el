@@ -324,7 +324,7 @@
   (dashboard-set-file-icons t)
   (dashboard-set-heading-icons t)
   (dashboard-image-banner-max-height 250)
-  (dashboard-banner-logo-title "[EMACS is my operating system]")
+  (dashboard-banner-logo-title "[one man cheeseburger apocalypse]")
   (dashboard-startup-banner (concat doom-user-dir "assets/splash.png"))
   :config
   (setq! doom-fallback-buffer-name "*dashboard*")
